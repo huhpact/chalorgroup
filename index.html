@@ -1,0 +1,1897 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chalor Capital Allocation & Institutional Group</title>
+<meta name="description" content="Institutional-grade asset management and corporate advisory for private investors and mid-market enterprises across Continental Europe and the United States.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.min.css">
+<style>
+:root {
+  --navy: #072958;
+  --navy-deep: #051e42;
+  --navy-mid: #0e3d7a;
+  --slate: #a4acb8;
+  --slate-light: #c8cdd6;
+  --bg-white: #ffffff;
+  --bg-near: #f8f9fb;
+  --bg-light: #f0f3f8;
+  --text-dark: #0d1b2a;
+  --text-body: #3a4557;
+  --text-muted: #6b7a92;
+  --border-light: #e4e8ef;
+  --shadow-sm: 0 2px 12px rgba(7,41,88,0.08);
+  --shadow-md: 0 8px 32px rgba(7,41,88,0.12);
+  --shadow-lg: 0 20px 60px rgba(7,41,88,0.16);
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --transition: 0.25s ease;
+  --font-display: 'Manrope', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --max-width: 1240px;
+  --section-pad: 130px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-body);
+  background: var(--bg-white);
+  overflow-x: hidden;
+  font-size: 16px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── PAGE LOADER ── */
+#page-loader {
+  position: fixed; inset: 0;
+  background: var(--navy);
+  z-index: 9999;
+  display: flex; align-items: center; justify-content: center;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+#page-loader.hidden { opacity: 0; visibility: hidden; }
+.loader-mark {
+  opacity: 0;
+  animation: loaderFade 0.8s ease 0.2s forwards;
+}
+@keyframes loaderFade {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-near); }
+::-webkit-scrollbar-thumb { background: var(--slate); border-radius: 3px; }
+
+/* ── HEADER ── */
+#site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 1000;
+  padding: 16px 24px;
+  pointer-events: none;
+  transition: transform 0.35s ease;
+}
+#site-header.hide { transform: translateY(-120%); }
+
+.header-island {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(7,41,88,0.10), 0 1px 4px rgba(7,41,88,0.06);
+  padding: 0 32px;
+  height: 68px;
+  display: flex; align-items: center; justify-content: space-between;
+  pointer-events: all;
+  border: 1px solid rgba(7,41,88,0.06);
+}
+
+.header-logo {
+  display: flex; align-items: center; gap: 12px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.logo-wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 0.18em;
+  color: var(--navy);
+  text-transform: uppercase;
+}
+
+.burger-btn {
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+  transition: background var(--transition);
+  padding: 0;
+  flex-shrink: 0;
+}
+.burger-btn:hover { background: var(--bg-near); }
+.burger-line {
+  width: 22px; height: 2px;
+  background: var(--navy);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
+  transform-origin: center;
+}
+.burger-btn.open .burger-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger-btn.open .burger-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.burger-btn.open .burger-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ── SIDEBAR DRAWER ── */
+.sidebar-overlay {
+  position: fixed; inset: 0;
+  background: rgba(7,41,88,0.45);
+  z-index: 1100;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+  backdrop-filter: blur(2px);
+}
+.sidebar-overlay.open { opacity: 1; visibility: visible; }
+
+.sidebar {
+  position: fixed;
+  top: 0; right: 0; bottom: 0;
+  width: min(420px, 90vw);
+  background: var(--bg-white);
+  z-index: 1200;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+  display: flex; flex-direction: column;
+  padding: 40px 48px;
+  box-shadow: -8px 0 48px rgba(7,41,88,0.15);
+}
+.sidebar.open { transform: translateX(0); }
+
+.sidebar-close {
+  position: absolute; top: 24px; right: 24px;
+  width: 40px; height: 40px;
+  border: none; background: var(--bg-near);
+  border-radius: 10px; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--navy); font-size: 18px;
+  transition: background var(--transition);
+}
+.sidebar-close:hover { background: var(--border-light); }
+
+.sidebar-logo { margin-bottom: 56px; }
+
+.sidebar-nav { flex: 1; }
+.sidebar-nav a {
+  display: block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 26px;
+  color: var(--text-dark);
+  text-decoration: none;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border-light);
+  transition: color var(--transition), padding-left var(--transition);
+  letter-spacing: -0.01em;
+}
+.sidebar-nav a:hover { color: var(--navy); padding-left: 8px; }
+.sidebar-nav a:last-child { border-bottom: none; }
+
+.sidebar-cta {
+  margin-top: 40px;
+  display: inline-block;
+  padding: 16px 32px;
+  background: var(--navy);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background var(--transition), transform var(--transition);
+  text-align: center;
+}
+.sidebar-cta:hover { background: var(--navy-mid); transform: translateY(-1px); }
+
+.sidebar-social {
+  margin-top: 36px;
+  display: flex; gap: 16px;
+}
+.sidebar-social a {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  background: var(--bg-near);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--navy); font-size: 18px;
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition);
+}
+.sidebar-social a:hover { background: var(--navy); color: #fff; }
+
+/* ── BUBBLES ── */
+.bubbles-bg {
+  position: absolute; inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
+.bubble {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--navy);
+  opacity: 0.045;
+  animation: bubbleDrift 18s ease-in-out infinite;
+}
+.bubble:nth-child(2) { animation-delay: -5s; animation-duration: 22s; opacity: 0.03; }
+.bubble:nth-child(3) { animation-delay: -10s; animation-duration: 26s; opacity: 0.05; }
+.bubble:nth-child(4) { animation-delay: -14s; animation-duration: 20s; opacity: 0.025; }
+@keyframes bubbleDrift {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  33% { transform: translate(30px,-20px) scale(1.04); }
+  66% { transform: translate(-20px,25px) scale(0.97); }
+}
+
+/* ── BUTTONS ── */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 16px 34px;
+  background: var(--navy);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 2px solid var(--navy);
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.btn-primary:hover {
+  background: var(--navy-mid);
+  border-color: var(--navy-mid);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(7,41,88,0.22);
+}
+
+.btn-ghost {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 16px 34px;
+  background: transparent;
+  color: var(--navy);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 2px solid var(--navy);
+  cursor: pointer;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+.btn-ghost:hover {
+  background: var(--navy);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-ghost-white {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 16px 34px;
+  background: transparent;
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 10px;
+  border: 2px solid rgba(255,255,255,0.35);
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), transform var(--transition);
+}
+.btn-ghost-white:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.7);
+  transform: translateY(-2px);
+}
+
+/* ── SECTION WRAPPER ── */
+.section { position: relative; overflow: hidden; }
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── SECTION LABEL ── */
+.section-label {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--navy);
+  padding: 6px 14px;
+  background: rgba(7,41,88,0.06);
+  border-radius: 40px;
+  margin-bottom: 28px;
+}
+
+/* ── HERO ── */
+#hero {
+  min-height: 100vh;
+  display: flex; align-items: center;
+  background: var(--bg-white);
+  padding-top: 100px;
+}
+
+.hero-inner {
+  padding: 120px 0;
+  display: flex; flex-direction: column; align-items: flex-start;
+  max-width: 860px;
+}
+
+.hero-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--navy);
+  background: rgba(7,41,88,0.06);
+  padding: 8px 16px;
+  border-radius: 40px;
+  margin-bottom: 36px;
+  font-weight: 500;
+}
+.hero-tag-dot {
+  width: 6px; height: 6px;
+  background: var(--navy);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+
+.hero-h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(52px, 7vw, 82px);
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+.hero-h1 span.line2 {
+  display: block;
+  color: var(--slate);
+  font-weight: 600;
+}
+
+.hero-sub {
+  font-size: 18px;
+  line-height: 1.75;
+  color: var(--text-muted);
+  max-width: 600px;
+  margin-top: 28px;
+  margin-bottom: 44px;
+}
+
+.hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+
+.hero-stats {
+  display: flex; gap: 48px;
+  margin-top: 72px;
+  padding-top: 48px;
+  border-top: 1px solid var(--border-light);
+  flex-wrap: wrap;
+}
+.stat-item { display: flex; flex-direction: column; }
+.stat-number {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 38px;
+  letter-spacing: -0.03em;
+  color: var(--text-dark);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  margin-top: 6px;
+}
+
+/* Grid bg pattern */
+.hero-grid-bg {
+  position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(7,41,88,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(7,41,88,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── MARQUEE ── */
+#marquee {
+  background: var(--navy);
+  padding: 18px 0;
+  overflow: hidden;
+  position: relative;
+}
+.marquee-track {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+}
+.marquee-content {
+  display: flex; align-items: center; gap: 0;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.7);
+  flex-shrink: 0;
+}
+.marquee-sep {
+  display: inline-block;
+  width: 4px; height: 4px;
+  background: rgba(255,255,255,0.3);
+  border-radius: 50%;
+  margin: 0 28px;
+  vertical-align: middle;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ── ABOUT ── */
+#about {
+  background: var(--bg-near);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 80px;
+  align-items: start;
+}
+
+.about-label { }
+
+.about-h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(36px, 4.5vw, 52px);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--text-dark);
+  margin-bottom: 32px;
+}
+
+.about-body p {
+  font-size: 16.5px;
+  line-height: 1.8;
+  color: var(--text-body);
+  margin-bottom: 20px;
+}
+
+.about-pullquote {
+  border-left: 3px solid var(--navy);
+  padding: 16px 24px;
+  margin: 32px 0;
+  background: rgba(7,41,88,0.03);
+  border-radius: 0 8px 8px 0;
+}
+.about-pullquote p {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--text-dark);
+  margin: 0 !important;
+}
+
+.about-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--navy);
+  text-decoration: none;
+  letter-spacing: 0.03em;
+  transition: gap var(--transition), opacity var(--transition);
+  margin-top: 8px;
+}
+.about-link:hover { gap: 14px; }
+
+/* Stat Cards */
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  position: sticky;
+  top: 110px;
+}
+
+.stat-card {
+  background: var(--bg-white);
+  border-radius: var(--radius-md);
+  padding: 32px 28px;
+  border: 1px solid var(--border-light);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.stat-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+.stat-card-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 36px;
+  letter-spacing: -0.03em;
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.stat-card-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ── SERVICES ── */
+#services {
+  background: var(--navy);
+}
+
+.services-header {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  margin-bottom: 72px;
+  flex-wrap: wrap; gap: 24px;
+}
+
+.services-h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(36px, 4.5vw, 52px);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: #fff;
+}
+
+.services-label {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  padding: 6px 14px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 40px;
+  margin-bottom: 20px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.service-card {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: var(--radius-md);
+  padding: 40px 36px;
+  transition: border-color var(--transition), transform var(--transition), background var(--transition), box-shadow var(--transition);
+  cursor: default;
+}
+.service-card:hover {
+  border-color: rgba(255,255,255,0.35);
+  transform: translateY(-4px);
+  background: rgba(255,255,255,0.07);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.2);
+}
+
+.service-icon {
+  width: 52px; height: 52px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 28px;
+  transition: background var(--transition);
+}
+.service-card:hover .service-icon { background: rgba(255,255,255,0.13); }
+
+.service-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 16px;
+  line-height: 1.25;
+}
+.service-desc {
+  font-size: 15px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.58);
+}
+
+/* ── HOW IT WORKS ── */
+#how-it-works {
+  background: var(--bg-light);
+}
+
+.hiw-header { text-align: center; margin-bottom: 80px; }
+
+.section-h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(36px, 4.5vw, 52px);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  color: var(--text-dark);
+}
+
+.hiw-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.hiw-steps::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: calc(12.5% + 20px);
+  right: calc(12.5% + 20px);
+  height: 1px;
+  background: linear-gradient(90deg, var(--navy) 0%, var(--slate-light) 100%);
+  z-index: 0;
+}
+
+.step {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 0 24px;
+}
+
+.step-icon-wrap {
+  width: 80px; height: 80px;
+  background: var(--bg-white);
+  border: 2px solid var(--border-light);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 28px;
+  position: relative;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+.step:hover .step-icon-wrap {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 6px rgba(7,41,88,0.07);
+}
+
+.step-num {
+  position: absolute;
+  top: -8px; right: -8px;
+  width: 24px; height: 24px;
+  background: var(--navy);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+}
+
+.step-icon { font-size: 28px; color: var(--navy); }
+
+.step-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--text-dark);
+  margin-bottom: 10px;
+}
+.step-desc {
+  font-size: 14px;
+  line-height: 1.65;
+  color: var(--text-muted);
+}
+
+/* ── MARKETS ── */
+#markets {
+  background: var(--bg-white);
+}
+
+.markets-intro {
+  text-align: center;
+  max-width: 620px;
+  margin: 0 auto 72px;
+}
+.markets-intro .section-h2 { margin-bottom: 20px; }
+.markets-intro p { font-size: 17px; color: var(--text-muted); line-height: 1.7; }
+
+.markets-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+.market-card {
+  padding: 40px 36px;
+  border-top: 3px solid var(--navy);
+  background: var(--bg-near);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  transition: box-shadow var(--transition), transform var(--transition);
+}
+.market-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+}
+
+.market-icon {
+  font-size: 32px;
+  color: var(--navy);
+  margin-bottom: 20px;
+  display: block;
+}
+
+.market-region {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 22px;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+.market-sub {
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+.market-desc {
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-body);
+}
+
+/* ── FOR WHOM ── */
+#for-whom {
+  background: var(--bg-near);
+}
+
+.whom-header { text-align: center; margin-bottom: 56px; }
+
+.whom-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.whom-card {
+  background: var(--bg-white);
+  border-radius: var(--radius-lg);
+  padding: 52px 48px;
+  border: 1px solid var(--border-light);
+  transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+}
+.whom-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+  border-color: var(--navy);
+}
+
+.whom-badge {
+  display: inline-block;
+  padding: 8px 18px;
+  background: rgba(7,41,88,0.07);
+  color: var(--navy);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  border-radius: 40px;
+  margin-bottom: 32px;
+}
+
+.whom-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 28px;
+  letter-spacing: -0.02em;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+}
+
+.whom-desc {
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: var(--text-body);
+  margin-bottom: 28px;
+}
+
+.whom-list {
+  list-style: none;
+  margin-bottom: 40px;
+}
+.whom-list li {
+  display: flex; align-items: flex-start; gap: 12px;
+  font-size: 14.5px;
+  color: var(--text-body);
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-light);
+}
+.whom-list li:last-child { border-bottom: none; }
+.whom-list li::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--navy);
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+.whom-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--navy);
+  text-decoration: none;
+  transition: gap var(--transition);
+}
+.whom-link:hover { gap: 14px; }
+
+/* ── CONTACT ── */
+#contact {
+  background: var(--bg-white);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.contact-info h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(32px, 3.5vw, 44px);
+  letter-spacing: -0.025em;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+.contact-info p.lead {
+  font-size: 16px;
+  color: var(--text-muted);
+  margin-bottom: 48px;
+  line-height: 1.7;
+}
+
+.contact-detail {
+  display: flex; align-items: flex-start; gap: 16px;
+  margin-bottom: 28px;
+}
+.contact-detail-icon {
+  width: 44px; height: 44px;
+  background: var(--bg-near);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  color: var(--navy);
+  font-size: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+.contact-detail-body { }
+.contact-detail-label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+.contact-detail-value {
+  font-size: 15px;
+  color: var(--text-dark);
+  font-weight: 500;
+  line-height: 1.5;
+}
+.contact-detail-value a { color: var(--navy); text-decoration: none; }
+.contact-detail-value a:hover { text-decoration: underline; }
+
+.contact-social {
+  display: flex; gap: 12px;
+  margin-top: 48px;
+}
+.contact-social a {
+  width: 44px; height: 44px;
+  border-radius: 12px;
+  background: var(--bg-near);
+  border: 1px solid var(--border-light);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--navy); font-size: 18px;
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+.contact-social a:hover {
+  background: var(--navy);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Contact Form */
+.contact-form-wrap { }
+
+.form-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 22px;
+  color: var(--text-dark);
+  margin-bottom: 32px;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.form-col-full { grid-column: 1 / -1; }
+
+.form-group { display: flex; flex-direction: column; gap: 8px; }
+.form-group label {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+.form-group input,
+.form-group textarea,
+.form-group select {
+  padding: 14px 18px;
+  border: 1px solid var(--border-light);
+  border-radius: 10px;
+  font-family: var(--font-body);
+  font-size: 15px;
+  color: var(--text-dark);
+  background: var(--bg-white);
+  outline: none;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  -webkit-appearance: none;
+}
+.form-group select {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236b7a92' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 44px;
+  cursor: pointer;
+}
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(7,41,88,0.08);
+}
+.form-group textarea { resize: vertical; min-height: 120px; }
+
+.form-submit {
+  margin-top: 8px;
+  width: 100%;
+  padding: 16px;
+  background: var(--navy);
+  color: #fff;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background var(--transition), transform var(--transition);
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+}
+.form-submit:hover {
+  background: var(--navy-mid);
+  transform: translateY(-1px);
+}
+
+.calendar-placeholder {
+  margin-top: 40px;
+  border: 2px dashed var(--border-light);
+  border-radius: var(--radius-md);
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px;
+  background: var(--bg-near);
+}
+.calendar-placeholder-icon {
+  font-size: 36px;
+  color: var(--slate);
+  margin-bottom: 16px;
+}
+.calendar-placeholder h4 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--text-dark);
+  margin-bottom: 8px;
+}
+.calendar-placeholder p {
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+/* ── FOOTER ── */
+footer {
+  background: var(--navy);
+}
+
+.footer-main {
+  padding: 80px 0 60px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
+  gap: 48px;
+}
+
+.footer-brand-tagline {
+  font-size: 14px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.45);
+  margin-top: 16px;
+  margin-bottom: 28px;
+  max-width: 240px;
+}
+
+.footer-social {
+  display: flex; gap: 10px;
+}
+.footer-social a {
+  width: 36px; height: 36px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.07);
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.55);
+  font-size: 16px;
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition);
+}
+.footer-social a:hover { background: rgba(255,255,255,0.15); color: #fff; }
+
+.footer-col-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 24px;
+}
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 12px; }
+.footer-links a {
+  font-size: 14.5px;
+  color: rgba(255,255,255,0.6);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.footer-links a:hover { color: #fff; }
+
+.footer-sep {
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+  margin: 0 40px;
+}
+
+.footer-bottom {
+  background: var(--navy-deep);
+  padding: 18px 0;
+}
+
+.footer-bottom-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+}
+
+.footer-copy {
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.38);
+}
+
+.footer-reg {
+  font-size: 12.5px;
+  color: rgba(255,255,255,0.38);
+  display: flex; align-items: center; gap: 6px;
+}
+.footer-reg span {
+  color: rgba(255,255,255,0.22);
+}
+
+/* ── COOKIE BANNER ── */
+#cookie-banner {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: var(--navy-deep);
+  z-index: 5000;
+  padding: 20px 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  transform: translateY(100%);
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+  border-top: 1px solid rgba(255,255,255,0.06);
+}
+#cookie-banner.show { transform: translateY(0); }
+
+.cookie-text {
+  font-size: 13.5px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.6;
+  max-width: 600px;
+}
+.cookie-text a { color: rgba(255,255,255,0.9); }
+
+.cookie-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.cookie-btn {
+  padding: 10px 20px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background var(--transition), opacity var(--transition);
+}
+.cookie-btn-accept { background: #fff; color: var(--navy); }
+.cookie-btn-accept:hover { opacity: 0.9; }
+.cookie-btn-manage { background: rgba(255,255,255,0.1); color: #fff; }
+.cookie-btn-manage:hover { background: rgba(255,255,255,0.18); }
+.cookie-btn-decline { background: transparent; color: rgba(255,255,255,0.5); border: 1px solid rgba(255,255,255,0.15); }
+.cookie-btn-decline:hover { color: rgba(255,255,255,0.8); }
+
+/* ── SCROLL ANIMATIONS ── */
+[data-animate] {
+  opacity: 0;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+[data-animate="left"] { transform: translateX(-60px); }
+[data-animate="right"] { transform: translateX(60px); }
+[data-animate="up"] { transform: translateY(40px); }
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translate(0,0);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 1024px) {
+  .about-grid { grid-template-columns: 1fr; }
+  .about-stats { position: static; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .services-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .hiw-steps { grid-template-columns: 1fr 1fr; gap: 40px; }
+  .hiw-steps::before { display: none; }
+}
+
+@media (max-width: 768px) {
+  :root { --section-pad: 80px; }
+  .container { padding: 0 20px; }
+  .header-island { padding: 0 20px; height: 60px; }
+  .hero-h1 { font-size: 42px; }
+  .hero-sub { font-size: 16px; }
+  .hero-stats { gap: 28px; }
+  .stat-number { font-size: 30px; }
+  .about-grid { grid-template-columns: 1fr; gap: 48px; }
+  .about-stats { grid-template-columns: 1fr 1fr; }
+  .services-grid { grid-template-columns: 1fr; }
+  .hiw-steps { grid-template-columns: 1fr; }
+  .markets-grid { grid-template-columns: 1fr; }
+  .whom-grid { grid-template-columns: 1fr; }
+  .whom-card { padding: 36px 28px; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .form-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-bottom-inner { flex-direction: column; align-items: flex-start; }
+  .services-header { flex-direction: column; align-items: flex-start; }
+  .hero-ctas { flex-direction: column; }
+  .btn-primary, .btn-ghost { width: 100%; justify-content: center; }
+  #cookie-banner { padding: 20px 20px; }
+  .cookie-actions { width: 100%; }
+  .cookie-btn { flex: 1; text-align: center; }
+  .sidebar { padding: 40px 28px; }
+}
+</style>
+</head>
+<body>
+
+<!-- PAGE LOADER -->
+<div id="page-loader">
+  <div class="loader-mark">
+    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M32 4L60 56H4L32 4Z" fill="none" stroke="white" stroke-width="2.5"/>
+      <path d="M18 42H46" stroke="white" stroke-width="2.5"/>
+      <path d="M32 14L46 42" stroke="white" stroke-width="2.5"/>
+      <path d="M32 14L18 42" stroke="white" stroke-width="2.5"/>
+    </svg>
+  </div>
+</div>
+
+<!-- COOKIE BANNER -->
+<div id="cookie-banner">
+  <p class="cookie-text">
+    We use cookies to enhance your experience on our platform. Essential cookies ensure core functionality; analytics and preference cookies help us improve our service. 
+    <a href="cookies.html">Cookie Policy</a> · <a href="privacy.html">Privacy Policy</a>
+  </p>
+  <div class="cookie-actions">
+    <button class="cookie-btn cookie-btn-accept" onclick="setCookieChoice('all')">Accept All</button>
+    <button class="cookie-btn cookie-btn-manage" onclick="setCookieChoice('manage')">Manage Preferences</button>
+    <button class="cookie-btn cookie-btn-decline" onclick="setCookieChoice('decline')">Decline</button>
+  </div>
+</div>
+
+<!-- SIDEBAR OVERLAY -->
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+<!-- SIDEBAR -->
+<div class="sidebar" id="sidebar">
+  <button class="sidebar-close" id="sidebarClose" onclick="closeSidebar()" aria-label="Close menu">
+    <i class="ti ti-x"></i>
+  </button>
+  <div class="sidebar-logo">
+    <a href="index.html" class="header-logo">
+      <svg width="28" height="28" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 4L60 56H4L32 4Z" fill="none" stroke="#072958" stroke-width="3"/>
+        <path d="M18 42H46" stroke="#072958" stroke-width="3"/>
+      </svg>
+      <span class="logo-wordmark">Chalor</span>
+    </a>
+  </div>
+  <nav class="sidebar-nav">
+    <a href="#about" onclick="closeSidebar()">About</a>
+    <a href="#services" onclick="closeSidebar()">Services</a>
+    <a href="#how-it-works" onclick="closeSidebar()">Our Method</a>
+    <a href="#markets" onclick="closeSidebar()">Markets</a>
+    <a href="#for-whom" onclick="closeSidebar()">For Whom</a>
+    <a href="#contact" onclick="closeSidebar()">Contact</a>
+  </nav>
+  <a href="#contact" class="sidebar-cta" onclick="closeSidebar()">Get in Touch</a>
+  <div class="sidebar-social">
+    <a href="#" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+    <a href="#" aria-label="X / Twitter"><i class="ti ti-brand-x"></i></a>
+    <a href="#" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header id="site-header">
+  <div class="header-island">
+    <a href="index.html" class="header-logo">
+      <svg width="26" height="26" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M32 4L60 56H4L32 4Z" fill="none" stroke="#072958" stroke-width="3.5"/>
+        <path d="M18 42H46" stroke="#072958" stroke-width="3.5"/>
+      </svg>
+      <span class="logo-wordmark">Chalor</span>
+    </a>
+    <button class="burger-btn" id="burgerBtn" onclick="toggleSidebar()" aria-label="Open menu">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero" class="section">
+  <div class="hero-grid-bg"></div>
+  <div class="bubbles-bg">
+    <div class="bubble" style="width:600px;height:600px;top:-100px;right:-100px;"></div>
+    <div class="bubble" style="width:350px;height:350px;bottom:80px;left:10%;"></div>
+    <div class="bubble" style="width:200px;height:200px;top:40%;right:20%;"></div>
+  </div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-tag">
+        <span class="hero-tag-dot"></span>
+        Institutional Asset Management
+      </div>
+      <h1 class="hero-h1">
+        Capital Allocation.
+        <span class="line2">Precision. Performance.</span>
+      </h1>
+      <p class="hero-sub">
+        Institutional-grade asset management and corporate advisory for private investors and mid-market enterprises across Continental Europe and the United States.
+      </p>
+      <div class="hero-ctas">
+        <a href="#services" class="btn-primary">
+          Explore Our Approach
+          <i class="ti ti-arrow-right"></i>
+        </a>
+        <a href="#contact" class="btn-ghost">Schedule a Consultation</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <span class="stat-number" id="stat1">€0</span>
+          <span class="stat-label">Assets Under Management</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" id="stat2">0</span>
+          <span class="stat-label">Markets</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number" id="stat3">0</span>
+          <span class="stat-label">Year Established</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div id="marquee">
+  <div class="marquee-track" aria-hidden="true">
+    <div class="marquee-content">
+      <span>NYSE</span><span class="marquee-sep"></span>
+      <span>NASDAQ</span><span class="marquee-sep"></span>
+      <span>Euronext</span><span class="marquee-sep"></span>
+      <span>Deutsche Börse</span><span class="marquee-sep"></span>
+      <span>iShares</span><span class="marquee-sep"></span>
+      <span>Amundi</span><span class="marquee-sep"></span>
+      <span>Vanguard</span><span class="marquee-sep"></span>
+      <span>BlackRock</span><span class="marquee-sep"></span>
+      <span>Clearstream</span><span class="marquee-sep"></span>
+      <span>BaFin Regulated</span><span class="marquee-sep"></span>
+      <span>AMF</span><span class="marquee-sep"></span>
+      <span>FINMA</span><span class="marquee-sep"></span>
+    </div>
+    <div class="marquee-content" aria-hidden="true">
+      <span>NYSE</span><span class="marquee-sep"></span>
+      <span>NASDAQ</span><span class="marquee-sep"></span>
+      <span>Euronext</span><span class="marquee-sep"></span>
+      <span>Deutsche Börse</span><span class="marquee-sep"></span>
+      <span>iShares</span><span class="marquee-sep"></span>
+      <span>Amundi</span><span class="marquee-sep"></span>
+      <span>Vanguard</span><span class="marquee-sep"></span>
+      <span>BlackRock</span><span class="marquee-sep"></span>
+      <span>Clearstream</span><span class="marquee-sep"></span>
+      <span>BaFin Regulated</span><span class="marquee-sep"></span>
+      <span>AMF</span><span class="marquee-sep"></span>
+      <span>FINMA</span><span class="marquee-sep"></span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="bubbles-bg">
+    <div class="bubble" style="width:500px;height:500px;top:-60px;left:-120px;"></div>
+    <div class="bubble" style="width:280px;height:280px;bottom:100px;right:5%;"></div>
+  </div>
+  <div class="container" style="padding-top: var(--section-pad); padding-bottom: var(--section-pad);">
+    <div class="about-grid">
+      <div class="about-body">
+        <span class="section-label" data-animate="left">About Chalor</span>
+        <h2 class="about-h2" data-animate="left">A New Standard in Institutional Capital Management</h2>
+        <p data-animate="left">Chalor Capital Allocation & Institutional Group operates at the intersection of rigorous quantitative discipline and bespoke client mandate. Founded in 2019, the Group was established to bring the precision of a multi-family office to a broader spectrum of qualified investors — without sacrificing the institutional rigour that defines truly professional asset stewardship.</p>
+        <p data-animate="left">Our dual operating model integrates two distinct but complementary disciplines: systematic wealth management and strategic corporate identity architecture. The wealth management arm deploys a macro trend-following framework across global equity, fixed income, and ETF instruments, calibrated to deliver risk-adjusted returns within clearly defined volatility parameters. The corporate services arm applies the same precision to brand transformation and digital infrastructure for portfolio companies and mid-market enterprises.</p>
+        <div class="about-pullquote" data-animate="left">
+          <p>"Access to institutional-grade capital allocation should not be contingent on the scale of one's initial mandate. We have structured our platform to ensure otherwise."</p>
+        </div>
+        <p data-animate="left">Operating across the DACH region, the Franco-Luxembourg regulatory axis, and the North American capital markets, Chalor provides its clients with a geographically diversified approach to allocation, custodianship, and liquidity management. Our custodian relationships span Clearstream and leading tier-1 European banks, ensuring settlement integrity and regulatory compliance across all mandates.</p>
+        <a href="#" class="about-link" data-animate="left">
+          Read our Investment Philosophy
+          <i class="ti ti-arrow-right"></i>
+        </a>
+      </div>
+      <div class="about-stats">
+        <div class="stat-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="stat-card-num">€2.4B+</div>
+          <div class="stat-card-label">Assets Under Management across all mandates</div>
+        </div>
+        <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="stat-card-num">14</div>
+          <div class="stat-card-label">Active markets and regulatory jurisdictions</div>
+        </div>
+        <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-card-num">98%</div>
+          <div class="stat-card-label">Client mandate retention rate, five-year average</div>
+        </div>
+        <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="stat-card-num">Tier 1</div>
+          <div class="stat-card-label">Custodian relationships & regulatory standing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="section">
+  <div class="bubbles-bg">
+    <div class="bubble" style="width:700px;height:700px;top:-200px;right:-150px;background:#fff;opacity:0.02;"></div>
+    <div class="bubble" style="width:300px;height:300px;bottom:40px;left:5%;background:#fff;opacity:0.015;"></div>
+  </div>
+  <div class="container" style="padding-top: var(--section-pad); padding-bottom: var(--section-pad);">
+    <div class="services-header">
+      <div>
+        <span class="services-label">Service Architecture</span>
+        <h2 class="services-h2" data-animate="left">Our Service Architecture</h2>
+      </div>
+      <a href="#contact" class="btn-ghost-white" style="flex-shrink:0;">Enquire Now</a>
+    </div>
+    <div class="services-grid">
+      <div class="service-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="service-icon">
+          <i class="ti ti-chart-line"></i>
+        </div>
+        <h3 class="service-title">Capital Allocation & Wealth Suite</h3>
+        <p class="service-desc">Systematic trend-following across global equity markets, ETF rotation strategy, and an active S&P outperformance mandate. Each allocation is calibrated to the client's liquidity profile, vintage requirements, and defined risk tolerance — with monthly rebalancing and full transparency reporting.</p>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="service-icon">
+          <i class="ti ti-currency-euro"></i>
+        </div>
+        <h3 class="service-title">Liquidity & Treasury Optimization</h3>
+        <p class="service-desc">Automated best-offer interbank scanning and proprietary Tagesgeld arbitrage model for institutional and corporate treasury clients. Daily yield maximization across counterparty-diversified deposit structures, with same-day settlement capability and full BaFin/AMF compliance.</p>
+      </div>
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+        <div class="service-icon">
+          <i class="ti ti-building-skyscraper"></i>
+        </div>
+        <h3 class="service-title">Corporate Identity & Brand Architecture</h3>
+        <p class="service-desc">Comprehensive brand transformation for portfolio companies and KMU clients. From strategic identity architecture to high-specification digital presence and conversion-optimized commercial web platforms — executed at the level of tier-1 European brand consultancies, at institutional pricing.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section id="how-it-works" class="section">
+  <div class="container" style="padding-top: var(--section-pad); padding-bottom: var(--section-pad);">
+    <div class="hiw-header">
+      <span class="section-label" data-animate="up">The Chalor Method</span>
+      <h2 class="section-h2" data-animate="up">Structured. Systematic. Accountable.</h2>
+    </div>
+    <div class="hiw-steps">
+      <div class="step" data-aos="fade-up" data-aos-delay="0">
+        <div class="step-icon-wrap">
+          <span class="step-num">1</span>
+          <i class="step-icon ti ti-clipboard-list"></i>
+        </div>
+        <h4 class="step-title">Onboarding & Assessment</h4>
+        <p class="step-desc">Comprehensive financial profiling, risk mandate definition, and regulatory KYC/AML onboarding across all applicable jurisdictions.</p>
+      </div>
+      <div class="step" data-aos="fade-up" data-aos-delay="100">
+        <div class="step-icon-wrap">
+          <span class="step-num">2</span>
+          <i class="step-icon ti ti-map-2"></i>
+        </div>
+        <h4 class="step-title">Strategic Allocation</h4>
+        <p class="step-desc">Bespoke allocation framework constructed around the client's objectives, liquidity horizon, and approved instrument universe.</p>
+      </div>
+      <div class="step" data-aos="fade-up" data-aos-delay="200">
+        <div class="step-icon-wrap">
+          <span class="step-num">3</span>
+          <i class="step-icon ti ti-radar"></i>
+        </div>
+        <h4 class="step-title">Active Monitoring</h4>
+        <p class="step-desc">Continuous systematic surveillance of market conditions, portfolio drift, and macro indicators — with defined rebalancing triggers and fiduciary reporting.</p>
+      </div>
+      <div class="step" data-aos="fade-up" data-aos-delay="300">
+        <div class="step-icon-wrap">
+          <span class="step-num">4</span>
+          <i class="step-icon ti ti-trending-up"></i>
+        </div>
+        <h4 class="step-title">Compounding Returns</h4>
+        <p class="step-desc">Disciplined reinvestment of yield and capital gains within the mandate framework, with annual review and forward allocation advisory.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARKETS -->
+<section id="markets" class="section">
+  <div class="bubbles-bg">
+    <div class="bubble" style="width:450px;height:450px;top:-80px;right:-60px;"></div>
+    <div class="bubble" style="width:250px;height:250px;bottom:60px;left:8%;"></div>
+  </div>
+  <div class="container" style="padding-top: var(--section-pad); padding-bottom: var(--section-pad);">
+    <div class="markets-intro">
+      <span class="section-label" data-animate="up">Geographic Coverage</span>
+      <h2 class="section-h2" data-animate="up">Global Reach. Local Precision.</h2>
+      <p data-animate="up">Three strategic axes form the geographic foundation of Chalor's operating model — each chosen for its distinct regulatory environment, capital market depth, and client base characteristics.</p>
+    </div>
+    <div class="markets-grid">
+      <div class="market-card" data-aos="fade-up" data-aos-delay="0">
+        <i class="market-icon ti ti-map-pin"></i>
+        <div class="market-region">North America</div>
+        <div class="market-sub">NYSE · NASDAQ · SEC</div>
+        <p class="market-desc">Primary execution venue for equity mandates and ETF strategies. Deep-liquid, continuous markets with high-frequency rebalancing capability. Technology and growth sector allocation conducted under U.S. regulatory framework with full FATCA compliance infrastructure.</p>
+      </div>
+      <div class="market-card" data-aos="fade-up" data-aos-delay="100">
+        <i class="market-icon ti ti-map-pin"></i>
+        <div class="market-region">DACH & Continental Europe</div>
+        <div class="market-sub">Deutsche Börse · Xetra · BaFin</div>
+        <p class="market-desc">Core acquisition and advisory market. The German-speaking Mittelstand and broader KMU landscape represent Chalor's primary corporate client base for treasury management and brand architecture services. Frankfurt serves as the Group's operational centre of gravity within the EU.</p>
+      </div>
+      <div class="market-card" data-aos="fade-up" data-aos-delay="200">
+        <i class="market-icon ti ti-map-pin"></i>
+        <div class="market-region">Franco-Luxembourg Axis</div>
+        <div class="market-sub">Euronext · AMF · CSSF</div>
+        <p class="market-desc">Structural hub for fund domiciliation, custodianship, and cross-border mandate structuring. Luxembourg's UCITS framework and the AMF regulatory environment provide optimal conditions for the Group's private and institutional fund architecture mandates.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOR WHOM -->
+<section id="for-whom" class="section">
+  <div class="container" style="padding-top: var(--section-pad); padding-bottom: var(--section-pad);">
+    <div class="whom-header">
+      <span class="section-label" data-animate="up">Client Segments</span>
+      <h2 class="section-h2" data-animate="up">Who We Serve</h2>
+    </div>
+    <div class="whom-grid">
+      <div class="whom-card" data-aos="fade-up" data-aos-delay="0">
+        <div class="whom-badge">From €10,000</div>
+        <h3 class="whom-title">Private Investors</h3>
+        <p class="whom-desc">Access to institutional-grade portfolio management, historically restricted to family offices and ultra-high-net-worth mandates, is now available to qualified private investors. Chalor's structured allocation platform delivers fiduciary stewardship, systematic rebalancing, and full transparency reporting from an accessible entry threshold.</p>
+        <ul class="whom-list">
+          <li>Systematic, trend-based equity and ETF allocation</li>
+          <li>Individual mandate structuring and risk profiling</li>
+          <li>Monthly rebalancing and performance reporting</li>
+          <li>Access to Chalor's full custodian network</li>
+          <li>Liquidity-optimized Tagesgeld yield structures</li>
+        </ul>
+        <a href="#contact" class="whom-link">
+          Enquire about Private Mandates
+          <i class="ti ti-arrow-right"></i>
+        </a>
+      </div>
+      <div class="whom-card" data-aos="fade-up" data-aos-delay="100">
+        <div class="whom-badge">KMU & Corporate Treasury</div>
+        <h3 class="whom-title">Corporate & Institutional</h3>
+        <p class="whom-desc">Chalor serves mid-market enterprises and institutional counterparties seeking professional treasury management, corporate capital deployment guidance, and strategic brand transformation. Our institutional service suite is structured to align with the governance requirements and fiduciary obligations of corporate clients operating across multiple jurisdictions.</p>
+        <ul class="whom-list">
+          <li>Corporate treasury optimization and yield maximization</li>
+          <li>Institutional mandate structuring and custodianship</li>
+          <li>Portfolio company brand architecture and transformation</li>
+          <li>Cross-border regulatory compliance advisory</li>
+          <li>Bespoke reporting and governance documentation</li>
+        </ul>
+        <a href="#contact" class="whom-link">
+          Enquire about Corporate Services
+          <i class="ti ti-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+  <div class="bubbles-bg">
+    <div class="bubble" style="width:400px;height:400px;top:-60px;right:5%;"></div>
+    <div class="bubble" style="width:200px;height:200px;bottom:80px;left:10%;"></div>
+  </div>
+  <div class="container" style="padding-top: var(--section-pad); padding-bottom: var(--section-pad);">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <span class="section-label" data-animate="left">Contact</span>
+        <h2 data-animate="left">Initiate a Conversation</h2>
+        <p class="lead" data-animate="left">Our relationship managers are available to discuss your mandate requirements, provide regulatory guidance, or arrange a formal consultation session.</p>
+
+        <div class="contact-detail" data-animate="left">
+          <div class="contact-detail-icon"><i class="ti ti-mail"></i></div>
+          <div class="contact-detail-body">
+            <div class="contact-detail-label">General Enquiries</div>
+            <div class="contact-detail-value"><a href="mailto:contact@chalor.com">contact@chalor.com</a></div>
+          </div>
+        </div>
+        <div class="contact-detail" data-animate="left">
+          <div class="contact-detail-icon"><i class="ti ti-phone"></i></div>
+          <div class="contact-detail-body">
+            <div class="contact-detail-label">Frankfurt Office</div>
+            <div class="contact-detail-value"><a href="tel:+4969000000">+49 69 000 0000</a></div>
+          </div>
+        </div>
+        <div class="contact-detail" data-animate="left">
+          <div class="contact-detail-icon"><i class="ti ti-building"></i></div>
+          <div class="contact-detail-body">
+            <div class="contact-detail-label">Principal Office — Frankfurt</div>
+            <div class="contact-detail-value">Taunusanlage 12, 60325 Frankfurt am Main, Germany</div>
+          </div>
+        </div>
+        <div class="contact-detail" data-animate="left">
+          <div class="contact-detail-icon"><i class="ti ti-building"></i></div>
+          <div class="contact-detail-body">
+            <div class="contact-detail-label">Fund Domicile — Luxembourg</div>
+            <div class="contact-detail-value">2 Boulevard Konrad Adenauer, L-1115 Luxembourg</div>
+          </div>
+        </div>
+        <div class="contact-detail" data-animate="left">
+          <div class="contact-detail-icon"><i class="ti ti-building"></i></div>
+          <div class="contact-detail-body">
+            <div class="contact-detail-label">Representative Office — New York</div>
+            <div class="contact-detail-value">250 Park Avenue, New York, NY 10177, United States</div>
+          </div>
+        </div>
+
+        <div class="contact-social" data-animate="left">
+          <a href="#" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+          <a href="#" aria-label="X / Twitter"><i class="ti ti-brand-x"></i></a>
+          <a href="#" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-form-wrap" data-animate="right">
+        <p class="form-title">Submit an Enquiry</p>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="f-name">Full Name</label>
+            <input type="text" id="f-name" name="name" placeholder="Dr. Anna Schmidt" autocomplete="name">
+          </div>
+          <div class="form-group">
+            <label for="f-company">Company / Organisation</label>
+            <input type="text" id="f-company" name="company" placeholder="Muster GmbH" autocomplete="organization">
+          </div>
+          <div class="form-group">
+            <label for="f-email">Email Address</label>
+            <input type="email" id="f-email" name="email" placeholder="a.schmidt@example.com" autocomplete="email">
+          </div>
+          <div class="form-group">
+            <label for="f-type">Enquiry Type</label>
+            <select id="f-type" name="type">
+              <option value="" disabled selected>Select inquiry type</option>
+              <option>Private Mandate</option>
+              <option>Corporate Treasury</option>
+              <option>Brand Architecture</option>
+              <option>Institutional Mandate</option>
+              <option>General Enquiry</option>
+            </select>
+          </div>
+          <div class="form-group form-col-full">
+            <label for="f-message">Message</label>
+            <textarea id="f-message" name="message" placeholder="Please describe your mandate requirements or enquiry in brief..."></textarea>
+          </div>
+          <div class="form-col-full">
+            <button type="button" class="form-submit" onclick="handleFormSubmit()">
+              Submit Enquiry
+              <i class="ti ti-send"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="calendar-placeholder" id="calendar-embed">
+          <div class="calendar-placeholder-icon"><i class="ti ti-calendar-event"></i></div>
+          <h4>Schedule a Consultation</h4>
+          <p>Calendar integration coming soon. To arrange a formal consultation, please use the enquiry form above or contact us directly at contact@chalor.com.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="header-logo" style="margin-bottom: 16px; display: inline-flex;">
+            <svg width="26" height="26" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 4L60 56H4L32 4Z" fill="none" stroke="white" stroke-width="3.5"/>
+              <path d="M18 42H46" stroke="white" stroke-width="3.5"/>
+            </svg>
+            <span class="logo-wordmark" style="color:#fff;">Chalor</span>
+          </a>
+          <p class="footer-brand-tagline">Institutional capital allocation and corporate advisory across Continental Europe and North America.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+            <a href="#" aria-label="X / Twitter"><i class="ti ti-brand-x"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-col-title">Services</p>
+          <ul class="footer-links">
+            <li><a href="#services">Capital Allocation</a></li>
+            <li><a href="#services">Treasury Optimization</a></li>
+            <li><a href="#services">Corporate Identity</a></li>
+            <li><a href="#for-whom">Portfolio Advisory</a></li>
+            <li><a href="#for-whom">Institutional Mandates</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Company</p>
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#how-it-works">Our Approach</a></li>
+            <li><a href="#markets">Markets</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Press</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Legal & Compliance</p>
+          <ul class="footer-links">
+            <li><a href="imprint.html">Imprint</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+            <li><a href="terms.html">Terms & Conditions</a></li>
+            <li><a href="#">Regulatory Disclosures</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-sep"></div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-inner">
+        <p class="footer-copy">© 2025 Chalor Capital Allocation & Institutional Group. All rights reserved.</p>
+        <div class="footer-reg">
+          <i class="ti ti-shield-check" style="font-size:13px;color:rgba(255,255,255,0.3);"></i>
+          Regulated under BaFin <span>|</span> AMF <span>|</span> FINMA
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.6.2/countUp.umd.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.min.js" defer></script>
+<script>
+// ── PAGE LOADER ──
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('page-loader').classList.add('hidden');
+  }, 1200);
+});
+
+// ── AOS ──
+document.addEventListener('DOMContentLoaded', () => {
+  if (typeof AOS !== 'undefined') {
+    AOS.init({ duration: 700, once: true, offset: 60, easing: 'ease-out' });
+  }
+});
+
+// ── SIDEBAR ──
+function toggleSidebar() {
+  const sidebar = document.getElementById('sidebar');
+  const overlay = document.getElementById('sidebarOverlay');
+  const burger = document.getElementById('burgerBtn');
+  const isOpen = sidebar.classList.contains('open');
+  if (isOpen) {
+    closeSidebar();
+  } else {
+    sidebar.classList.add('open');
+    overlay.classList.add('open');
+    burger.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+}
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('sidebarOverlay').classList.remove('open');
+  document.getElementById('burgerBtn').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// ── HEADER HIDE/SHOW ON SCROLL ──
+let lastScroll = 0;
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  const current = window.scrollY;
+  if (current > lastScroll && current > 80) {
+    header.classList.add('hide');
+  } else {
+    header.classList.remove('hide');
+  }
+  lastScroll = current <= 0 ? 0 : current;
+}, { passive: true });
+
+// ── COUNTUP ──
+function initCounters() {
+  if (window.CountUp) {
+    new CountUp.CountUp('stat1', 2.4, { prefix: '€', suffix: 'B+', decimalPlaces: 1, duration: 2 }).start();
+    new CountUp.CountUp('stat2', 14, { suffix: '+', duration: 1.8 }).start();
+    new CountUp.CountUp('stat3', 2019, { separator: '', duration: 2.2 }).start();
+  }
+}
+
+const heroObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { initCounters(); heroObs.disconnect(); } });
+}, { threshold: 0.3 });
+const heroStats = document.querySelector('.hero-stats');
+if (heroStats) heroObs.observe(heroStats);
+
+// ── INTERSECTION OBSERVER FOR CUSTOM ANIMATIONS ──
+const animObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('is-visible');
+      animObs.unobserve(e.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('[data-animate]').forEach(el => animObs.observe(el));
+
+// ── COOKIE BANNER ──
+function showCookieBanner() {
+  if (!localStorage.getItem('chalor_cookie_choice')) {
+    setTimeout(() => {
+      document.getElementById('cookie-banner').classList.add('show');
+    }, 2000);
+  }
+}
+function setCookieChoice(choice) {
+  localStorage.setItem('chalor_cookie_choice', choice);
+  document.getElementById('cookie-banner').classList.remove('show');
+}
+showCookieBanner();
+
+// ── FORM SUBMIT ──
+function handleFormSubmit() {
+  const name = document.getElementById('f-name').value;
+  const email = document.getElementById('f-email').value;
+  if (!name || !email) {
+    alert('Please provide your name and email address.');
+    return;
+  }
+  const btn = document.querySelector('.form-submit');
+  btn.innerHTML = 'Enquiry Submitted <i class="ti ti-check"></i>';
+  btn.style.background = '#1a6b3c';
+  btn.disabled = true;
+}
+</script>
+</body>
+</html>
