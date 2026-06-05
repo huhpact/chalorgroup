@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Terms of Service — Chalor Capital Allocation & Institutional Group</title>
+<meta name="description" content="Terms of Service governing the use of Chalor Capital Allocation & Institutional Group's website and private advisory services.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="icon" type="image/png" href="/img/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/img/favicon/favicon.svg" />
+<link rel="shortcut icon" href="/img/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png" />
+<meta name="theme-color" content="#072958">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G4V61PC4QD"></script>
+<link rel="stylesheet" href="main.css">
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-G4V61PC4QD');
+</script>
+<style>
+:root {
+  --navy: #072958;
+  --navy-deep: #051e42;
+  --navy-mid: #0e3d7a;
+  --slate: #a4acb8;
+  --bg-white: #ffffff;
+  --bg-near: #f8f9fb;
+  --text-dark: #0d1b2a;
+  --text-body: #3a4557;
+  --text-muted: #6b7a92;
+  --border-light: #e4e8ef;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --transition: 0.25s ease;
+  --font-display: 'Manrope', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --max-width: 900px;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body); color: var(--text-body);
+  background: var(--bg-white); overflow-x: hidden;
+  font-size: 16px; line-height: 1.85; -webkit-font-smoothing: antialiased;
+}
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-near); }
+::-webkit-scrollbar-thumb { background: var(--slate); border-radius: 3px; }
+
+/* HEADER */
+#site-header {
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 1000; padding: 16px 24px;
+  pointer-events: none; transition: transform 0.35s ease;
+}
+#site-header.hide { transform: translateY(-120%); }
+.header-island {
+  max-width: 1100px; margin: 0 auto;
+  background: rgba(255,255,255,0.93);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(7,41,88,0.10), 0 1px 4px rgba(7,41,88,0.06);
+  padding: 0 32px; height: 68px;
+  display: flex; align-items: center; justify-content: space-between;
+  pointer-events: all; border: 1px solid rgba(7,41,88,0.06);
+}
+.header-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
+.logo-wordmark {
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 16px; letter-spacing: 0.18em; color: var(--navy); text-transform: uppercase;
+}
+.header-back {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--navy); text-decoration: none;
+  padding: 10px 20px; border: 1.5px solid var(--border-light);
+  border-radius: 10px; transition: background var(--transition), border-color var(--transition);
+}
+.header-back:hover { background: var(--bg-near); border-color: var(--navy); }
+
+/* PAGE HERO */
+.page-hero {
+  background: var(--navy); padding: 160px 0 80px;
+  position: relative; overflow: hidden;
+}
+.page-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px; pointer-events: none;
+}
+.container { max-width: 1240px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 1; }
+.page-hero-label {
+  display: inline-block; font-family: var(--font-body); font-weight: 500;
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(255,255,255,0.55); padding: 6px 14px;
+  background: rgba(255,255,255,0.08); border-radius: 40px; margin-bottom: 24px;
+}
+.breadcrumb {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 13px; color: rgba(255,255,255,0.45); margin-bottom: 32px;
+}
+.breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color var(--transition); }
+.breadcrumb a:hover { color: #fff; }
+.breadcrumb span { color: rgba(255,255,255,0.25); }
+.page-hero h1 {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: clamp(40px, 6vw, 64px);
+  line-height: 1.05; letter-spacing: -0.025em; color: #fff; margin-bottom: 16px;
+}
+.page-hero-sub { font-size: 16px; color: rgba(255,255,255,0.55); max-width: 660px; margin-top: 12px; }
+
+/* MAIN */
+.legal-main { padding: 80px 0 140px; background: var(--bg-white); }
+.legal-wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 40px; }
+
+.meta-bar {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding: 16px 22px; background: var(--bg-near);
+  border-radius: var(--radius-sm); margin-bottom: 56px;
+  font-size: 13px; color: var(--text-muted); border: 1px solid var(--border-light);
+}
+.meta-bar i { color: var(--slate); }
+.meta-bar strong { color: var(--text-dark); }
+
+/* SECTIONS */
+.legal-section { margin-bottom: 72px; padding-bottom: 72px; border-bottom: 1px solid var(--border-light); }
+.legal-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.section-eyebrow {
+  font-family: var(--font-body); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--navy); opacity: 0.55; margin-bottom: 10px;
+}
+.legal-section h2 {
+  font-family: var(--font-display); font-weight: 700; font-size: 24px;
+  letter-spacing: -0.01em; color: var(--text-dark); margin-bottom: 24px; line-height: 1.2;
+}
+.legal-section h3 {
+  font-family: var(--font-display); font-weight: 600; font-size: 17px;
+  color: var(--text-dark); margin-top: 36px; margin-bottom: 14px; line-height: 1.35;
+}
+.legal-section p { font-size: 15px; line-height: 1.85; color: var(--text-body); margin-bottom: 16px; }
+.legal-section p:last-child { margin-bottom: 0; }
+.legal-section ul { list-style: none; margin: 14px 0 18px; padding: 0; }
+.legal-section ul li {
+  font-size: 15px; line-height: 1.8; color: var(--text-body);
+  padding-left: 22px; position: relative; margin-bottom: 9px;
+}
+.legal-section ul li::before { content: '—'; position: absolute; left: 0; color: var(--slate); }
+.legal-section a { color: var(--navy); text-decoration: none; border-bottom: 1px solid rgba(7,41,88,0.2); transition: border-color var(--transition); }
+.legal-section a:hover { border-color: var(--navy); }
+
+/* NOTICE */
+.notice-box {
+  background: rgba(7,41,88,0.04); border-left: 3px solid var(--navy);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 20px 24px; margin: 24px 0;
+  font-size: 14px; color: var(--text-body); line-height: 1.75;
+}
+.notice-box strong { color: var(--text-dark); }
+.notice-box a { color: var(--navy); border-bottom: 1px solid rgba(7,41,88,0.2); text-decoration: none; }
+
+/* WARNING BOX */
+.warning-box {
+  background: rgba(180, 30, 30, 0.04); border-left: 3px solid #8b1a1a;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 20px 24px; margin: 24px 0;
+  font-size: 14px; color: var(--text-body); line-height: 1.75;
+}
+.warning-box strong { color: #8b1a1a; }
+
+/* INFO CARD */
+.info-card {
+  background: var(--bg-near); border: 1px solid var(--border-light);
+  border-radius: var(--radius-md); padding: 28px 32px; margin: 24px 0;
+}
+.info-card-title {
+  font-family: var(--font-display); font-weight: 700; font-size: 12px;
+  color: var(--navy); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 18px;
+}
+.info-row {
+  display: flex; gap: 16px; padding: 11px 0;
+  border-bottom: 1px solid var(--border-light); font-size: 14px; line-height: 1.6;
+}
+.info-row:last-child { border-bottom: none; padding-bottom: 0; }
+.info-key { flex: 0 0 200px; color: var(--text-muted); font-weight: 500; }
+.info-val { color: var(--text-dark); }
+.info-val a { color: var(--navy); border-bottom: 1px solid rgba(7,41,88,0.2); text-decoration: none; }
+
+/* TABLE */
+.data-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
+.data-table th {
+  background: var(--navy); color: #fff;
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 13px 16px; text-align: left;
+}
+.data-table th:first-child { border-radius: 8px 0 0 0; }
+.data-table th:last-child { border-radius: 0 8px 0 0; }
+.data-table td { padding: 12px 16px; border-bottom: 1px solid var(--border-light); color: var(--text-body); line-height: 1.65; vertical-align: top; }
+.data-table tr:nth-child(even) td { background: var(--bg-near); }
+.data-table tr:last-child td { border-bottom: none; }
+
+/* FOOTER */
+footer { background: var(--navy-deep); color: rgba(255,255,255,0.65); }
+.footer-main { padding: 80px 0; }
+.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; }
+.footer-brand-tagline { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.45); margin-top: 16px; max-width: 280px; }
+.footer-social { display: flex; gap: 12px; margin-top: 24px; }
+.footer-social a {
+  width: 38px; height: 38px; border-radius: 10px; background: rgba(255,255,255,0.07);
+  display: flex; align-items: center; justify-content: center;
+  color: rgba(255,255,255,0.55); font-size: 16px; text-decoration: none;
+  transition: background var(--transition), color var(--transition);
+}
+.footer-social a:hover { background: rgba(255,255,255,0.15); color: #fff; }
+.footer-col-title {
+  font-family: var(--font-display); font-weight: 700; font-size: 12px;
+  letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 20px;
+}
+.footer-links { list-style: none; }
+.footer-links li { margin-bottom: 10px; }
+.footer-links a { font-size: 14px; color: rgba(255,255,255,0.55); text-decoration: none; transition: color var(--transition); }
+.footer-links a:hover { color: #fff; }
+.footer-sep { height: 1px; background: rgba(255,255,255,0.08); }
+.footer-bottom { padding: 24px 0; }
+.footer-bottom-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+.footer-copy { font-size: 13px; color: rgba(255,255,255,0.35); }
+
+@media (max-width: 900px) {
+  .container, .legal-wrap { padding: 0 24px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+}
+@media (max-width: 600px) {
+  .page-hero { padding: 140px 0 60px; }
+  .legal-main { padding: 60px 0 80px; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .info-row { flex-direction: column; gap: 4px; }
+  .info-key { flex: none; }
+  .data-table td, .data-table th { padding: 10px 12px; font-size: 13px; }
+}
+</style>
+</head>
+<body>
+
+<div id="cookie-banner">
+  <p class="cookie-text">
+    We use cookies to enhance your experience. Essential cookies ensure core functionality; analytics and preference cookies help us improve our service.
+    <a href="cookies.html">Cookie Policy</a> · <a href="privacy.html">Privacy Policy</a>
+  </p>
+  <div class="cookie-actions">
+    <button class="cookie-btn cookie-btn-accept" onclick="setCookieChoice('all')">Accept All</button>
+    <button class="cookie-btn cookie-btn-manage" onclick="setCookieChoice('manage')">Manage Preferences</button>
+    <button class="cookie-btn cookie-btn-decline" onclick="setCookieChoice('decline')">Decline</button>
+  </div>
+</div>
+
+<div class="sidebar-overlay" id="sidebarOverlay" onclick="closeSidebar()"></div>
+
+<div class="sidebar" id="sidebar">
+  <button class="sidebar-close" id="sidebarClose" onclick="closeSidebar()" aria-label="Close menu">
+    <i class="ti ti-x"></i>
+  </button>
+  <div class="sidebar-logo">
+    <a href="index.html" class="header-logo">
+      <img
+        class="header-logo-img"
+        src="/img/logo.png"
+        alt="Chalor Capital"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+      >
+      
+    </a>
+  </div>
+  <nav class="sidebar-nav" aria-label="Main navigation">
+    <a href="#about" onclick="closeSidebar()">About</a>
+    <a href="#services" onclick="closeSidebar()">Services</a>
+    <a href="#how-it-works" onclick="closeSidebar()">Our Method</a>
+    <a href="#markets" onclick="closeSidebar()">Markets</a>
+    <a href="#for-whom" onclick="closeSidebar()">For Whom</a>
+    <a href="philosophy.html">Philosophy</a>
+    <a href="#contact" onclick="closeSidebar()">Contact</a>
+  </nav>
+  <a href="#contact" class="sidebar-cta" onclick="closeSidebar()">Get in Touch</a>
+  <div class="sidebar-social">
+    <a href="#" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+    <a href="#" aria-label="X / Twitter"><i class="ti ti-brand-x"></i></a>
+    <a href="#" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+  </div>
+</div>
+
+<header id="site-header">
+  <div class="header-island">
+    <a href="index.html" class="header-logo" aria-label="Chalor Group — Home">
+      <img
+        class="header-logo-img"
+        src="/img/logo.png"
+        alt="Chalor Capital"
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+      >
+    
+    </a>
+    <button class="burger-btn" id="burgerBtn" onclick="toggleSidebar()" aria-label="Open menu" aria-expanded="false">
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+      <span class="burger-line"></span>
+    </button>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="breadcrumb">
+      <a href="index.html">Home</a><span>/</span>
+      <span style="color:rgba(255,255,255,0.65);">Terms of Service</span>
+    </div>
+    <div class="page-hero-label">Legal Agreement</div>
+    <h1>Terms of Service</h1>
+    <p class="page-hero-sub">These Terms of Service constitute the entire legal framework governing access to our website and the provision of private advisory services by Chalor Capital Allocation &amp; Institutional Group. Please read them carefully and in full before engaging with the Company.</p>
+  </div>
+</section>
+
+<main class="legal-main">
+  <div class="legal-wrap">
+
+    <div class="meta-bar">
+      <i class="ti ti-calendar"></i> Effective date: <strong>5 June 2026</strong>
+      &nbsp;&middot;&nbsp;
+      <i class="ti ti-world"></i> Applicable to: <strong>chalorgroup.com</strong>
+      &nbsp;&middot;&nbsp;
+      <i class="ti ti-mail"></i> <strong>chalorgroup@outlook.fr</strong>
+    </div>
+
+    <div class="warning-box">
+      <strong>Please read these Terms of Service carefully before using this website or engaging with Chalor Capital Allocation &amp; Institutional Group.</strong> By accessing this website or entering into any service engagement with the Company, you confirm that you have read, understood, and agree to be legally bound by these Terms in their entirety. If you do not agree with any part of these Terms, you must not use this website or engage the Company's services.
+    </div>
+
+    <!-- SECTION 1 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">01 — Parties &amp; Definitions</p>
+      <h2>Parties, Definitions, and Interpretation</h2>
+
+      <h3>The Parties</h3>
+      <p>These Terms of Service (hereinafter "Terms") govern the legal relationship between <strong>Chalor Capital Allocation &amp; Institutional Group</strong> (hereinafter "Chalor", "the Company", "we", "us", or "our"), operator of the website at chalorgroup.com, and any individual or legal entity (hereinafter "Client", "User", "you", or "your") who accesses this website or enters into any service engagement with the Company, whether formally documented or otherwise.</p>
+
+      <h3>Key Definitions</h3>
+      <p>For the purposes of these Terms, the following definitions apply throughout:</p>
+      <ul>
+        <li><strong>"Website"</strong> means the website operated by the Company at chalorgroup.com, including all pages, subdomains, and digital assets associated therewith.</li>
+        <li><strong>"Services"</strong> means all advisory, capital allocation, treasury optimisation, corporate identity, institutional mandate, and related services offered by the Company on a private and individually negotiated basis.</li>
+        <li><strong>"Engagement"</strong> means any formal or informal arrangement pursuant to which the Company provides Services to a Client, whether or not memorialised in a written mandate agreement.</li>
+        <li><strong>"Mandate Agreement"</strong> means a separate written agreement between the Company and a Client governing the specific terms of a particular service engagement, which shall take precedence over these Terms in the event of any conflict.</li>
+        <li><strong>"Commission"</strong> means any fee, success fee, advisory fee, retainer, percentage-based remuneration, or other monetary consideration payable to the Company in connection with the provision of Services, as set out in the applicable Mandate Agreement or agreed in writing between the parties.</li>
+        <li><strong>"Financial Instruments"</strong> means shares, equities, bonds, funds, derivatives, structured products, private equity interests, and any other instruments of a financial nature discussed, analysed, or referenced in the context of the Company's Services.</li>
+        <li><strong>"Confidential Information"</strong> means all non-public information disclosed by either party to the other in connection with an Engagement, including but not limited to financial data, business strategies, client lists, pricing structures, and proprietary methodologies.</li>
+        <li><strong>"Force Majeure Event"</strong> means any event beyond a party's reasonable control, including acts of God, natural disasters, wars, pandemics, governmental actions, market suspensions, or systemic infrastructure failures.</li>
+        <li><strong>"Intellectual Property"</strong> means all patents, trademarks, trade names, service marks, copyrights, design rights, trade secrets, know-how, methodologies, and all other proprietary rights of any kind, whether registered or unregistered.</li>
+      </ul>
+
+      <h3>Interpretation</h3>
+      <p>In these Terms, references to the singular include the plural and vice versa; references to one gender include all genders; references to any statute or statutory provision include all amendments and re-enactments thereof; and headings are for convenience only and do not affect interpretation. The word "including" shall be construed as "including without limitation".</p>
+    </div>
+
+    <!-- SECTION 2 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">02 — Acceptance &amp; Eligibility</p>
+      <h2>Acceptance of Terms and Eligibility</h2>
+
+      <h3>Acceptance by Use</h3>
+      <p>By accessing or using this Website, by submitting an enquiry through our contact form, by engaging in email correspondence with the Company for the purpose of exploring or obtaining Services, or by entering into any Engagement with the Company, you unconditionally accept and agree to be bound by these Terms in full, including any additional terms, policies, and guidelines incorporated herein by reference.</p>
+      <p>If you are acting on behalf of a legal entity — such as a company, partnership, trust, or family office — you represent and warrant that you have full authority to bind that entity to these Terms, and that your acceptance on its behalf constitutes a valid and enforceable commitment of that entity.</p>
+
+      <h3>Eligibility Requirements</h3>
+      <p>Access to this Website and engagement of the Company's Services is subject to the following eligibility requirements, which you confirm you satisfy by accessing this Website or engaging the Company:</p>
+      <ul>
+        <li>You are at least eighteen (18) years of age and have full legal capacity to enter into binding contractual obligations under the laws of your jurisdiction;</li>
+        <li>You are accessing this Website and/or engaging Services in a capacity that does not constitute a regulated consumer relationship under applicable consumer protection legislation — i.e. as a professional, institutional, or sophisticated party;</li>
+        <li>Your access to and use of this Website and the Company's Services does not violate any applicable law, regulation, or court order in your jurisdiction of residence or domicile;</li>
+        <li>You are not located in, incorporated in, or a national or resident of any jurisdiction in which the receipt of the Company's advisory or financial services would be prohibited or would require the Company to obtain any licence or registration it does not currently hold.</li>
+      </ul>
+      <p>The Company reserves the right to refuse access to this Website or to decline to enter into any Engagement with any person or entity at its sole and absolute discretion and without obligation to provide reasons.</p>
+
+      <h3>Amendments to These Terms</h3>
+      <p>The Company reserves the right to amend, update, or replace these Terms at any time. The revised Terms will be published on this page with an updated effective date. Continued access to the Website or continued engagement of Services following such publication constitutes your acceptance of the revised Terms. It is your responsibility to review these Terms periodically. No amendment to these Terms shall affect the validity or enforceability of any Mandate Agreement separately executed between the parties, unless expressly agreed in writing.</p>
+    </div>
+
+    <!-- SECTION 3 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">03 — Nature of Services</p>
+      <h2>Nature, Scope, and Limitations of Services</h2>
+
+      <h3>Private Advisory Services Only</h3>
+      <p>Chalor Capital Allocation &amp; Institutional Group provides exclusively private, individually negotiated advisory and capital allocation services. All Services are offered on a strictly non-public basis to pre-qualified clients. The Company does not provide services to the general public, does not manage publicly offered funds, and does not hold itself out as a regulated financial institution, licensed investment adviser, or authorised asset manager subject to financial supervisory oversight.</p>
+
+      <h3>No Regulated Investment Advice</h3>
+      <p>Nothing communicated by the Company — whether through this Website, by email, in meetings, in reports, in presentations, or in any other format — constitutes regulated investment advice, a personal recommendation, a solicitation to buy or sell any financial instrument, or investment management within the meaning of any applicable financial services directive, regulation, or national implementing legislation. All analysis, commentary, and strategic guidance provided by the Company is of a general, informational, and advisory nature only, and is provided strictly as a private service to clients who engage the Company with full understanding of this limitation.</p>
+
+      <h3>Scope of Individual Engagements</h3>
+      <p>The precise scope, deliverables, timelines, and terms of each Engagement are defined in the applicable Mandate Agreement. In the absence of a written Mandate Agreement, any Engagement shall be governed by the terms most recently communicated in writing by the Company to the Client, supplemented by these Terms. The Company's obligations in any Engagement are limited to those expressly agreed in writing. No representation made verbally or informally shall give rise to any obligation on the part of the Company unless confirmed in writing.</p>
+
+      <h3>No Guarantee of Outcomes</h3>
+      <p>The Company makes no representation, warranty, or guarantee — express or implied — that any Engagement will produce a particular outcome, achieve a particular return, or meet any specific objective. The provision of advisory Services does not constitute a promise or prediction of financial results. Any projections, forecasts, or illustrative scenarios provided by the Company in the course of an Engagement are based on assumptions and market conditions prevailing at the time of their preparation and are subject to change without notice. Past results discussed in any context are not indicative of future outcomes.</p>
+    </div>
+
+    <!-- SECTION 4 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">04 — Fees, Commission &amp; Payment</p>
+      <h2>Fees, Commission Structure, and Payment Terms</h2>
+
+      <h3>Fee Entitlement</h3>
+      <p>The Company is entitled to remuneration for all Services rendered, whether in the form of a fixed advisory fee, a time-based retainer, a success-based commission, a performance-linked fee, or any combination thereof, as agreed in writing in the applicable Mandate Agreement or as otherwise confirmed in writing between the parties. No Service is provided free of charge unless explicitly stated in writing by an authorised representative of the Company.</p>
+
+      <h3>Commission on Transactions and Capital Events</h3>
+      <p>Where the Company's advisory Services result in, contribute to, or facilitate a capital transaction, asset acquisition or disposal, structured finance arrangement, strategic partnership, mandate origination, or other value-creating event, the Company shall be entitled to a commission calculated in accordance with the terms set out in the applicable Mandate Agreement. Unless otherwise agreed in writing, the following principles govern the Company's commission entitlement:</p>
+      <ul>
+        <li><strong>Origination commission:</strong> Where the Company introduces a Client to a transaction, counterparty, or investment opportunity — whether or not the Client ultimately proceeds — the Company's entitlement to a commission or fee for the introduction is preserved to the extent agreed in the Mandate Agreement. Withdrawal from a transaction after introduction does not automatically extinguish the Company's fee entitlement;</li>
+        <li><strong>Success fee:</strong> A success fee becomes due and payable upon the occurrence of the event defined as a "trigger event" in the Mandate Agreement (e.g. closing of a transaction, signing of a term sheet, first drawdown of capital). The fee is earned at the moment the trigger event occurs and is not conditional upon subsequent performance of the underlying transaction;</li>
+        <li><strong>Retainer fees:</strong> Fixed retainer fees are due and payable in advance on the dates specified in the Mandate Agreement and are non-refundable once paid, unless the Company is in material breach of its obligations. Retainer fees are not set off against success fees unless expressly agreed;</li>
+        <li><strong>Advisory fees:</strong> Time-based or project-based advisory fees are invoiced in accordance with the Mandate Agreement and are payable within the timeframe specified in the invoice. All fees are exclusive of applicable taxes unless otherwise stated.</li>
+      </ul>
+
+      <h3>Tail Period — Post-Termination Commission Rights</h3>
+      <p>The Company's right to commission is not extinguished upon the termination or expiry of a Mandate Agreement where the Client completes, or causes to be completed, a transaction that was introduced, originated, or materially progressed by the Company during the term of the Engagement. Unless otherwise expressly agreed in writing, the Company shall retain its full commission entitlement in respect of any such transaction completed within <strong>twenty-four (24) months</strong> following the termination or expiry of the relevant Mandate Agreement (the "Tail Period"). The Client shall promptly notify the Company of any such transaction and shall not seek to structure or time any transaction so as to circumvent this entitlement.</p>
+
+      <h3>Late Payment</h3>
+      <p>All amounts due to the Company that are not paid by the applicable due date shall accrue interest at a rate of <strong>eight percent (8%) per annum above the applicable base rate</strong> (or such rate as may be prescribed by applicable late payment legislation), calculated on a daily basis from the due date until the date of actual payment in full, without prejudice to any other remedy available to the Company. The Company reserves the right to suspend the provision of further Services pending payment of all outstanding amounts.</p>
+
+      <h3>Expenses</h3>
+      <p>Unless otherwise agreed, the Client shall reimburse the Company for all reasonable, documented out-of-pocket expenses incurred in connection with the provision of Services, including travel, accommodation, third-party due diligence costs, legal counsel fees where specifically approved by the Client, and any other costs directly attributable to the Engagement. Expenses shall be invoiced separately and are payable within the timeframe stated on the invoice.</p>
+
+      <h3>Currency and Taxes</h3>
+      <p>All fees and commissions are expressed in the currency specified in the applicable Mandate Agreement. The Client is solely responsible for determining and satisfying any tax obligations arising from the receipt of the Company's Services in its jurisdiction of residence or incorporation. The Company shall not be liable for any tax imposed on the Client by any governmental authority in connection with any Engagement or transaction.</p>
+
+      <h3>Disputed Invoices</h3>
+      <p>If the Client disputes an invoice in good faith, it must notify the Company in writing within <strong>ten (10) business days</strong> of receipt of the invoice, specifying the grounds of dispute in reasonable detail. Undisputed portions of any invoice remain due and payable by the original due date. Failure to raise a dispute within the specified period shall constitute acceptance of the invoice in full.</p>
+    </div>
+
+    <!-- SECTION 5 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">05 — Investment Risk Disclaimer</p>
+      <h2>Investment Risk, Market Losses, and Absence of Guarantees</h2>
+
+      <h3>Acknowledgement of Investment Risk</h3>
+      <p>By engaging the Company's Services, the Client acknowledges and accepts, without reservation, that all investment and capital allocation activities involve significant financial risk, including the risk of partial or total loss of invested capital. The Client confirms that it understands the following risks, among others, which may affect the value and performance of any Financial Instruments discussed, analysed, or referenced in the context of an Engagement:</p>
+      <ul>
+        <li><strong>Market risk:</strong> The value of equities, bonds, funds, and other Financial Instruments may rise or fall due to changes in general market conditions, economic cycles, interest rates, inflation, geopolitical events, or investor sentiment, none of which the Company can control or predict with certainty;</li>
+        <li><strong>Equity and share price risk:</strong> The price of individual shares and equity instruments is subject to significant volatility. Shares may decline in value substantially, including to zero, as a result of company-specific developments, sector downturns, regulatory changes, management failures, or broader market dislocations;</li>
+        <li><strong>Liquidity risk:</strong> Certain Financial Instruments may be difficult or impossible to sell at a desired time or price, particularly in illiquid or private markets, resulting in the Client being unable to realise the value of an investment when required;</li>
+        <li><strong>Credit and counterparty risk:</strong> The failure or default of a counterparty, issuer, or financial institution involved in a transaction may result in partial or total loss of the Client's investment;</li>
+        <li><strong>Currency risk:</strong> Where investments are denominated in a currency other than the Client's base currency, fluctuations in exchange rates may erode returns or amplify losses;</li>
+        <li><strong>Concentration risk:</strong> A portfolio concentrated in a small number of positions, sectors, or geographies is more exposed to the underperformance of those positions than a broadly diversified portfolio;</li>
+        <li><strong>Leverage risk:</strong> Where leverage or borrowed capital is used in connection with any investment, losses may exceed the amount of the original investment;</li>
+        <li><strong>Private market and illiquidity risk:</strong> Investments in private equity, unlisted securities, or other non-public instruments carry additional risks, including the absence of a secondary market, prolonged capital lock-up, and difficulty in obtaining reliable valuations;</li>
+        <li><strong>Regulatory and tax risk:</strong> Changes in applicable law, regulation, or tax treatment may adversely affect the value, profitability, or legality of any investment;</li>
+        <li><strong>Operational risk:</strong> Errors, systems failures, process breakdowns, or other operational events may negatively affect investment outcomes.</li>
+      </ul>
+
+      <h3>No Guarantee of Returns or Capital Preservation</h3>
+      <p>The Company provides no guarantee, warranty, or assurance of any kind regarding the return on, or preservation of, any capital deployed in connection with its advisory Services. Any illustrative returns, projections, or scenario analyses presented by the Company are hypothetical in nature, based on assumptions as of the date of preparation, and are subject to material change. They do not constitute a promise, prediction, or guarantee of any particular level of performance.</p>
+      <p>The Client accepts that it may lose some or all of the capital it deploys in any investment or transaction in connection with which it has received advisory Services from the Company. Such losses do not give rise to any claim against the Company, except in cases of proven gross negligence or wilful misconduct on the part of the Company, and subject always to the limitations on liability set out in Section 9 of these Terms.</p>
+
+      <h3>Past Performance</h3>
+      <p>Any reference to the Company's past advisory work, prior transactions, historical results, or illustrative case studies is provided for informational context only. Past performance — whether of the Company's advisory activities or of any Financial Instrument — is not a reliable indicator of future results and should not be relied upon as such. Market conditions change, and strategies that performed well historically may underperform or produce losses in different market environments.</p>
+
+      <h3>Client's Own Responsibility</h3>
+      <p>The Client retains full and sole responsibility for all decisions it makes in relation to its own financial affairs, investments, and capital deployments. The Company's advisory input does not substitute for the Client's own independent judgement, due diligence, and, where appropriate, the advice of separately retained legal, tax, accounting, or financial professionals. The Client should not make any investment decision solely on the basis of information or analysis provided by the Company without conducting its own independent assessment of the risks involved.</p>
+
+      <div class="warning-box">
+        <strong>Capital at risk.</strong> All investments discussed in the context of advisory Services carry the risk of loss. The value of Financial Instruments can fall as well as rise. You may receive back less than you invest, and in certain circumstances you may lose the entirety of your invested capital. The Company does not guarantee any level of return and is not liable for investment losses sustained by the Client.
+      </div>
+    </div>
+
+    <!-- SECTION 6 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">06 — Client Obligations</p>
+      <h2>Client Obligations, Representations, and Warranties</h2>
+
+      <h3>Accuracy of Information</h3>
+      <p>The Client represents and warrants that all information provided to the Company — whether in connection with an enquiry, the onboarding process, an ongoing Engagement, or otherwise — is accurate, complete, and not misleading in any material respect. The Client undertakes to notify the Company promptly of any change in circumstances that may affect the accuracy of previously provided information. The Company is entitled to rely on information provided by the Client without independent verification, and shall bear no liability for consequences arising from the Client's provision of inaccurate or incomplete information.</p>
+
+      <h3>Cooperation</h3>
+      <p>The Client undertakes to cooperate fully and promptly with the Company in all matters necessary for the effective provision of Services, including providing access to relevant information, documents, and key personnel; responding to the Company's requests in a timely manner; and making all decisions within the Client's authority on a timely basis so as not to delay or frustrate the Company's ability to perform its obligations. Where the Client's failure to cooperate causes delay or additional cost to the Company, the Company reserves the right to charge reasonable additional fees for work required as a result.</p>
+
+      <h3>Compliance with Law</h3>
+      <p>The Client represents and warrants that: (i) its engagement of the Company's Services does not violate any applicable law, regulation, or court order; (ii) it has all necessary authority, capacity, and approvals to enter into the Engagement; (iii) the source of any funds provided to the Company or deployed in connection with an Engagement is lawful and does not contravene any applicable anti-money laundering, sanctions, or financial crime legislation; and (iv) it will comply with all applicable laws in connection with the receipt and use of the Company's Services and any transactions entered into pursuant thereto.</p>
+
+      <h3>Anti-Money Laundering and Due Diligence</h3>
+      <p>The Client acknowledges and accepts that the Company is required to conduct client due diligence as part of its standard onboarding procedure. The Client agrees to provide, promptly and without objection, all information and documentation reasonably requested by the Company for the purposes of identity verification, source of funds verification, and any other due diligence checks the Company deems necessary. The Company reserves the right to decline to enter into, or to terminate, any Engagement if the Client fails to provide satisfactory due diligence materials or if the Company has concerns about the Client's compliance with applicable law.</p>
+
+      <h3>Prohibition on Circumvention</h3>
+      <p>The Client undertakes not to circumvent the Company in relation to any transaction, counterparty, opportunity, or relationship introduced, facilitated, or originated by the Company in the context of an Engagement. Any attempt by the Client to bypass the Company and deal directly with a counterparty or opportunity introduced by the Company — whether during the term of an Engagement or within the Tail Period following termination — shall entitle the Company to its full commission as if the transaction had been completed through the Company, in addition to any other remedies available at law or in equity.</p>
+
+      <h3>Authorised Representatives</h3>
+      <p>The Client shall designate, and maintain the designation of, one or more authorised representatives with authority to give instructions and make decisions on the Client's behalf in connection with any Engagement. The Company is entitled to act on instructions from any person it reasonably believes to be an authorised representative of the Client, and shall bear no liability for acting in accordance with such instructions unless it has been previously notified in writing of a change in authorisation.</p>
+    </div>
+
+    <!-- SECTION 7 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">07 — Confidentiality</p>
+      <h2>Confidentiality and Non-Disclosure</h2>
+
+      <h3>Mutual Confidentiality Obligation</h3>
+      <p>Each party agrees to hold in strict confidence all Confidential Information received from the other party in connection with any Engagement, and not to disclose such information to any third party without the prior written consent of the disclosing party. Each party shall use Confidential Information received from the other party solely for the purposes of the Engagement and shall restrict access to it to those of its personnel, agents, and professional advisors who have a genuine need to know and who are themselves bound by equivalent confidentiality obligations.</p>
+
+      <h3>Company's Right to Discuss Engagements</h3>
+      <p>Notwithstanding the foregoing, the Company reserves the right to disclose, in general and anonymised terms, the fact of its engagement by a Client and the general nature of the Services provided, for the purpose of demonstrating the Company's track record and capabilities to prospective clients, subject always to the obligation not to disclose any information that could identify the Client without the Client's prior written consent.</p>
+
+      <h3>Exceptions</h3>
+      <p>The confidentiality obligation shall not apply to information that: (i) is or becomes publicly available through no fault of the receiving party; (ii) was already known to the receiving party prior to disclosure; (iii) is independently developed by the receiving party without use of the disclosing party's Confidential Information; or (iv) is required to be disclosed by applicable law, regulation, or court order, provided that the receiving party gives the disclosing party as much prior written notice as is reasonably practicable and cooperates with the disclosing party's efforts to obtain confidential treatment of the information.</p>
+
+      <h3>Survival</h3>
+      <p>The confidentiality obligations set out in this Section shall survive the termination or expiry of any Engagement or Mandate Agreement for a period of <strong>five (5) years</strong>, or indefinitely in respect of trade secrets and proprietary methodologies.</p>
+    </div>
+
+    <!-- SECTION 8 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">08 — Intellectual Property</p>
+      <h2>Intellectual Property Rights</h2>
+
+      <h3>Company's Intellectual Property</h3>
+      <p>All Intellectual Property developed, created, or used by the Company in the course of providing Services — including but not limited to methodologies, analytical frameworks, research, models, templates, software tools, databases, reports, presentations, and written materials — remains the exclusive property of the Company. Nothing in these Terms or in any Mandate Agreement shall be construed as a transfer or assignment of any Intellectual Property right to the Client unless such transfer is expressly stated in a written Mandate Agreement executed by both parties.</p>
+
+      <h3>Licence to Use Deliverables</h3>
+      <p>Subject to the full payment of all fees and commissions due, the Company grants the Client a non-exclusive, non-transferable, non-sublicensable licence to use any reports, analyses, or written materials delivered by the Company as part of an Engagement solely for the Client's own internal purposes. The Client may not reproduce, distribute, publish, or make available to any third party any materials provided by the Company without prior written consent. Where such consent is granted, the Client shall attribute the materials appropriately to the Company.</p>
+
+      <h3>Client's Background Intellectual Property</h3>
+      <p>Any Intellectual Property owned by the Client prior to the commencement of an Engagement, or developed independently of the Engagement, remains the property of the Client. The Client grants the Company a limited, revocable licence to use such Client Intellectual Property solely to the extent necessary to perform the Services during the term of the Engagement.</p>
+
+      <h3>Website Content</h3>
+      <p>All content published on this Website — including text, graphics, logos, design elements, and code — is the exclusive property of Chalor Capital Allocation &amp; Institutional Group and is protected by applicable copyright and trademark law. No content from this Website may be reproduced, adapted, distributed, or used for any commercial purpose without the Company's prior written authorisation.</p>
+    </div>
+
+    <!-- SECTION 9 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">09 — Liability</p>
+      <h2>Limitation of Liability and Exclusions</h2>
+
+      <h3>General Limitation of Liability</h3>
+      <p>To the fullest extent permitted by applicable law, the Company's total aggregate liability to the Client — whether in contract, tort (including negligence), breach of statutory duty, or otherwise — arising out of or in connection with any single Engagement shall not exceed the total amount of fees and commissions actually paid by the Client to the Company under that Engagement during the twelve (12) month period immediately preceding the event giving rise to the claim. Where no fees have been paid, the Company's total liability shall not exceed one thousand euros (€1,000).</p>
+
+      <h3>Exclusion of Consequential and Indirect Losses</h3>
+      <p>In no circumstances shall the Company be liable to the Client or any third party for any of the following categories of loss, regardless of whether such loss was foreseeable, whether the Company was advised of the possibility of such loss, and regardless of the legal theory on which any claim is based:</p>
+      <ul>
+        <li>Loss of profits, loss of revenue, or loss of anticipated savings;</li>
+        <li>Investment losses, capital losses, or losses arising from the depreciation in value of any Financial Instrument, portfolio, or asset class;</li>
+        <li>Loss arising from market movements, macroeconomic events, or conditions beyond the Company's control;</li>
+        <li>Loss of business, loss of contracts, or loss of commercial opportunity;</li>
+        <li>Loss of goodwill or reputational damage;</li>
+        <li>Loss of data or information;</li>
+        <li>Any indirect, special, incidental, punitive, or consequential loss of any nature, howsoever arising.</li>
+      </ul>
+
+      <h3>Investment Losses Specifically Excluded</h3>
+      <p>The Company shall bear no liability whatsoever for any decline in the value of, or loss realised on, any investment, financial instrument, asset, or portfolio in connection with which it has provided advisory Services, unless such loss is directly and exclusively attributable to the Company's proven gross negligence or wilful misconduct. For the avoidance of doubt, the provision of an advisory recommendation or analysis that, with hindsight, proves to have been suboptimal or incorrect does not in itself constitute gross negligence or wilful misconduct and does not give rise to any liability on the part of the Company.</p>
+
+      <h3>Third-Party Actions and Market Events</h3>
+      <p>The Company shall bear no liability for losses, delays, failures, or adverse outcomes caused by the actions or omissions of third parties (including exchanges, brokers, counterparties, custodians, regulators, or market infrastructure operators), by market conditions, by systemic events affecting financial markets, or by any Force Majeure Event.</p>
+
+      <h3>Reliance on Client Information</h3>
+      <p>The Company is entitled to rely on all information, data, and representations provided by the Client without independent verification. The Company shall bear no liability for any loss, damage, or adverse outcome arising directly or indirectly from inaccurate, incomplete, or misleading information provided by the Client.</p>
+
+      <h3>Website Limitation</h3>
+      <p>To the fullest extent permitted by law, the Company excludes all liability for any loss or damage arising from: access to or use of this Website; inability to access or use this Website; reliance on any content published on this Website; or any errors, omissions, or inaccuracies in Website content. Use of this Website is entirely at the User's own risk.</p>
+
+      <h3>Savings Clause</h3>
+      <p>Nothing in these Terms shall exclude or limit either party's liability for: (i) death or personal injury caused by that party's negligence; (ii) fraud or fraudulent misrepresentation; or (iii) any other liability that cannot be excluded or limited as a matter of applicable law.</p>
+    </div>
+
+    <!-- SECTION 10 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">10 — Indemnification</p>
+      <h2>Client's Obligation to Indemnify the Company</h2>
+      <p>The Client agrees to defend, indemnify, and hold harmless Chalor Capital Allocation &amp; Institutional Group, its affiliates, officers, employees, agents, and successors from and against any and all claims, actions, proceedings, losses, liabilities, damages, costs, and expenses (including reasonable legal fees) arising out of or in connection with:</p>
+      <ul>
+        <li>The Client's breach of any provision of these Terms or any applicable Mandate Agreement;</li>
+        <li>The Client's breach of any representation or warranty given by it under these Terms or a Mandate Agreement;</li>
+        <li>Any inaccurate, incomplete, or misleading information provided by the Client to the Company;</li>
+        <li>The Client's violation of any applicable law or regulation in connection with any Engagement or transaction;</li>
+        <li>Any claim by a third party arising from the Client's use or misuse of the Company's deliverables, advice, or Services;</li>
+        <li>Any attempt by the Client to circumvent the Company's commission entitlement, including during the Tail Period;</li>
+        <li>The Client's negligence, wilful misconduct, or fraudulent act or omission in connection with any Engagement.</li>
+      </ul>
+      <p>The Company shall notify the Client promptly of any claim in respect of which it seeks indemnification, shall give the Client reasonable opportunity to participate in the defence of such claim, and shall not settle any such claim without the Client's prior written consent (not to be unreasonably withheld or delayed). The Client shall not settle any such claim in a manner that imposes any obligation or restriction on the Company without the Company's prior written consent.</p>
+    </div>
+
+    <!-- SECTION 11 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">11 — Conflicts of Interest</p>
+      <h2>Conflicts of Interest</h2>
+      <p>The Company operates a conflicts of interest policy designed to identify, manage, and — where necessary — disclose actual or potential conflicts of interest that may arise in the course of its advisory activities. The Company may, from time to time, provide services to multiple clients whose interests may overlap or conflict. Where a material conflict of interest arises that may affect the quality or impartiality of Services provided to a particular Client, the Company undertakes to disclose this to the Client as soon as reasonably practicable.</p>
+      <p>The Client acknowledges that the Company may receive commissions, referral fees, or other remuneration from third parties in connection with arrangements it facilitates on the Client's behalf. Where such third-party remuneration arises, the Company will disclose its existence and, where legally required, its amount or methodology of calculation, to the Client. Unless otherwise agreed, such third-party remuneration does not reduce the fees payable by the Client to the Company.</p>
+    </div>
+
+    <!-- SECTION 12 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">12 — Termination</p>
+      <h2>Term, Termination, and Consequences of Termination</h2>
+
+      <h3>Term</h3>
+      <p>These Terms remain in effect for as long as the Client accesses the Website or maintains any Engagement with the Company. Individual Engagements are governed by the term provisions of the applicable Mandate Agreement. In the absence of a specific Mandate Agreement, an Engagement shall continue until terminated by either party upon giving not less than thirty (30) days' written notice to the other party, unless a shorter notice period is agreed in writing or immediate termination is warranted under these Terms.</p>
+
+      <h3>Termination for Cause</h3>
+      <p>Either party may terminate an Engagement with immediate effect by written notice to the other party if: (i) the other party commits a material breach of these Terms or the applicable Mandate Agreement that is not remedied within fifteen (15) business days of receiving written notice specifying the breach; (ii) the other party becomes insolvent, enters administration, receivership, or liquidation, or makes any arrangement with its creditors; or (iii) the other party engages in fraud, wilful misconduct, or conduct that the terminating party reasonably determines is incompatible with the continuation of the Engagement.</p>
+
+      <h3>Consequences of Termination</h3>
+      <p>Upon termination of an Engagement for any reason:</p>
+      <ul>
+        <li>All amounts due and payable to the Company at the date of termination become immediately due and payable, without set-off or deduction;</li>
+        <li>The Company's commission entitlement in respect of any transaction introduced or materially progressed during the term of the Engagement is preserved in full for the duration of the Tail Period, as described in Section 4;</li>
+        <li>Each party shall return or destroy (at the other party's election) any Confidential Information of the other party held in its possession, subject to any legal obligation to retain such information;</li>
+        <li>The Client's licence to use materials delivered by the Company during the Engagement shall continue on the terms stated in Section 8, provided all fees have been paid in full;</li>
+        <li>Termination shall not affect any accrued rights, remedies, or obligations of either party as at the date of termination.</li>
+      </ul>
+
+      <h3>Survival of Provisions</h3>
+      <p>The following provisions of these Terms shall survive termination or expiry of any Engagement indefinitely or for the periods stated: Section 4 (Fees and Commission, including the Tail Period), Section 7 (Confidentiality), Section 8 (Intellectual Property), Section 9 (Limitation of Liability), Section 10 (Indemnification), Section 12 (Termination — consequences and survival), and Section 14 (Governing Law and Dispute Resolution).</p>
+    </div>
+
+    <!-- SECTION 13 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">13 — Force Majeure</p>
+      <h2>Force Majeure</h2>
+      <p>Neither party shall be liable to the other for any failure or delay in performing its obligations under these Terms or any Mandate Agreement to the extent that such failure or delay is caused by a Force Majeure Event, provided that the affected party: (i) notifies the other party in writing as soon as reasonably practicable after the onset of the Force Majeure Event; (ii) takes all reasonable steps to mitigate the effects of the event and to resume full performance of its obligations as soon as possible; and (iii) continues to perform any obligations not affected by the Force Majeure Event.</p>
+      <p>For the avoidance of doubt, a Force Majeure Event shall include, without limitation: adverse market conditions, exchange suspensions, trading halts, systemic market crashes, governmental interventions in financial markets, global pandemics, wars, acts of terrorism, natural disasters, power outages, and major IT or telecommunications failures. A Force Majeure Event shall not excuse the Client's obligation to pay fees and commissions already earned and accrued prior to the onset of the event.</p>
+      <p>If a Force Majeure Event continues for more than ninety (90) consecutive days, either party may terminate the affected Engagement upon giving written notice to the other party, without liability to the other for such termination, save that all amounts accrued and due prior to the onset of the Force Majeure Event remain payable.</p>
+    </div>
+
+    <!-- SECTION 14 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">14 — Governing Law &amp; Disputes</p>
+      <h2>Governing Law, Jurisdiction, and Dispute Resolution</h2>
+
+      <h3>Governing Law</h3>
+      <p>These Terms, and all non-contractual rights and obligations arising out of or in connection with them, shall be governed by and construed in accordance with the laws applicable in the jurisdiction of the Company's registered seat, without prejudice to any mandatory provisions of law applicable in the Client's country of domicile that cannot be contractually excluded.</p>
+
+      <h3>Exclusive Jurisdiction</h3>
+      <p>Each party irrevocably agrees that, subject to the dispute resolution procedure set out below, the courts of competent jurisdiction in the Company's country of registration shall have exclusive jurisdiction to settle any dispute arising out of or in connection with these Terms or any Mandate Agreement (including any dispute concerning their existence, validity, or termination), and each party waives any objection to proceedings in those courts on the grounds of inconvenient forum or otherwise.</p>
+
+      <h3>Escalation and Good Faith Negotiation</h3>
+      <p>In the event of any dispute, controversy, or claim arising out of or relating to these Terms, any Mandate Agreement, or the Services, the parties undertake to first seek to resolve the matter through good-faith senior-level negotiation. Either party may initiate this process by sending written notice to the other specifying the nature of the dispute in reasonable detail. The parties shall engage in negotiations for a period of not less than thirty (30) days from the date of such notice before either party commences formal legal proceedings, unless the matter involves urgent injunctive relief or the protection of confidential or proprietary information.</p>
+
+      <h3>Mediation</h3>
+      <p>If a dispute is not resolved through negotiation within the period specified above, the parties agree, if both consent, to submit the dispute to non-binding mediation before a mutually agreed mediator as a further step prior to litigation. The costs of mediation shall be shared equally unless otherwise agreed.</p>
+
+      <h3>Waiver of Jury Trial</h3>
+      <p>To the fullest extent permitted by applicable law, each party irrevocably waives any right it may have to a trial by jury in any legal proceeding arising from or relating to these Terms or any Mandate Agreement.</p>
+    </div>
+
+    <!-- SECTION 15 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">15 — Miscellaneous</p>
+      <h2>General Provisions</h2>
+
+      <h3>Entire Agreement</h3>
+      <p>These Terms, together with any applicable Mandate Agreement and the Company's <a href="privacy.html">Privacy Policy</a> and <a href="imprint.html">Imprint</a>, constitute the entire agreement between the parties with respect to the subject matter hereof, and supersede all prior discussions, representations, agreements, and understandings, whether oral or written, relating to that subject matter. No representation, warranty, or undertaking not expressly set out in these Terms or a Mandate Agreement shall be binding on either party.</p>
+
+      <h3>No Waiver</h3>
+      <p>A failure or delay by the Company to exercise or enforce any right or remedy provided under these Terms or by law shall not constitute a waiver of that right or remedy, nor shall it prevent or restrict any further exercise or enforcement of that right or remedy. No single or partial exercise of any right or remedy shall prevent or restrict the further exercise of that or any other right or remedy.</p>
+
+      <h3>Severability</h3>
+      <p>If any provision of these Terms is found by a court or arbitrator of competent jurisdiction to be invalid, unlawful, or unenforceable, that provision shall be deemed severed from the remainder of the Terms, which shall continue in full force and effect. The parties agree to replace any severed provision with a valid and enforceable provision that most closely approximates the intent and economic effect of the severed provision.</p>
+
+      <h3>No Partnership or Agency</h3>
+      <p>Nothing in these Terms or in any Mandate Agreement shall create or be deemed to create a partnership, joint venture, agency, employment relationship, or fiduciary relationship between the parties. Neither party shall have authority to bind the other contractually or otherwise.</p>
+
+      <h3>Notices</h3>
+      <p>All formal notices required or permitted under these Terms shall be made in writing and delivered by email with delivery confirmation or by registered post to the addresses specified in the applicable Mandate Agreement or, in the absence of a Mandate Agreement, to the addresses most recently communicated by the relevant party. Notices sent by email shall be deemed received on the next business day following confirmed delivery, provided no automated delivery failure notification is received.</p>
+
+      <div class="info-card">
+        <p class="info-card-title">Company Contact for Legal Notices</p>
+        <div class="info-row"><span class="info-key">Organisation</span><span class="info-val">Chalor Capital Allocation &amp; Institutional Group</span></div>
+        <div class="info-row"><span class="info-key">Email</span><span class="info-val"><a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a></span></div>
+        <div class="info-row"><span class="info-key">Website</span><span class="info-val"><a href="https://chalorgroup.com">chalorgroup.com</a></span></div>
+        <div class="info-row"><span class="info-key">Postal address</span><span class="info-val">Berlin, Germany</span></div>
+      </div>
+
+      <h3>Assignment</h3>
+      <p>The Client may not assign, transfer, novate, charge, or sub-contract any of its rights or obligations under these Terms or any Mandate Agreement without the prior written consent of the Company. The Company may assign or transfer its rights and obligations under these Terms to any affiliate or successor entity, provided that such assignment does not materially prejudice the Client's position, and provided that the Company gives the Client reasonable prior written notice.</p>
+
+      <h3>Third-Party Rights</h3>
+      <p>These Terms do not create any rights enforceable by any third party. No third party shall be entitled to enforce any provision of these Terms under any applicable third-party rights legislation.</p>
+
+      <h3>Language</h3>
+      <p>These Terms are published in the English language, which shall be the controlling language for all purposes. In the event of any inconsistency between this English version and any translation, the English version shall prevail.</p>
+
+      <div class="notice-box">
+        <strong>These Terms were last reviewed and updated on 5 June 2026.</strong> If you have any questions about these Terms, or if you require clarification regarding any provision, please contact us at <a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a> before engaging our Services. We will respond promptly to any such enquiry.
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer>
+  <div class="footer-main">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="header-logo" style="margin-bottom: 16px; display: inline-flex;" aria-label="Chalor Capital — Home">
+      
+            <img
+              class="footer-logo-img"
+              src="/img/logo-inverted.png"
+              alt="Chalor Capital"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+            >
+          </a>
+          <p class="footer-brand-tagline">Institutional capital allocation and corporate advisory across Continental Europe and North America.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="LinkedIn"><i class="ti ti-brand-linkedin" aria-hidden="true"></i></a>
+            <a href="#" aria-label="X / Twitter"><i class="ti ti-brand-x" aria-hidden="true"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ti ti-brand-instagram" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div>
+          <p class="footer-col-title">Services</p>
+          <ul class="footer-links">
+            <li><a href="#services">Capital Allocation</a></li>
+            <li><a href="#services">Treasury Optimisation</a></li>
+            <li><a href="#services">Corporate Identity</a></li>
+            <li><a href="#for-whom">Portfolio Advisory</a></li>
+            <li><a href="#for-whom">Institutional Mandates</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Company</p>
+          <ul class="footer-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="philosophy.html">Investment Philosophy</a></li>
+            <li><a href="#how-it-works">Our Approach</a></li>
+            <li><a href="#markets">Markets</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-col-title">Legal &amp; Compliance</p>
+          <ul class="footer-links">
+            <li><a href="imprint.html">Imprint</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+            <li><a href="terms.html">Terms &amp; Conditions</a></li>
+            <li><a href="regulatory.html">Regulatory Disclosures</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-sep"></div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="footer-bottom-inner">
+        <p class="footer-copy">&copy; 2026 Chalor Capital Allocation &amp; Institutional Group. All rights reserved.</p>
+        
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="/main.js"></script>
+
+<script>
+let lastScroll = 0;
+const header = document.getElementById('site-header');
+window.addEventListener('scroll', () => {
+  const c = window.scrollY;
+  header.classList.toggle('hide', c > lastScroll && c > 80);
+  lastScroll = c <= 0 ? 0 : c;
+}, { passive: true });
+</script>
+</body>
+</html>
+

@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Privacy Policy — Chalor Capital Allocation & Institutional Group</title>
-<meta name="description" content="Privacy Policy of Chalor Capital Allocation & Institutional Group. How we collect, use and protect your personal data in compliance with GDPR.">
+<meta name="description" content="Privacy Policy of Chalor Capital Allocation & Institutional Group — how we collect, use, store and protect your personal data, including email correspondence.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
@@ -16,6 +16,7 @@
 <meta name="theme-color" content="#072958">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4V61PC4QD"></script>
+<link rel="stylesheet" href="main.css">
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -23,497 +24,213 @@
 
   gtag('config', 'G-G4V61PC4QD');
 </script>
-<link rel="stylesheet" href="main.css">
-
 <style>
 :root {
   --navy: #072958;
   --navy-deep: #051e42;
   --navy-mid: #0e3d7a;
   --slate: #a4acb8;
-  --slate-light: #c8cdd6;
   --bg-white: #ffffff;
   --bg-near: #f8f9fb;
-  --bg-light: #f0f3f8;
   --text-dark: #0d1b2a;
   --text-body: #3a4557;
   --text-muted: #6b7a92;
   --border-light: #e4e8ef;
-  --shadow-sm: 0 2px 12px rgba(7,41,88,0.08);
-  --shadow-md: 0 8px 32px rgba(7,41,88,0.12);
   --radius-sm: 8px;
   --radius-md: 16px;
-  --radius-lg: 24px;
   --transition: 0.25s ease;
   --font-display: 'Manrope', sans-serif;
   --font-body: 'DM Sans', sans-serif;
-  --max-width: 1240px;
+  --max-width: 900px;
 }
-
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: var(--font-body);
-  color: var(--text-body);
-  background: var(--bg-white);
-  overflow-x: hidden;
-  font-size: 16px;
-  line-height: 1.75;
-  -webkit-font-smoothing: antialiased;
+  font-family: var(--font-body); color: var(--text-body);
+  background: var(--bg-white); overflow-x: hidden;
+  font-size: 16px; line-height: 1.8; -webkit-font-smoothing: antialiased;
 }
-
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg-near); }
 ::-webkit-scrollbar-thumb { background: var(--slate); border-radius: 3px; }
 
-/* ── HEADER ── */
+/* HEADER */
 #site-header {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 1000;
-  padding: 16px 24px;
-  pointer-events: none;
-  transition: transform 0.35s ease;
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 1000; padding: 16px 24px;
+  pointer-events: none; transition: transform 0.35s ease;
 }
 #site-header.hide { transform: translateY(-120%); }
 .header-island {
-  max-width: 1100px;
-  margin: 0 auto;
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  max-width: 1100px; margin: 0 auto;
+  background: rgba(255,255,255,0.93);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(7,41,88,0.10), 0 1px 4px rgba(7,41,88,0.06);
-  padding: 0 32px;
-  height: 68px;
+  padding: 0 32px; height: 68px;
   display: flex; align-items: center; justify-content: space-between;
-  pointer-events: all;
-  border: 1px solid rgba(7,41,88,0.06);
+  pointer-events: all; border: 1px solid rgba(7,41,88,0.06);
 }
-.header-logo {
-  display: flex; align-items: center; gap: 12px;
-  text-decoration: none;
-  flex-shrink: 0;
-}
+.header-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
 .logo-wordmark {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 16px;
-  letter-spacing: 0.18em;
-  color: var(--navy);
-  text-transform: uppercase;
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 16px; letter-spacing: 0.18em; color: var(--navy); text-transform: uppercase;
 }
 .header-back {
   display: inline-flex; align-items: center; gap: 8px;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--navy);
-  text-decoration: none;
-  padding: 10px 20px;
-  border: 1.5px solid var(--border-light);
-  border-radius: 10px;
-  transition: background var(--transition), border-color var(--transition);
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--navy); text-decoration: none;
+  padding: 10px 20px; border: 1.5px solid var(--border-light);
+  border-radius: 10px; transition: background var(--transition), border-color var(--transition);
 }
 .header-back:hover { background: var(--bg-near); border-color: var(--navy); }
 
-/* ── CONTAINER ── */
-.container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 40px;
-  position: relative;
-  z-index: 1;
-}
-
-/* ── PAGE HERO ── */
+/* PAGE HERO */
 .page-hero {
-  background: var(--navy);
-  padding: 160px 0 80px;
-  position: relative;
-  overflow: hidden;
+  background: var(--navy); padding: 160px 0 80px;
+  position: relative; overflow: hidden;
 }
 .page-hero::before {
-  content: '';
-  position: absolute; inset: 0;
+  content: ''; position: absolute; inset: 0;
   background-image:
     linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-  pointer-events: none;
+  background-size: 60px 60px; pointer-events: none;
 }
+.container { max-width: 1240px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 1; }
 .page-hero-label {
-  display: inline-block;
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.55);
-  padding: 6px 14px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 40px;
-  margin-bottom: 24px;
-}
-.page-hero h1 {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(40px, 6vw, 64px);
-  line-height: 1.05;
-  letter-spacing: -0.025em;
-  color: #fff;
-  margin-bottom: 16px;
-}
-.page-hero-sub {
-  font-size: 16px;
-  color: rgba(255,255,255,0.55);
-  max-width: 600px;
-  margin-top: 12px;
+  display: inline-block; font-family: var(--font-body); font-weight: 500;
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(255,255,255,0.55); padding: 6px 14px;
+  background: rgba(255,255,255,0.08); border-radius: 40px; margin-bottom: 24px;
 }
 .breadcrumb {
   display: flex; align-items: center; gap: 8px;
-  font-size: 13px;
-  color: rgba(255,255,255,0.45);
-  margin-bottom: 32px;
+  font-size: 13px; color: rgba(255,255,255,0.45); margin-bottom: 32px;
 }
 .breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color var(--transition); }
 .breadcrumb a:hover { color: #fff; }
 .breadcrumb span { color: rgba(255,255,255,0.25); }
+.page-hero h1 {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: clamp(40px, 6vw, 64px);
+  line-height: 1.05; letter-spacing: -0.025em; color: #fff; margin-bottom: 16px;
+}
+.page-hero-sub { font-size: 16px; color: rgba(255,255,255,0.55); max-width: 640px; margin-top: 12px; }
 
-/* ── MAIN CONTENT ── */
-.legal-main {
-  padding: 80px 0 120px;
-  background: var(--bg-white);
-}
-.legal-layout {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 80px;
-  align-items: start;
-}
+/* MAIN */
+.legal-main { padding: 80px 0 140px; background: var(--bg-white); }
+.legal-wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 40px; }
 
-/* ── STICKY TOC ── */
-.toc-wrap {
-  position: sticky;
-  top: 104px;
+.meta-bar {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding: 16px 22px; background: var(--bg-near);
+  border-radius: var(--radius-sm); margin-bottom: 56px;
+  font-size: 13px; color: var(--text-muted); border: 1px solid var(--border-light);
 }
-.toc-label {
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 16px;
-}
-.toc-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.toc-list li a {
-  display: block;
-  font-size: 13px;
-  font-family: var(--font-body);
-  color: var(--text-muted);
-  text-decoration: none;
-  padding: 7px 12px;
-  border-radius: 8px;
-  border-left: 2px solid transparent;
-  transition: color var(--transition), background var(--transition), border-color var(--transition);
-  line-height: 1.4;
-}
-.toc-list li a:hover, .toc-list li a.active {
-  color: var(--navy);
-  background: rgba(7,41,88,0.05);
-  border-left-color: var(--navy);
-}
+.meta-bar i { color: var(--slate); }
+.meta-bar strong { color: var(--text-dark); }
 
-/* ── LEGAL CONTENT ── */
-.legal-content { max-width: 720px; }
-.legal-section {
-  margin-bottom: 64px;
-  padding-bottom: 64px;
-  border-bottom: 1px solid var(--border-light);
-}
+/* SECTIONS */
+.legal-section { margin-bottom: 72px; padding-bottom: 72px; border-bottom: 1px solid var(--border-light); }
 .legal-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-
-.legal-section-num {
-  font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--navy);
-  opacity: 0.6;
-  margin-bottom: 10px;
+.section-eyebrow {
+  font-family: var(--font-body); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--navy); opacity: 0.55; margin-bottom: 10px;
 }
 .legal-section h2 {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 22px;
-  letter-spacing: -0.01em;
-  color: var(--text-dark);
-  margin-bottom: 20px;
-  line-height: 1.25;
+  font-family: var(--font-display); font-weight: 700; font-size: 24px;
+  letter-spacing: -0.01em; color: var(--text-dark); margin-bottom: 24px; line-height: 1.2;
 }
 .legal-section h3 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 16px;
-  color: var(--text-dark);
-  margin-top: 32px;
-  margin-bottom: 12px;
+  font-family: var(--font-display); font-weight: 600; font-size: 17px;
+  color: var(--text-dark); margin-top: 36px; margin-bottom: 14px; line-height: 1.35;
 }
-.legal-section p {
-  font-size: 15px;
-  line-height: 1.8;
-  color: var(--text-body);
-  margin-bottom: 14px;
-}
+.legal-section p { font-size: 15px; line-height: 1.85; color: var(--text-body); margin-bottom: 16px; }
 .legal-section p:last-child { margin-bottom: 0; }
-.legal-section ul, .legal-section ol {
-  margin: 12px 0 16px 0;
-  padding-left: 0;
-  list-style: none;
-}
+.legal-section ul { list-style: none; margin: 14px 0 18px; padding: 0; }
 .legal-section ul li {
-  font-size: 15px;
-  line-height: 1.8;
-  color: var(--text-body);
-  padding-left: 20px;
-  position: relative;
-  margin-bottom: 7px;
+  font-size: 15px; line-height: 1.8; color: var(--text-body);
+  padding-left: 22px; position: relative; margin-bottom: 9px;
 }
-.legal-section ul li::before {
-  content: '—';
-  position: absolute;
-  left: 0;
-  color: var(--slate);
-}
-.legal-section ol { counter-reset: ol-counter; }
-.legal-section ol li {
-  font-size: 15px;
-  line-height: 1.8;
-  color: var(--text-body);
-  padding-left: 28px;
-  position: relative;
-  margin-bottom: 7px;
-  counter-increment: ol-counter;
-}
-.legal-section ol li::before {
-  content: counter(ol-counter) '.';
-  position: absolute;
-  left: 0;
-  color: var(--navy);
-  font-weight: 600;
-  font-size: 13px;
-}
+.legal-section ul li::before { content: '—'; position: absolute; left: 0; color: var(--slate); }
+.legal-section a { color: var(--navy); text-decoration: none; border-bottom: 1px solid rgba(7,41,88,0.2); transition: border-color var(--transition); }
+.legal-section a:hover { border-color: var(--navy); }
 
-/* ── INFO CARD ── */
+/* CARDS */
 .info-card {
-  background: var(--bg-near);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-md);
-  padding: 28px 32px;
-  margin-bottom: 24px;
+  background: var(--bg-near); border: 1px solid var(--border-light);
+  border-radius: var(--radius-md); padding: 28px 32px; margin: 24px 0;
 }
 .info-card-title {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 14px;
-  color: var(--navy);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  margin-bottom: 16px;
+  font-family: var(--font-display); font-weight: 700; font-size: 12px;
+  color: var(--navy); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 18px;
 }
 .info-row {
-  display: flex;
-  gap: 12px;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border-light);
-  font-size: 14px;
-  line-height: 1.5;
+  display: flex; gap: 16px; padding: 11px 0;
+  border-bottom: 1px solid var(--border-light); font-size: 14px; line-height: 1.6;
 }
 .info-row:last-child { border-bottom: none; padding-bottom: 0; }
-.info-key {
-  flex: 0 0 200px;
-  color: var(--text-muted);
-  font-weight: 500;
-}
+.info-key { flex: 0 0 200px; color: var(--text-muted); font-weight: 500; }
 .info-val { color: var(--text-dark); }
-.info-val a {
-  color: var(--navy);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(7,41,88,0.2);
-  transition: border-color var(--transition);
-}
+.info-val a { color: var(--navy); border-bottom: 1px solid rgba(7,41,88,0.2); text-decoration: none; }
 .info-val a:hover { border-color: var(--navy); }
 
-/* ── NOTICE BOX ── */
+/* NOTICE */
 .notice-box {
-  background: rgba(7,41,88,0.04);
-  border-left: 3px solid var(--navy);
+  background: rgba(7,41,88,0.04); border-left: 3px solid var(--navy);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  padding: 18px 22px;
-  margin: 20px 0;
-  font-size: 14px;
-  color: var(--text-body);
-  line-height: 1.7;
+  padding: 20px 24px; margin: 24px 0;
+  font-size: 14px; color: var(--text-body); line-height: 1.75;
 }
-.notice-box a { color: var(--navy); }
+.notice-box strong { color: var(--text-dark); }
+.notice-box a { color: var(--navy); border-bottom: 1px solid rgba(7,41,88,0.2); text-decoration: none; }
 
-/* ── TABLE ── */
-.data-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
-  font-size: 14px;
-}
+/* TABLE */
+.data-table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 14px; }
 .data-table th {
-  background: var(--navy);
-  color: #fff;
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 12px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 12px 16px;
-  text-align: left;
+  background: var(--navy); color: #fff;
+  font-family: var(--font-display); font-weight: 600;
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 13px 16px; text-align: left;
 }
 .data-table th:first-child { border-radius: 8px 0 0 0; }
 .data-table th:last-child { border-radius: 0 8px 0 0; }
-.data-table td {
-  padding: 12px 16px;
-  border-bottom: 1px solid var(--border-light);
-  color: var(--text-body);
-  line-height: 1.6;
-  vertical-align: top;
-}
+.data-table td { padding: 12px 16px; border-bottom: 1px solid var(--border-light); color: var(--text-body); line-height: 1.65; vertical-align: top; }
 .data-table tr:nth-child(even) td { background: var(--bg-near); }
 .data-table tr:last-child td { border-bottom: none; }
 
-/* ── RIGHTS GRID ── */
-.rights-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  margin-top: 16px;
-}
-.right-card {
-  background: var(--bg-near);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-sm);
-  padding: 18px 20px;
-}
-.right-card-icon {
-  font-size: 20px;
-  color: var(--navy);
-  margin-bottom: 10px;
-}
-.right-card-title {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 14px;
-  color: var(--text-dark);
-  margin-bottom: 6px;
-}
-.right-card p {
-  font-size: 13px !important;
-  color: var(--text-muted) !important;
-  line-height: 1.6 !important;
-  margin-bottom: 0 !important;
-}
-
-/* ── META BAR ── */
-.meta-bar {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 18px 24px;
-  background: var(--bg-near);
-  border-radius: var(--radius-sm);
-  margin-bottom: 48px;
-  font-size: 13px;
-  color: var(--text-muted);
-  flex-wrap: wrap;
-}
-.meta-bar i { font-size: 15px; color: var(--slate); }
-.meta-bar strong { color: var(--text-dark); }
-
-/* ── FOOTER ── */
+/* FOOTER */
 footer { background: var(--navy-deep); color: rgba(255,255,255,0.65); }
 .footer-main { padding: 80px 0; }
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1fr;
-  gap: 48px;
-}
-.footer-brand-tagline {
-  font-size: 14px;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.45);
-  margin-top: 16px;
-  max-width: 280px;
-}
-.footer-social {
-  display: flex; gap: 12px;
-  margin-top: 24px;
-}
+.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; }
+.footer-brand-tagline { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.45); margin-top: 16px; max-width: 280px; }
+.footer-social { display: flex; gap: 12px; margin-top: 24px; }
 .footer-social a {
-  width: 38px; height: 38px;
-  border-radius: 10px;
-  background: rgba(255,255,255,0.07);
+  width: 38px; height: 38px; border-radius: 10px; background: rgba(255,255,255,0.07);
   display: flex; align-items: center; justify-content: center;
-  color: rgba(255,255,255,0.55);
-  font-size: 16px;
-  text-decoration: none;
+  color: rgba(255,255,255,0.55); font-size: 16px; text-decoration: none;
   transition: background var(--transition), color var(--transition);
 }
 .footer-social a:hover { background: rgba(255,255,255,0.15); color: #fff; }
 .footer-col-title {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
-  margin-bottom: 20px;
+  font-family: var(--font-display); font-weight: 700; font-size: 12px;
+  letter-spacing: 0.15em; text-transform: uppercase; color: rgba(255,255,255,0.35); margin-bottom: 20px;
 }
 .footer-links { list-style: none; }
 .footer-links li { margin-bottom: 10px; }
-.footer-links a {
-  font-size: 14px;
-  color: rgba(255,255,255,0.55);
-  text-decoration: none;
-  transition: color var(--transition);
-}
+.footer-links a { font-size: 14px; color: rgba(255,255,255,0.55); text-decoration: none; transition: color var(--transition); }
 .footer-links a:hover { color: #fff; }
 .footer-sep { height: 1px; background: rgba(255,255,255,0.08); }
 .footer-bottom { padding: 24px 0; }
-.footer-bottom-inner {
-  display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 12px;
-}
+.footer-bottom-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 .footer-copy { font-size: 13px; color: rgba(255,255,255,0.35); }
-.footer-reg {
-  font-size: 12px;
-  color: rgba(255,255,255,0.3);
-  display: flex; align-items: center; gap: 8px;
-  letter-spacing: 0.04em;
-}
-.footer-reg span { opacity: 0.4; }
 
-/* ── RESPONSIVE ── */
 @media (max-width: 900px) {
-  .legal-layout { grid-template-columns: 1fr; }
-  .toc-wrap { position: static; margin-bottom: 40px; }
-  .container { padding: 0 24px; }
+  .container, .legal-wrap { padding: 0 24px; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
-  .rights-grid { grid-template-columns: 1fr; }
 }
 @media (max-width: 600px) {
   .page-hero { padding: 140px 0 60px; }
@@ -521,8 +238,7 @@ footer { background: var(--navy-deep); color: rgba(255,255,255,0.65); }
   .footer-grid { grid-template-columns: 1fr; }
   .info-row { flex-direction: column; gap: 4px; }
   .info-key { flex: none; }
-  .data-table { font-size: 13px; }
-  .data-table td, .data-table th { padding: 10px 12px; }
+  .data-table td, .data-table th { padding: 10px 12px; font-size: 13px; }
 }
 </style>
 </head>
@@ -558,15 +274,15 @@ footer { background: var(--navy-deep); color: rgba(255,255,255,0.65); }
     </a>
   </div>
   <nav class="sidebar-nav" aria-label="Main navigation">
-    <a href="/index.html#about" onclick="closeSidebar()">About</a>
-    <a href="/index.html#services" onclick="closeSidebar()">Services</a>
-    <a href="/index.html#how-it-works" onclick="closeSidebar()">Our Method</a>
-    <a href="/index.html#markets" onclick="closeSidebar()">Markets</a>
-    <a href="/index.html#for-whom" onclick="closeSidebar()">For Whom</a>
-    <a href="/index.html#philosophy" onclick="closeSidebar()">Philosophy</a>
-    <a href="/index.html#contact" onclick="closeSidebar()">Contact</a>
+    <a href="#about" onclick="closeSidebar()">About</a>
+    <a href="#services" onclick="closeSidebar()">Services</a>
+    <a href="#how-it-works" onclick="closeSidebar()">Our Method</a>
+    <a href="#markets" onclick="closeSidebar()">Markets</a>
+    <a href="#for-whom" onclick="closeSidebar()">For Whom</a>
+    <a href="philosophy.html">Philosophy</a>
+    <a href="#contact" onclick="closeSidebar()">Contact</a>
   </nav>
-  <a href="/index.html#contact" class="sidebar-cta" onclick="closeSidebar()">Get in Touch</a>
+  <a href="#contact" class="sidebar-cta" onclick="closeSidebar()">Get in Touch</a>
   <div class="sidebar-social">
     <a href="#" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
     <a href="#" aria-label="X / Twitter"><i class="ti ti-brand-x"></i></a>
@@ -580,7 +296,7 @@ footer { background: var(--navy-deep); color: rgba(255,255,255,0.65); }
       <img
         class="header-logo-img"
         src="/img/logo.png"
-        alt="Chalor Group"
+        alt="Chalor Capital"
         onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
       >
     
@@ -596,448 +312,374 @@ footer { background: var(--navy-deep); color: rgba(255,255,255,0.65); }
 <section class="page-hero">
   <div class="container">
     <div class="breadcrumb">
-      <a href="index.html">Home</a>
-      <span>/</span>
+      <a href="index.html">Home</a><span>/</span>
       <span style="color:rgba(255,255,255,0.65);">Privacy Policy</span>
     </div>
     <div class="page-hero-label">Data Protection</div>
     <h1>Privacy Policy</h1>
-    <p class="page-hero-sub">We take the protection of your personal data seriously. This policy explains in full what data we collect, why, how we use it, and your rights under applicable law.</p>
+    <p class="page-hero-sub">We are committed to protecting your personal data. This policy explains comprehensively what information we collect, for what purposes, on what legal basis, how long we retain it, and what rights you hold — including in the context of email correspondence.</p>
   </div>
 </section>
 
 <main class="legal-main">
-  <div class="container">
-    <div class="legal-layout">
+  <div class="legal-wrap">
 
-     
+    <div class="meta-bar">
+      <i class="ti ti-calendar"></i> Last updated: <strong>1 June 2026</strong>
+      &nbsp;&middot;&nbsp;
+      <i class="ti ti-shield-check"></i> Compliant with GDPR (EU) 2016/679 &amp; applicable national data protection law
+      &nbsp;&middot;&nbsp;
+      <i class="ti ti-world"></i> <strong>chalorgroup.com</strong>
+    </div>
 
-      <div class="legal-content">
+    <!-- SECTION 1 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">01 — Identity &amp; Contact</p>
+      <h2>Data Controller</h2>
+      <p>The entity responsible for the processing of personal data in connection with this website and all associated communications is Chalor Capital Allocation &amp; Institutional Group (hereinafter referred to as "Chalor", "we", "us", or "the Company"). The Company is the data controller within the meaning of Article 4(7) of the General Data Protection Regulation (GDPR) for all processing activities described in this Privacy Policy.</p>
+      <p>We take our obligations under applicable data protection law with the utmost seriousness. This Privacy Policy has been drafted to meet the high standard of transparency required by the GDPR and to give you, as a data subject, a thorough and honest account of how your personal data is treated when you interact with us — whether through this website, by email, or in the course of a professional engagement.</p>
 
-        <div class="meta-bar">
-          <i class="ti ti-calendar"></i>
-          Last updated: <strong>1 June 2026</strong>
-          &nbsp;·&nbsp;
-          <i class="ti ti-shield-check"></i>
-          GDPR / DSGVO compliant
-          &nbsp;·&nbsp;
-          <i class="ti ti-file-text"></i>
-          Version 1.0
-        </div>
+      <div class="info-card">
+        <p class="info-card-title">Controller Identity (Art. 13(1)(a) GDPR)</p>
+        <div class="info-row"><span class="info-key">Legal name</span><span class="info-val">Chalor Capital Allocation &amp; Institutional Group</span></div>
+        <div class="info-row"><span class="info-key">Registered address</span><span class="info-val">Berlin, Germany</span></div>
+        <div class="info-row"><span class="info-key">Website</span><span class="info-val"><a href="https://www.chalorgroup.com">www.chalorgroup.com</a></span></div>
+        <div class="info-row"><span class="info-key">Email (all privacy matters)</span><span class="info-val"><a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a></span></div>
+      </div>
 
-        <div class="legal-section" id="controller">
-          <p class="legal-section-num">Section 01</p>
-          <h2>Data Controller</h2>
-          <p>The controller responsible for the processing of personal data collected through this website and in the course of our business activities is:</p>
+      <p>All data protection enquiries, requests to exercise your rights, complaints, or requests for further information regarding our data processing practices should be submitted to <a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a>. We will acknowledge receipt of your message within five (5) business days and aim to respond fully within one (1) calendar month from the date of receipt, as required by Article 12 GDPR.</p>
+    </div>
 
-          <div class="info-card">
-            <p class="info-card-title">Controller Details (Art. 13 para. 1 lit. a GDPR)</p>
-            <div class="info-row">
-              <span class="info-key">Legal name</span>
-              <span class="info-val">Chalor Capital Allocation &amp; Institutional Group</span>
-            </div>
-            <div class="info-row">
-              <span class="info-key">Registered address</span>
-              <span class="info-val">Berlin, Germany</span>
-            </div>
-            <div class="info-row">
-              <span class="info-key">Email (general)</span>
-              <span class="info-val"><a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a></span>
-            </div>
-          </div>
+    <!-- SECTION 2 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">02 — Scope</p>
+      <h2>Scope of This Privacy Policy</h2>
+      <p>This Privacy Policy applies to all personal data processed by Chalor Capital Allocation &amp; Institutional Group in the following contexts:</p>
+      <ul>
+        <li>Visits to and use of our website at www.chalorgroup.com, including any subdomains or microsites operated by us;</li>
+        <li>Submission of enquiries via the contact form embedded on our website;</li>
+        <li>All incoming and outgoing email correspondence sent to or from any address associated with chalorgroup.com or the Company's official email accounts;</li>
+        <li>Pre-engagement communications, including the assessment of potential mandates and initial client due diligence;</li>
+        <li>The performance of advisory, capital allocation, and institutional services for established clients, to the extent personal data is involved;</li>
+        <li>Any other interaction through which you voluntarily provide personal data to the Company.</li>
+      </ul>
+      <p>This policy does not apply to the websites or services of third parties that may be accessible via hyperlinks on our website. We have no control over those external sites and encourage you to review their own privacy policies independently.</p>
+      <p>Where the Company acts as a data processor on behalf of a client entity — for example, where a corporate client provides us with personal data about their own employees or beneficiaries — a separate data processing agreement (DPA) governs that arrangement. This policy covers only the Company's activities as data controller.</p>
+    </div>
 
-          <p>References to "we", "us", or "Chalor" in this policy refer to Chalor Capital Allocation &amp; Institutional Group as the data controller. Where we act as a data processor on behalf of a client, a separate data processing agreement (DPA) governs that relationship.</p>
-        </div>
+    <!-- SECTION 3 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">03 — Legal Bases</p>
+      <h2>Legal Bases for Processing Personal Data</h2>
+      <p>Every processing activity carried out by Chalor Capital Allocation &amp; Institutional Group rests on one or more legal bases set out in Article 6 of the GDPR. We do not process personal data without a valid legal basis. The following legal bases are applicable to our processing activities:</p>
 
-        <div class="legal-section" id="scope">
-          <p class="legal-section-num">Section 02</p>
-          <h2>Scope &amp; Legal Basis of Processing</h2>
-          <p>This Privacy Policy applies to all personal data processed by Chalor Capital Allocation &amp; Institutional Group in connection with:</p>
-          <ul>
-            <li>Visits to and use of our website at www.chalor.com and any related subdomains;</li>
-            <li>Enquiries submitted via our contact form or sent by email;</li>
-            <li>Business correspondence and client relationship management;</li>
-            <li>The performance of capital allocation, advisory, and institutional services for our clients;</li>
-            <li>Compliance with legal and regulatory obligations applicable to financial services providers.</li>
-          </ul>
+      <h3>Consent (Art. 6(1)(a) GDPR)</h3>
+      <p>Where you have freely, specifically, and unambiguously indicated your agreement to the processing of your personal data for a defined purpose — for example, by accepting non-essential cookies or agreeing to receive communications from us — we rely on your consent as the legal basis. You have the right to withdraw consent at any time without affecting the lawfulness of processing carried out prior to withdrawal. Withdrawal of consent does not affect any other legal basis on which we may simultaneously rely.</p>
 
-          <p>We process personal data only where a valid legal basis under Article 6 of the General Data Protection Regulation (EU) 2016/679 (GDPR) applies. The primary legal bases we rely upon are:</p>
+      <h3>Performance of a Contract (Art. 6(1)(b) GDPR)</h3>
+      <p>Where we are in a contractual relationship with you, or where you have taken steps to enter into such a relationship with us, we process personal data to the extent necessary to perform the agreement or to respond to your pre-contractual enquiries. This applies, for example, when preparing a mandate proposal, conducting client onboarding, or delivering agreed advisory services.</p>
 
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>Legal Basis</th>
-                <th>GDPR Reference</th>
-                <th>When Applied</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Consent</strong></td>
-                <td>Art. 6(1)(a)</td>
-                <td>Non-essential cookies, marketing communications</td>
-              </tr>
-              <tr>
-                <td><strong>Contract performance</strong></td>
-                <td>Art. 6(1)(b)</td>
-                <td>Processing necessary to deliver agreed services to clients</td>
-              </tr>
-              <tr>
-                <td><strong>Legal obligation</strong></td>
-                <td>Art. 6(1)(c)</td>
-                <td>KYC/AML checks, regulatory reporting, tax records</td>
-              </tr>
-              <tr>
-                <td><strong>Legitimate interests</strong></td>
-                <td>Art. 6(1)(f)</td>
-                <td>Website security, fraud prevention, business communications, responding to enquiries</td>
-              </tr>
-            </tbody>
-          </table>
+      <h3>Compliance with a Legal Obligation (Art. 6(1)(c) GDPR)</h3>
+      <p>Certain processing activities are required of us by law. These include, but are not limited to, obligations arising under applicable anti-money laundering legislation, tax law, accounting obligations, and data retention rules imposed by statute. We process personal data to the minimum extent necessary to satisfy these obligations.</p>
 
-          <p>Where we process special categories of personal data (Art. 9 GDPR), we will explicitly identify the applicable basis (typically explicit consent or a statutory requirement).</p>
-        </div>
+      <h3>Legitimate Interests (Art. 6(1)(f) GDPR)</h3>
+      <p>In a number of circumstances, we process personal data where it is necessary for the purposes of our legitimate interests, provided those interests are not overridden by your own interests, rights, or freedoms. Legitimate interests we pursue include: operating a secure and functional website; responding to enquiries received from individuals or organisations; maintaining accurate business records; detecting and preventing fraud and abuse; and communicating with prospective clients who have voluntarily reached out to us. Where we rely on this basis, we have conducted a balancing assessment and are satisfied that our legitimate interests are proportionate and do not unduly prejudice data subjects.</p>
+    </div>
 
-        <div class="legal-section" id="website-data">
-          <p class="legal-section-num">Section 03</p>
-          <h2>Website Data Collection</h2>
+    <!-- SECTION 4 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">04 — Website Data</p>
+      <h2>Data Collected Through the Website</h2>
 
-          <h3>Server Log Files</h3>
-          <p>When you access our website, our web server automatically records certain technical information in server log files. This data is collected for the purpose of ensuring the stable and secure operation of the website and does not constitute profiling of individual visitors. The following data is recorded:</p>
-          <ul>
-            <li>IP address of the requesting device (anonymised or in full, depending on configuration);</li>
-            <li>Date and time of the request;</li>
-            <li>URL of the page accessed;</li>
-            <li>HTTP status code and volume of data transferred;</li>
-            <li>Referring URL (the page from which the request originated, if applicable);</li>
-            <li>Browser type and version, operating system, and device type.</li>
-          </ul>
-          <p>Server log data is retained for a maximum of <strong>14 days</strong> for security and technical diagnostic purposes and is then automatically deleted, unless longer retention is required due to a specific security incident. The legal basis for this processing is our legitimate interest in operating a secure and functional website (Art. 6(1)(f) GDPR).</p>
+      <h3>Server Log Files</h3>
+      <p>When you access and browse our website, our web server automatically records certain technical information in log files. This data is collected solely for the purpose of maintaining the secure and stable operation of the website and cannot be used to identify you by name. The following categories of data are logged automatically upon each page request:</p>
+      <ul>
+        <li>The IP address of the device from which the request originates (stored in a form that may or may not be anonymised depending on server configuration);</li>
+        <li>The date and time of the request, recorded to the second;</li>
+        <li>The specific URL (web address) of the page requested;</li>
+        <li>The HTTP response status code returned by the server (e.g. 200, 404);</li>
+        <li>The volume of data transferred in connection with the request;</li>
+        <li>The referring URL, where a request originates from a link on another website;</li>
+        <li>The browser type, browser version, operating system, and device category of the requesting client.</li>
+      </ul>
+      <p>Server log files are retained for a maximum of <strong>fourteen (14) days</strong> from the date of generation, after which they are automatically purged. They are used exclusively for the detection and investigation of security incidents, technical diagnostics, and server performance monitoring. They are not shared with any third party except where legally required. The legal basis is our legitimate interest in operating a secure and reliable online presence (Art. 6(1)(f) GDPR).</p>
 
-          <h3>Analytics</h3>
-          <p>We may use privacy-preserving analytics tools to understand aggregate patterns of website usage (e.g., most visited pages, geographic distribution of visitors, device types). Where such tools are used, they are configured to anonymise or pseudonymise data prior to processing and do not create individual behavioural profiles. Where analytics tools that process personal data are activated, they are subject to your consent via our cookie banner. Please refer to Section 7 (Cookies &amp; Tracking) for full details.</p>
+      <h3>Cookies and Local Storage</h3>
+      <p>Our website uses cookies and browser local storage to support certain site functions and to record your preferences. A cookie is a small text file placed on your device by your browser when you visit a site. We use a minimal number of cookies, classified as follows:</p>
+      <ul>
+        <li><strong>Strictly necessary cookies:</strong> These are essential for the basic operation of the website. They include the record of your cookie consent choice (<code>chalor_cookie_choice</code>), stored in your browser's local storage. These do not require your prior consent and are placed automatically to ensure the website functions correctly. They expire when you clear your browser data or local storage.</li>
+        <li><strong>Analytics and performance cookies (optional):</strong> Where enabled by your consent, we may use analytics tools to understand aggregate patterns of user behaviour on our website, such as which pages are visited most frequently. These tools are configured to minimise the collection of personally identifiable information wherever possible. If you do not consent, these cookies will not be placed.</li>
+      </ul>
+      <p>You may withdraw consent to optional cookies at any time by clearing your browser's local storage or adjusting your browser settings. Please refer to our separate <a href="cookies.html">Cookie Policy</a> for a complete list of cookies in use, their providers, and their individual retention periods.</p>
 
-          <h3>No Automated Decision-Making</h3>
-          <p>We do not employ automated decision-making or profiling based on data collected through the website that produces legal effects or similarly significant impacts on visitors (Art. 22 GDPR).</p>
-        </div>
+      <h3>Third-Party Resources Embedded in the Website</h3>
+      <p>For technical and design reasons, our website loads certain resources from third-party content delivery networks. This may result in your IP address and browser information being transmitted to those providers when you load a page on our site. The third-party services currently in use are:</p>
+      <ul>
+        <li><strong>Google Fonts</strong> (fonts.googleapis.com, fonts.gstatic.com): Typefaces loaded from Google's servers. Google may receive your IP address as part of the resource request.</li>
+        <li><strong>Tabler Icons</strong> (cdn.jsdelivr.net): Icon font loaded from the jsDelivr CDN network.</li>
+        <li><strong>AOS Animation Library</strong> (cdnjs.cloudflare.com): Scroll animation library served via Cloudflare's CDN infrastructure.</li>
+      </ul>
+      <p>We do not control the data processing practices of these third-party providers and encourage you to review their respective privacy policies. The legal basis for the use of these resources is our legitimate interest in providing a performant and visually consistent website experience (Art. 6(1)(f) GDPR).</p>
 
-        <div class="legal-section" id="contact-form">
-          <p class="legal-section-num">Section 04</p>
-          <h2>Contact Form &amp; Enquiries</h2>
-          <p>When you submit an enquiry through our website contact form, we collect the personal data you provide. Depending on the fields you complete, this may include:</p>
-          <ul>
-            <li>Full name;</li>
-            <li>Company or organisation name;</li>
-            <li>Email address;</li>
-            <li>Enquiry type (mandate category selected from drop-down);</li>
-            <li>The content of your message.</li>
-          </ul>
+      <h3>No Automated Profiling</h3>
+      <p>We do not engage in automated decision-making or profiling based on data collected through the website that produces legal or similarly significant effects in respect of any individual, as defined in Article 22 of the GDPR.</p>
+    </div>
 
-          <p>We process this data for the purpose of handling your enquiry, assessing the feasibility of a potential mandate relationship, and responding to you. The legal basis is our legitimate interest in responding to incoming business communications (Art. 6(1)(f) GDPR), supplemented by pre-contractual steps at your request (Art. 6(1)(b) GDPR) where applicable.</p>
+    <!-- SECTION 5 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">05 — Contact Form</p>
+      <h2>Enquiries Submitted via the Contact Form</h2>
+      <p>Our website offers a contact form through which you may submit a business enquiry to the Company. When you use this form, we collect the personal data you choose to provide. Depending on which fields you complete, this may include:</p>
+      <ul>
+        <li>Your full name;</li>
+        <li>The name of your company or organisation;</li>
+        <li>Your email address;</li>
+        <li>The category of your enquiry, selected from a drop-down menu (Private Mandate, Corporate Treasury, Brand Architecture, Institutional Mandate, or General Enquiry);</li>
+        <li>The free-text content of your message.</li>
+      </ul>
+      <p>This data is collected and processed for the purpose of handling and responding to your enquiry, assessing whether a service relationship would be appropriate, and maintaining a record of correspondence for business continuity purposes. We do not use contact form data for any marketing purpose without your express, specific consent.</p>
+      <p>The legal basis for processing contact form submissions is our legitimate interest in receiving and responding to business communications (Art. 6(1)(f) GDPR) and, where the enquiry relates to a potential service engagement, the taking of pre-contractual steps at your request (Art. 6(1)(b) GDPR).</p>
+      <p>Data submitted via the contact form is retained for a period of <strong>thirty-six (36) months</strong> from the date of your last communication with us, after which it is securely and permanently deleted unless a legal obligation requires us to retain it for a longer period or unless a client relationship has been established (in which case the data becomes part of the client record and is subject to the retention periods applicable to that record).</p>
 
-          <div class="notice-box">
-            <strong>Please note:</strong> We will never use the information you submit via the contact form to add you to marketing distribution lists or share it with third parties for marketing purposes without your explicit consent. If your enquiry leads to a formal mandate engagement, your data will be processed under the terms of our client agreement and this Privacy Policy.
-          </div>
+      <div class="notice-box">
+        <strong>Your data will not be sold or shared for marketing purposes.</strong> Information submitted through our contact form is used exclusively to handle your enquiry and, if applicable, to establish a service relationship. We will never add you to any third-party marketing list or share your contact details with external parties for promotional purposes without your explicit, freely given consent.
+      </div>
+    </div>
 
-          <p>Enquiry data is retained for <strong>36 months</strong> from the date of receipt (or longer if a client relationship is established), after which it is securely deleted unless we have a legal obligation to retain it for a longer period.</p>
-        </div>
+    <!-- SECTION 6: EMAIL — dedicated, comprehensive -->
+    <div class="legal-section">
+      <p class="section-eyebrow">06 — Email Correspondence</p>
+      <h2>Processing of Personal Data in Email Correspondence</h2>
+      <p>A significant portion of the communications we receive and send takes place via email. Because email correspondence involves the transmission and storage of personal data, we are committed to explaining precisely how we handle this data — what we collect, why, on what legal basis, how long we keep it, who can access it, and how we keep it secure.</p>
 
-        <div class="legal-section" id="email">
-          <p class="legal-section-num">Section 05</p>
-          <h2>Email Correspondence</h2>
-          <p>When you contact us by email, or when we conduct business correspondence with you by email, we process personal data contained in those communications. This section explains in detail how we handle email-based personal data.</p>
+      <h3>What Personal Data Is Contained in Emails</h3>
+      <p>When you send an email to any address associated with Chalor Capital Allocation &amp; Institutional Group, or when we conduct business correspondence with you by email, the following categories of personal data may be present in that communication:</p>
+      <ul>
+        <li><strong>Sender metadata:</strong> Your email address, your display name as configured in your email client, and any other contact details your email application automatically appends to messages;</li>
+        <li><strong>Email signature data:</strong> Job title, company name, telephone number, physical address, or any other personal information you include in your email signature;</li>
+        <li><strong>Message content:</strong> The subject line and the body of the message, including any opinions, instructions, or personal information you choose to include;</li>
+        <li><strong>Attachments:</strong> Any files attached to the email, which may themselves contain personal data (e.g. CVs, contracts, identity documents, financial statements);</li>
+        <li><strong>Technical transmission metadata:</strong> Information automatically generated by email protocols (SMTP, IMAP, DKIM, SPF), including the IP addresses of sending and receiving mail servers, message identifiers (Message-ID), timestamps, and routing headers. This data is embedded in the email header and is transmitted as part of every email regardless of the sender's actions;</li>
+        <li><strong>Reply-chain content:</strong> Where you reply to one of our messages, or we reply to yours, earlier messages in the thread are typically included in the reply and thus form part of the email record.</li>
+      </ul>
 
-          <h3>What We Collect from Email Communications</h3>
-          <p>Email correspondence may contain, among other things:</p>
-          <ul>
-            <li><strong>Sender information:</strong> Your name, email address, and any further contact details included in your email signature or message body;</li>
-            <li><strong>Communication content:</strong> The subject line, body text, and any files or attachments you choose to include;</li>
-            <li><strong>Metadata:</strong> Technical transmission data including IP addresses of mail servers, timestamps, message identifiers, and routing information generated by email protocols (SMTP, IMAP/POP3);</li>
-            <li><strong>Reply-chain history:</strong> Prior messages in a conversation thread that are included in subsequent replies.</li>
-          </ul>
+      <h3>Purposes of Processing and Applicable Legal Bases</h3>
+      <p>We process personal data contained in email correspondence for the following specific purposes, each underpinned by a defined legal basis:</p>
 
-          <h3>Purpose and Legal Basis for Email Processing</h3>
-          <p>We process personal data contained in email communications for the following purposes, each with its applicable legal basis:</p>
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>Purpose</th>
-                <th>Legal Basis (GDPR)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Responding to your enquiry or message</td>
-                <td>Art. 6(1)(f) — Legitimate interest; or Art. 6(1)(b) — Contract performance</td>
-              </tr>
-              <tr>
-                <td>Assessing and onboarding potential clients</td>
-                <td>Art. 6(1)(b) — Pre-contractual steps at your request</td>
-              </tr>
-              <tr>
-                <td>Maintaining records of business correspondence</td>
-                <td>Art. 6(1)(f) — Legitimate interest in accurate record-keeping</td>
-              </tr>
-              <tr>
-                <td>Compliance with regulatory obligations (e.g. MiFID II communication archiving)</td>
-                <td>Art. 6(1)(c) — Legal obligation</td>
-              </tr>
-              <tr>
-                <td>Fraud prevention and security</td>
-                <td>Art. 6(1)(f) — Legitimate interest</td>
-              </tr>
-            </tbody>
-          </table>
+      <table class="data-table">
+        <thead>
+          <tr><th>Purpose of Processing</th><th>Legal Basis (GDPR Art. 6)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Reading and responding to your message</td><td>Art. 6(1)(f) — Legitimate interest in responding to business communications</td></tr>
+          <tr><td>Assessing a potential advisory engagement or mandate</td><td>Art. 6(1)(b) — Pre-contractual steps at your request</td></tr>
+          <tr><td>Performing services under an existing client agreement</td><td>Art. 6(1)(b) — Performance of a contract</td></tr>
+          <tr><td>Maintaining accurate and complete records of business correspondence</td><td>Art. 6(1)(f) — Legitimate interest in reliable business administration</td></tr>
+          <tr><td>Compliance with legal recordkeeping obligations</td><td>Art. 6(1)(c) — Legal obligation</td></tr>
+          <tr><td>Detecting and preventing fraudulent, malicious, or abusive communications</td><td>Art. 6(1)(f) — Legitimate interest in security and fraud prevention</td></tr>
+          <tr><td>Resolving disputes or enforcing contractual rights</td><td>Art. 6(1)(f) — Legitimate interest in the protection of legal rights</td></tr>
+        </tbody>
+      </table>
 
-          <h3>Email Service Provider &amp; Infrastructure</h3>
-          <p>Our email infrastructure is operated using professional business email services. Email data may be processed on servers located within the European Economic Area (EEA). Where our email provider stores or processes data outside the EEA, we ensure that appropriate safeguards are in place in accordance with Chapter V of the GDPR (see Section 9, International Transfers).</p>
+      <h3>Email Infrastructure and Storage</h3>
+      <p>The Company's email communications are managed via Microsoft Outlook (Office 365 / Microsoft 365) infrastructure. Email data associated with the address <strong>chalorgroup@outlook.fr</strong> is hosted on Microsoft's servers. Microsoft acts as a data processor on our behalf in this context, subject to Microsoft's data processing terms and the European Commission's standard contractual clauses where applicable.</p>
+      <p>Microsoft's data centres serving European accounts are primarily located within the European Economic Area (EEA). However, Microsoft is a global organisation and some processing may take place in countries outside the EEA. Where this occurs, Microsoft has committed to applying appropriate transfer safeguards, including standard contractual clauses and adherence to applicable frameworks. Further details can be found in Microsoft's Privacy Statement at <a href="https://privacy.microsoft.com" target="_blank" rel="noopener noreferrer">privacy.microsoft.com</a>.</p>
 
-          <h3>Regulatory Archiving of Business Email</h3>
-          <p>As a financial services provider subject to regulation under BaFin, AMF, and FINMA frameworks, we are subject to legal obligations to archive business-related electronic communications, including email correspondence relating to investment advice, portfolio management, order execution, and other regulated activities. This obligation arises under MiFID II (Article 16(6)–(7)) and applicable national implementing legislation.</p>
-          <p>Emails relating to regulated activities are archived for a minimum of <strong>5 years</strong> (or up to <strong>7 years</strong> where required by the competent authority) from the date of the communication, regardless of whether a mandate relationship was subsequently established. The legal basis for this archiving is our legal obligation (Art. 6(1)(c) GDPR).</p>
+      <h3>Access Controls and Confidentiality</h3>
+      <p>Access to the Company's email accounts is restricted exclusively to authorised personnel of Chalor Capital Allocation &amp; Institutional Group who require access in the course of their professional duties. All personnel with access to email systems containing personal data are bound by strict confidentiality obligations, which apply both during and after their engagement with the Company. We employ multi-factor authentication and other appropriate technical controls to prevent unauthorised access to email accounts and stored correspondence.</p>
+      <p>Email correspondence received by the Company is treated as strictly confidential business communication. Its contents will not be disclosed to any third party except as described in Section 9 (Disclosure and Recipients) of this Privacy Policy.</p>
 
-          <h3>Confidentiality of Email Content</h3>
-          <p>All email communications received by Chalor are treated as confidential business correspondence. Access to mailboxes and archived emails is restricted to authorised personnel on a need-to-know basis and is governed by our internal information security policies.</p>
+      <h3>Security of Email Transmission</h3>
+      <p>Emails transmitted over the internet are not inherently secure. While we configure our mail infrastructure to support encrypted transmission (TLS — Transport Layer Security) for email in transit, we cannot guarantee end-to-end encryption for all messages, as this depends also on the configuration of your own email provider. Accordingly, we recommend that particularly sensitive information — such as copies of identity documents, financial account details, or confidential mandate instructions — not be sent by standard email. If you need to share sensitive materials with us, please contact us at <a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a> to discuss available secure alternatives.</p>
 
-          <div class="notice-box">
-            <strong>Important security notice:</strong> Email is not inherently a secure method of transmitting highly sensitive financial or personal information. We recommend that particularly sensitive information — such as account details, identity documents, or confidential investment mandates — be exchanged through our secure client portal (where available) or by encrypted email. Please contact us at <a href="mailto:contact@chalor.com">contact@chalor.com</a> if you require guidance on secure document transmission.
-          </div>
+      <div class="notice-box">
+        <strong>Phishing and impersonation notice:</strong> Chalor Capital Allocation &amp; Institutional Group will never request payment credentials, passwords, or sensitive financial information by email without prior agreement and verification through an established secure channel. If you receive an email purporting to be from us that requests such information, please contact us immediately at <a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a> to verify its authenticity. Do not respond to or act on any such email until its legitimacy has been confirmed.
+      </div>
 
-          <h3>Unsolicited Commercial Email</h3>
-          <p>We do not send unsolicited commercial email (spam). If you receive an email purporting to be from Chalor that you did not request and did not consent to, please notify us immediately at <a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a> so that we may investigate.</p>
+      <h3>Retention of Email Correspondence</h3>
+      <p>We retain email correspondence for as long as is necessary for the purposes for which it was received or sent, subject to the following guidelines:</p>
+      <ul>
+        <li><strong>General enquiries and non-client communications:</strong> Retained for a maximum of <strong>thirty-six (36) months</strong> from the date of the last substantive communication in a given thread. After this period, email correspondence is permanently deleted unless there is an ongoing legal or contractual reason to retain it.</li>
+        <li><strong>Pre-contractual correspondence:</strong> Where an enquiry or negotiation does not result in a formal engagement, correspondence is retained for <strong>thirty-six (36) months</strong>, after which it is deleted unless a dispute or legal claim is pending or reasonably foreseeable.</li>
+        <li><strong>Client engagement correspondence:</strong> Where a mandate or service agreement is established, email correspondence forming part of that client record is retained for the duration of the engagement and for a period of <strong>five (5) to ten (10) years</strong> thereafter, in accordance with applicable legal obligations and the Company's internal data retention policy.</li>
+        <li><strong>Legal and compliance correspondence:</strong> Where correspondence relates to a legal obligation, regulatory matter, or active or potential dispute, it will be retained for as long as that matter remains open and for a reasonable period thereafter, regardless of the above standard periods.</li>
+      </ul>
+      <p>Upon the expiry of the applicable retention period, email data is permanently deleted from all active mailboxes and backup systems in a manner that prevents reconstruction of the original content.</p>
 
-          <h3>Retention of General Email Correspondence</h3>
-          <p>Non-regulated business email correspondence (i.e. general enquiries, administrative communications not covered by regulatory archiving requirements) is retained for a period of <strong>36 months</strong> from the date of the last communication in a thread, after which it is securely deleted unless a legal obligation or legitimate interest requires longer retention. Please refer to Section 10 (Retention Periods) for full details.</p>
-        </div>
+      <h3>Your Rights Regarding Email Correspondence</h3>
+      <p>You have the right to request access to personal data contained in email correspondence in which you are identifiable as a data subject, subject to any limitations imposed by applicable law (for example, where disclosure would reveal confidential information about other individuals, or where a legal exemption applies). You also have the right to request rectification of inaccurate personal data and, in certain circumstances, erasure or restriction of processing. Please see Section 11 (Your Rights) for the full list of your rights and how to exercise them.</p>
+    </div>
 
-        <div class="legal-section" id="client-data">
-          <p class="legal-section-num">Section 06</p>
-          <h2>Client &amp; Mandate Data</h2>
-          <p>Where we enter into a formal mandate or advisory relationship with a client (whether an individual, family office, or corporate entity), we process personal and organisational data to the extent necessary to deliver our services and fulfil our regulatory obligations. This includes:</p>
-          <ul>
-            <li>Identity and verification data (name, date of birth, nationality, passport or ID document details) collected as part of our Know Your Customer (KYC) and Anti-Money Laundering (AML) processes;</li>
-            <li>Contact and communication details;</li>
-            <li>Financial information, including investment objectives, risk tolerance, portfolio holdings, and transaction history, required under MiFID II suitability assessment rules;</li>
-            <li>Beneficial ownership information for corporate and institutional clients;</li>
-            <li>Source of wealth and source of funds information where required by applicable AML legislation;</li>
-            <li>Tax identification numbers (e.g. for CRS/FATCA reporting obligations);</li>
-            <li>Records of investment advice given, orders placed, and portfolio decisions made.</li>
-          </ul>
+    <!-- SECTION 7 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">07 — Client Data</p>
+      <h2>Personal Data Processed in the Context of Client Engagements</h2>
+      <p>Where we enter into a formal advisory or capital allocation engagement with a client — whether a natural person, a family office, or a corporate entity — we process personal data to the extent strictly necessary to deliver the agreed services and to satisfy our obligations under applicable law. The categories of data we process in this context include:</p>
+      <ul>
+        <li>Identity information: full legal name, date of birth, nationality, country of residence;</li>
+        <li>Contact details: correspondence address, telephone numbers, email addresses;</li>
+        <li>Professional and business information: employer or business name, sector, role, business address;</li>
+        <li>Financial information provided voluntarily by the client in connection with a mandate, including investment objectives, financial situation, and relevant transaction history;</li>
+        <li>Source of wealth or source of funds information where reasonably necessary for due diligence purposes and where collected with the client's knowledge;</li>
+        <li>Correspondence and meeting records generated in the course of providing advisory services.</li>
+      </ul>
+      <p>The legal bases for processing client data are the performance of a contractual agreement (Art. 6(1)(b) GDPR), compliance with applicable legal obligations (Art. 6(1)(c) GDPR), and our legitimate interests in providing professional advisory services and maintaining accurate records (Art. 6(1)(f) GDPR). Where a client is a natural person, a tailored client-level privacy notice will be provided at the point of onboarding, supplementing and, where relevant, superseding this general policy.</p>
+    </div>
 
-          <p>The legal bases for processing client data are: performance of a contract (Art. 6(1)(b)); compliance with legal obligations including AML, MiFID II, FATCA/CRS (Art. 6(1)(c)); and legitimate interests in providing high-quality financial services and maintaining accurate business records (Art. 6(1)(f)).</p>
+    <!-- SECTION 8 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">08 — Retention</p>
+      <h2>Retention Periods</h2>
+      <p>We retain personal data only for as long as is necessary for the purpose for which it was collected, or as required by applicable statutory obligations. At the end of each applicable retention period, data is securely and permanently deleted or irreversibly anonymised. The following table sets out our standard retention periods by category of data:</p>
 
-          <div class="notice-box">
-            Clients who are natural persons are provided with a separate, detailed client-specific privacy notice at the point of onboarding, covering all categories of data processed in the context of their individual mandate. This website privacy policy supplements but does not replace that document.
-          </div>
-        </div>
+      <table class="data-table">
+        <thead>
+          <tr><th>Data Category</th><th>Standard Retention Period</th><th>Primary Basis</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Website server log files</td><td>14 days</td><td>Legitimate interest (security)</td></tr>
+          <tr><td>Cookie consent records</td><td>Until cleared by user; max. 24 months</td><td>Legal obligation (demonstrating consent)</td></tr>
+          <tr><td>Contact form enquiries (no engagement)</td><td>36 months from last interaction</td><td>Legitimate interest (business records)</td></tr>
+          <tr><td>General email correspondence (no engagement)</td><td>36 months from last substantive message</td><td>Legitimate interest (business records)</td></tr>
+          <tr><td>Pre-contractual email correspondence</td><td>36 months from last contact</td><td>Legitimate interest / legal protection</td></tr>
+          <tr><td>Client engagement correspondence &amp; records</td><td>5–10 years after end of engagement</td><td>Legal obligation / legitimate interest</td></tr>
+          <tr><td>Accounting and financial records</td><td>As required by applicable law (typically 10 years)</td><td>Legal obligation</td></tr>
+          <tr><td>Correspondence relating to disputes</td><td>Duration of dispute plus applicable limitation period</td><td>Legitimate interest (legal protection)</td></tr>
+        </tbody>
+      </table>
 
-        <div class="legal-section" id="cookies">
-          <p class="legal-section-num">Section 07</p>
-          <h2>Cookies &amp; Tracking Technologies</h2>
-          <p>We use cookies and similar technologies on our website. Cookies are small text files stored on your device by your browser when you visit our site. We distinguish between strictly necessary cookies and optional cookies requiring your consent.</p>
+      <p>Where a legal obligation requires data to be retained for a period longer than the above standard periods, we will comply with that obligation. Where you request deletion of your data and we are unable to comply immediately due to a legal retention obligation, we will restrict processing of that data to the minimum necessary until deletion is lawfully possible.</p>
+    </div>
 
-          <h3>Strictly Necessary Cookies</h3>
-          <p>These cookies are essential for the basic functionality of the website (e.g. remembering your cookie consent preference). They do not require your consent and cannot be disabled without impairing core site functions. The legal basis is our legitimate interest in operating a functional website.</p>
+    <!-- SECTION 9 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">09 — Disclosure</p>
+      <h2>Disclosure of Personal Data to Third Parties</h2>
+      <p>Chalor Capital Allocation &amp; Institutional Group does not sell, rent, or trade personal data to or with third parties under any circumstances. We disclose personal data to third parties only in the specific situations described below.</p>
 
-          <h3>Optional Cookies (Consent Required)</h3>
-          <p>With your consent, we may set analytics or functional cookies that help us understand how visitors interact with our website and improve user experience. You may grant or withdraw your consent at any time through our cookie banner or by adjusting your browser settings.</p>
+      <h3>Service Providers Acting as Data Processors</h3>
+      <p>We engage a limited number of carefully selected third-party service providers who process personal data on our behalf in order to support our operations. These providers act as data processors pursuant to written agreements that contractually restrict their use of personal data to the purpose for which it was disclosed and require them to implement appropriate technical and organisational security measures. Categories of service providers include:</p>
+      <ul>
+        <li>Email and cloud computing infrastructure providers (including Microsoft, as described in Section 6);</li>
+        <li>Cybersecurity and IT support services;</li>
+        <li>Professional advisors such as lawyers and accountants, who are bound by statutory or professional confidentiality obligations in their own right.</li>
+      </ul>
 
-          <p>A full description of all cookies used, their purposes, providers, and retention periods is available in our separate <a href="cookies.html">Cookie Policy</a>.</p>
+      <h3>Disclosure Required by Law</h3>
+      <p>We may be required to disclose personal data to courts, law enforcement authorities, or other competent public bodies where we are under a legal obligation to do so. We will disclose only the minimum necessary personal data in response to any such lawful demand, and where legally permissible, we will endeavour to inform the data subject concerned of the disclosure request before complying.</p>
 
-          <p>Your consent to non-essential cookies is stored locally in your browser (<code>chalor_cookie_choice</code>) and does not expire until cleared. You may withdraw consent at any time by clearing your browser's local storage or revisiting our cookie preference centre.</p>
-        </div>
+      <h3>Business Succession</h3>
+      <p>In the event of a merger, acquisition, reorganisation, or sale of the Company or its assets, personal data held by us may be transferred to the successor entity as part of that transaction. We would notify affected data subjects of any such transfer and the new controller's identity as soon as reasonably practicable.</p>
 
-        <div class="legal-section" id="third-parties">
-          <p class="legal-section-num">Section 08</p>
-          <h2>Third Parties &amp; Recipients of Personal Data</h2>
-          <p>We do not sell personal data to third parties. We share personal data only in the following circumstances:</p>
+      <h3>With Your Explicit Consent</h3>
+      <p>In any situation not covered above, we will only disclose your personal data to a third party where you have given us your explicit, informed, and freely given consent to do so. You may withdraw such consent at any time, and withdrawal will not affect the lawfulness of any disclosure made prior to withdrawal.</p>
+    </div>
 
-          <h3>Service Providers (Data Processors)</h3>
-          <p>We engage carefully selected third-party service providers who process personal data on our behalf, strictly under our instructions and pursuant to written data processing agreements (DPAs) in accordance with Art. 28 GDPR. These include:</p>
-          <ul>
-            <li>IT infrastructure and cloud hosting providers;</li>
-            <li>Email infrastructure and archiving providers;</li>
-            <li>CRM and business communication platforms;</li>
-            <li>Cybersecurity and fraud prevention services;</li>
-            <li>Professional advisors (legal, tax, audit) subject to confidentiality obligations.</li>
-          </ul>
+    <!-- SECTION 10 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">10 — International Transfers</p>
+      <h2>Transfers of Personal Data Outside the EEA</h2>
+      <p>Chalor Capital Allocation &amp; Institutional Group primarily processes personal data within the European Economic Area (EEA). However, as described in Section 6, our email infrastructure relies on Microsoft's global services, and some processing may take place in countries outside the EEA, including the United States.</p>
+      <p>All international transfers of personal data are conducted in compliance with Chapter V of the GDPR. Transfers occur only where one of the following safeguards is in place:</p>
+      <ul>
+        <li><strong>Adequacy decision:</strong> The European Commission has formally recognised the destination country as providing a level of data protection essentially equivalent to that within the EEA;</li>
+        <li><strong>Standard Contractual Clauses (SCCs):</strong> We or our data processors have implemented the European Commission's approved standard contractual clauses (Commission Implementing Decision (EU) 2021/914) with the relevant recipient, which contractually bind the recipient to GDPR-equivalent standards of data protection;</li>
+        <li><strong>Other appropriate safeguards:</strong> As recognised under Article 46 GDPR, including binding corporate rules or approved codes of conduct where applicable.</li>
+      </ul>
+      <p>You may request further information about the specific safeguards applicable to any particular international transfer by contacting us at <a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a>.</p>
+    </div>
 
-          <h3>Regulatory &amp; Supervisory Authorities</h3>
-          <p>We may be required to disclose personal data to competent regulatory authorities (BaFin, AMF, FINMA, or other relevant supervisors), law enforcement agencies, or courts in connection with our legal and regulatory obligations. Such disclosures are made only to the extent legally required and in accordance with applicable data protection law.</p>
+    <!-- SECTION 11 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">11 — Your Rights</p>
+      <h2>Your Rights as a Data Subject</h2>
+      <p>Under the GDPR and applicable national data protection law, you have the following rights in respect of the personal data we hold about you. We are committed to facilitating the exercise of these rights promptly, free of charge (unless a request is manifestly unfounded or excessive), and within the timescales prescribed by law.</p>
 
-          <h3>Third-Party Integrations on the Website</h3>
-          <p>Our website uses certain third-party resources that may result in technical data being transmitted to their servers:</p>
-          <ul>
-            <li><strong>Google Fonts:</strong> Loaded from Google's servers (fonts.googleapis.com, fonts.gstatic.com). Google may receive your IP address as part of this request. We have implemented resource loading in a manner designed to minimise data transfer where possible.</li>
-            <li><strong>Tabler Icons CDN</strong> (jsdelivr.net): Icon font loaded from a CDN; may result in IP address transmission to CDN provider.</li>
-            <li><strong>AOS Library CDN</strong> (cdnjs.cloudflare.com): Scroll animation library; processed by Cloudflare's CDN infrastructure.</li>
-          </ul>
-          <p>The use of these third-party resources is based on our legitimate interest in providing a high-quality, performant website experience (Art. 6(1)(f) GDPR).</p>
-        </div>
+      <h3>Right of Access (Article 15 GDPR)</h3>
+      <p>You have the right to obtain confirmation as to whether we process personal data relating to you, and if so, to receive a copy of that data together with supplementary information about how it is processed, including the purposes of processing, the categories of data, the recipients to whom it has been disclosed, the retention period, and the existence of your other rights. We will provide this information in a clear and intelligible format.</p>
 
-        <div class="legal-section" id="transfers">
-          <p class="legal-section-num">Section 09</p>
-          <h2>International Data Transfers</h2>
-          <p>As a firm operating across Continental Europe and North America, some of our activities may involve the transfer of personal data to countries outside the European Economic Area (EEA). Transfers of personal data to third countries are only carried out where one of the following safeguards applies in accordance with Chapter V GDPR:</p>
-          <ul>
-            <li><strong>Adequacy decision:</strong> The European Commission has determined that the destination country provides an adequate level of data protection (e.g. Switzerland, which is relevant to our FINMA-regulated activities);</li>
-            <li><strong>Standard Contractual Clauses (SCCs):</strong> We have implemented the European Commission's standard contractual clauses (Commission Implementing Decision (EU) 2021/914) with recipients in third countries where an adequacy decision does not exist;</li>
-            <li><strong>Binding Corporate Rules or other appropriate safeguards</strong> where applicable.</li>
-          </ul>
-          <p>You may request further information about the specific safeguards in place for any particular transfer by contacting us at <a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a>.</p>
-        </div>
+      <h3>Right to Rectification (Article 16 GDPR)</h3>
+      <p>You have the right to request the correction of inaccurate personal data we hold about you and the completion of incomplete personal data. We will act on such a request without undue delay and, where we have disclosed the inaccurate data to third parties, we will inform them of the rectification unless doing so is impossible or would involve disproportionate effort.</p>
 
-        <div class="legal-section" id="retention">
-          <p class="legal-section-num">Section 10</p>
-          <h2>Retention Periods</h2>
-          <p>We retain personal data only for as long as necessary for the purposes for which it was collected, or as required by applicable law. The following table summarises our standard retention periods:</p>
+      <h3>Right to Erasure / Right to Be Forgotten (Article 17 GDPR)</h3>
+      <p>You have the right to request that we delete personal data relating to you where: (i) it is no longer necessary for the purposes for which it was collected; (ii) you withdraw consent and there is no other legal basis for processing; (iii) you object to processing under Art. 21 and no overriding legitimate grounds exist; (iv) the data has been unlawfully processed; or (v) erasure is required by applicable law. We will comply with a valid erasure request without undue delay, subject to any legal retention obligations that may require us to retain the data for a specified period.</p>
 
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th>Data Category</th>
-                <th>Retention Period</th>
-                <th>Basis</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Server log files</td>
-                <td>14 days</td>
-                <td>Legitimate interest (security)</td>
-              </tr>
-              <tr>
-                <td>Contact form enquiries (no mandate)</td>
-                <td>36 months from last interaction</td>
-                <td>Legitimate interest (business records)</td>
-              </tr>
-              <tr>
-                <td>General email correspondence</td>
-                <td>36 months from last message</td>
-                <td>Legitimate interest (business records)</td>
-              </tr>
-              <tr>
-                <td>Regulated investment communications (MiFID II)</td>
-                <td>5 years (up to 7 years if required by competent authority)</td>
-                <td>Legal obligation (MiFID II Art. 16)</td>
-              </tr>
-              <tr>
-                <td>Client KYC/AML records</td>
-                <td>5 years after end of business relationship</td>
-                <td>Legal obligation (AMLD, GwG)</td>
-              </tr>
-              <tr>
-                <td>Client mandate &amp; portfolio records</td>
-                <td>10 years after end of mandate</td>
-                <td>Legal obligation / Legitimate interest</td>
-              </tr>
-              <tr>
-                <td>Accounting &amp; tax records</td>
-                <td>10 years (Germany: § 257 HGB, § 147 AO)</td>
-                <td>Legal obligation</td>
-              </tr>
-              <tr>
-                <td>Cookie consent records</td>
-                <td>Duration of browser local storage; max. 24 months</td>
-                <td>Legal obligation (demonstrating consent)</td>
-              </tr>
-            </tbody>
-          </table>
+      <h3>Right to Restriction of Processing (Article 18 GDPR)</h3>
+      <p>You have the right to request that we restrict processing of your personal data in the following circumstances: (i) you contest the accuracy of the data, pending verification; (ii) processing is unlawful but you oppose erasure; (iii) we no longer need the data but you require it for the establishment, exercise, or defence of legal claims; or (iv) you have objected to processing pending verification of whether our legitimate grounds override yours. Where processing is restricted, we will store your data but not process it further without your consent or for the establishment, exercise, or defence of legal claims.</p>
 
-          <p>Following the applicable retention period, personal data is securely deleted or anonymised in a manner that prevents reconstruction of the original personal data.</p>
-        </div>
+      <h3>Right to Data Portability (Article 20 GDPR)</h3>
+      <p>Where processing is based on your consent or on a contract, and is carried out by automated means, you have the right to receive the personal data you have provided to us in a structured, commonly used, and machine-readable format, and to transmit that data to another controller without hindrance from us. This right applies to the extent technically feasible.</p>
 
-        <div class="legal-section" id="rights">
-          <p class="legal-section-num">Section 11</p>
-          <h2>Your Data Subject Rights</h2>
-          <p>As a data subject under the GDPR, you have the following rights in respect of your personal data processed by Chalor Capital Allocation &amp; Institutional Group. We are committed to responding to all valid requests within <strong>one calendar month</strong> of receipt, extendable by a further two months in complex cases, with notification to you.</p>
+      <h3>Right to Object (Article 21 GDPR)</h3>
+      <p>Where we process personal data on the basis of legitimate interests (Art. 6(1)(f)), you have the right to object to that processing at any time on grounds relating to your particular situation. We will cease processing unless we can demonstrate compelling legitimate grounds that override your interests, rights, and freedoms, or where processing is necessary for the establishment, exercise, or defence of legal claims. Where personal data is processed for direct marketing purposes — which we do not currently conduct — you have an absolute right to object at any time.</p>
 
-          <div class="rights-grid">
-            <div class="right-card">
-              <div class="right-card-icon"><i class="ti ti-eye"></i></div>
-              <p class="right-card-title">Right of Access (Art. 15)</p>
-              <p>You may request confirmation of whether we process your personal data and, if so, access to a copy of that data together with information about the processing.</p>
-            </div>
-            <div class="right-card">
-              <div class="right-card-icon"><i class="ti ti-pencil"></i></div>
-              <p class="right-card-title">Right to Rectification (Art. 16)</p>
-              <p>You may request correction of inaccurate personal data or completion of incomplete data held about you.</p>
-            </div>
-            <div class="right-card">
-              <div class="right-card-icon"><i class="ti ti-trash"></i></div>
-              <p class="right-card-title">Right to Erasure (Art. 17)</p>
-              <p>You may request deletion of your personal data where it is no longer necessary, consent is withdrawn, or processing is unlawful — subject to legal retention obligations.</p>
-            </div>
-            <div class="right-card">
-              <div class="right-card-icon"><i class="ti ti-lock"></i></div>
-              <p class="right-card-title">Right to Restriction (Art. 18)</p>
-              <p>You may request that we restrict processing of your data in certain circumstances, such as while the accuracy of the data is being contested.</p>
-            </div>
-            <div class="right-card">
-              <div class="right-card-icon"><i class="ti ti-transfer"></i></div>
-              <p class="right-card-title">Right to Portability (Art. 20)</p>
-              <p>Where processing is based on consent or contract and carried out by automated means, you may receive your data in a structured, commonly used machine-readable format.</p>
-            </div>
-            <div class="right-card">
-              <div class="right-card-icon"><i class="ti ti-hand-stop"></i></div>
-              <p class="right-card-title">Right to Object (Art. 21)</p>
-              <p>You may object to processing based on legitimate interests (Art. 6(1)(f)). We will cease processing unless compelling legitimate grounds override your interests.</p>
-            </div>
-            <div class="right-card">
-              <div class="right-card-icon"><i class="ti ti-robot-off"></i></div>
-              <p class="right-card-title">Right Not to Be Subject to Automated Decisions (Art. 22)</p>
-              <p>You have the right not to be subject to decisions based solely on automated processing that produce significant legal or similarly significant effects.</p>
-            </div>
-            <div class="right-card">
-              <div class="right-card-icon"><i class="ti ti-x"></i></div>
-              <p class="right-card-title">Right to Withdraw Consent (Art. 7(3))</p>
-              <p>Where processing is based on your consent, you may withdraw it at any time without affecting the lawfulness of processing based on consent prior to withdrawal.</p>
-            </div>
-          </div>
+      <h3>Right to Withdraw Consent (Article 7(3) GDPR)</h3>
+      <p>Where we process your personal data based on your consent, you may withdraw that consent at any time. Withdrawal of consent does not affect the lawfulness of processing that took place prior to withdrawal. To withdraw consent for cookie-based processing, you may clear your browser's local storage. For any other consent-based processing, please contact us at <a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a>.</p>
 
-          <p style="margin-top: 24px;">To exercise any of your rights, please submit a request in writing to <a href="mailto:privacy@chalor.com" style="color:var(--navy);">privacy@chalor.com</a>. We may request proof of identity before processing your request in order to protect your personal data from unauthorised access.</p>
+      <h3>Right Not to Be Subject to Solely Automated Decisions (Article 22 GDPR)</h3>
+      <p>You have the right not to be subject to a decision based solely on automated processing — including profiling — which produces legal effects or similarly significantly affects you. We do not currently engage in any such automated decision-making.</p>
 
-          <h3>Right to Lodge a Complaint</h3>
-          <p>If you believe that our processing of your personal data infringes applicable data protection law, you have the right to lodge a complaint with the competent supervisory authority. In Germany, this is the data protection authority of the federal state in which we are registered. You may also contact the Federal Commissioner for Data Protection and Freedom of Information (Bundesbeauftragter für den Datenschutz und die Informationsfreiheit, BfDI) at <a href="https://www.bfdi.bund.de" target="_blank" rel="noopener noreferrer">www.bfdi.bund.de</a>.</p>
-        </div>
+      <h3>Right to Lodge a Complaint</h3>
+      <p>If you believe that our processing of your personal data infringes the GDPR or applicable national data protection law, you have the right to lodge a complaint with the competent supervisory authority in the EU member state in which you reside, work, or where the alleged infringement occurred. In Germany, you may contact the competent data protection authority for the relevant federal state, or the Federal Commissioner for Data Protection and Freedom of Information (BfDI) at <a href="https://www.bfdi.bund.de" target="_blank" rel="noopener noreferrer">www.bfdi.bund.de</a>. We would, however, appreciate the opportunity to address your concern directly before you contact a supervisory authority, and encourage you to reach out to us first.</p>
 
-        <div class="legal-section" id="security">
-          <p class="legal-section-num">Section 12</p>
-          <h2>Data Security</h2>
-          <p>We implement appropriate technical and organisational measures to protect personal data against accidental or unlawful destruction, loss, alteration, unauthorised disclosure, or access, in accordance with Art. 32 GDPR. These measures include, but are not limited to:</p>
-          <ul>
-            <li>Encrypted data transmission via TLS/SSL for all web traffic;</li>
-            <li>Encrypted storage of sensitive client data at rest;</li>
-            <li>Role-based access controls limiting data access to authorised personnel on a need-to-know basis;</li>
-            <li>Regular security reviews, vulnerability assessments, and penetration testing;</li>
-            <li>Multi-factor authentication for access to systems containing personal data;</li>
-            <li>Staff training and awareness programmes on data protection and information security;</li>
-            <li>Incident response procedures, including data breach notification protocols in compliance with Art. 33–34 GDPR.</li>
-          </ul>
-          <p>In the event of a personal data breach that is likely to result in a risk to your rights and freedoms, we will notify the competent supervisory authority within 72 hours of becoming aware of the breach (Art. 33 GDPR) and, where required, will notify affected individuals without undue delay (Art. 34 GDPR).</p>
-        </div>
+      <h3>How to Exercise Your Rights</h3>
+      <p>To exercise any of the rights set out above, please submit a written request to <a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a>. Please include sufficient information to enable us to identify you as a data subject and to locate the relevant personal data. We may request a reasonable form of identification before processing your request, in order to protect your data from unauthorised access. We will respond within one (1) calendar month of receipt of a valid request, and will notify you if we require an extension of up to two (2) further months in cases of complexity or volume.</p>
+    </div>
 
-        <div class="legal-section" id="children">
-          <p class="legal-section-num">Section 13</p>
-          <h2>Children's Data</h2>
-          <p>Our website and services are directed exclusively at adults and professional or institutional clients. We do not knowingly collect or process personal data of individuals under the age of 18. If we become aware that we have inadvertently collected personal data of a minor, we will take steps to delete such data promptly. If you believe that a minor has submitted personal data to us, please contact us at <a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a>.</p>
-        </div>
+    <!-- SECTION 12 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">12 — Security</p>
+      <h2>Technical and Organisational Security Measures</h2>
+      <p>Chalor Capital Allocation &amp; Institutional Group implements a comprehensive set of technical and organisational measures to protect personal data against accidental or unlawful destruction, loss, alteration, unauthorised disclosure, or access, in accordance with Article 32 of the GDPR. Our security measures include, but are not limited to, the following:</p>
+      <ul>
+        <li>Encrypted transmission of data via TLS/SSL for all website traffic, ensuring that data exchanged between your browser and our servers is protected in transit;</li>
+        <li>Multi-factor authentication (MFA) required for access to all systems that store or process personal data, including email accounts and cloud storage;</li>
+        <li>Role-based access control (RBAC) to restrict access to personal data to only those personnel who have a demonstrable need to access it in the course of their duties;</li>
+        <li>Regular review and update of software, systems, and security configurations to address emerging vulnerabilities;</li>
+        <li>Regular backup of data to protected storage, enabling recovery in the event of data loss or corruption;</li>
+        <li>Strict confidentiality obligations imposed on all personnel with access to personal data, applicable both during and after their engagement with the Company;</li>
+        <li>Internal procedures for the detection, recording, and timely reporting of personal data breaches, in accordance with Articles 33 and 34 GDPR.</li>
+      </ul>
+      <p>In the event of a personal data breach that is likely to result in a risk to the rights and freedoms of natural persons, we will notify the competent supervisory authority within seventy-two (72) hours of becoming aware of the breach. Where the breach is likely to result in a high risk to your rights and freedoms, we will also notify you directly, without undue delay, providing clear information about the nature of the breach and the steps you may take to protect yourself.</p>
+      <p>Notwithstanding the above, no method of data transmission or storage is completely secure. While we take every reasonable precaution to protect your personal data, we cannot guarantee absolute security, and we encourage you to exercise caution about the type of information you transmit to us electronically.</p>
+    </div>
 
-        <div class="legal-section" id="changes">
-          <p class="legal-section-num">Section 14</p>
-          <h2>Changes to This Privacy Policy</h2>
-          <p>We may update this Privacy Policy from time to time to reflect changes in our data processing practices, legal requirements, or regulatory guidance. When we make material changes, we will update the "Last updated" date at the top of this page and, where appropriate, notify you by email or by a prominent notice on our website.</p>
-          <p>We encourage you to review this policy periodically. Continued use of our website or services following any such changes constitutes your acknowledgment of the revised policy. The version of this policy in effect at the time we receive your personal data applies to the processing of that data, subject to any mandatory updates required by law.</p>
-          <p>Archived versions of this policy are available on request by contacting <a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a>.</p>
-        </div>
+    <!-- SECTION 13 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">13 — Minors</p>
+      <h2>Data Relating to Minors</h2>
+      <p>This website and all services offered by Chalor Capital Allocation &amp; Institutional Group are directed exclusively at adults. We do not knowingly collect or process personal data relating to individuals under the age of eighteen (18). If you believe that we have inadvertently received personal data relating to a minor, please notify us immediately at <a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a> and we will take prompt steps to delete such data from our systems.</p>
+    </div>
 
-          <div class="notice-box">
-            This Privacy Policy is provided in English as the primary language. In the event of any conflict between this English version and any translated version, the English version shall prevail. This policy has been prepared with reference to Regulation (EU) 2016/679 (GDPR), the German Federal Data Protection Act (BDSG), and applicable sector-specific legislation including MiFID II.
-          </div>
-        </div>
+    <!-- SECTION 14 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">14 — Changes</p>
+      <h2>Amendments to This Privacy Policy</h2>
+      <p>We reserve the right to update, amend, or supplement this Privacy Policy at any time in order to reflect changes in our data processing practices, changes in applicable law or regulatory guidance, or changes in the services we offer. Any amendments will be published on this page with an updated revision date clearly indicated in the metadata bar at the top of the document.</p>
+      <p>Where we make material changes to this Privacy Policy — that is, changes that meaningfully affect your rights or our obligations — we will take reasonable steps to draw these changes to your attention, which may include a notice on our website or, where we hold your contact details, direct communication by email.</p>
+      <p>We encourage you to review this Privacy Policy periodically to remain informed of how we handle your personal data. Your continued use of our website or services following the publication of an amended Privacy Policy constitutes your acknowledgment of the updated version, without prejudice to any rights you hold under applicable data protection law.</p>
+      <p>Previous versions of this Privacy Policy are available on request by contacting us at <a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a>.</p>
+    </div>
 
-      </div><!-- /.legal-content -->
-    </div><!-- /.legal-layout -->
+    <!-- SECTION 15 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">15 — Contact</p>
+      <h2>Contact for Data Protection Matters</h2>
+      <p>If you have any questions about this Privacy Policy, wish to exercise your rights as a data subject, have a concern about our data processing practices, or wish to report a suspected data security incident, please contact us using the details below. We are committed to responding to all data protection enquiries promptly, respectfully, and in full compliance with our obligations under applicable law.</p>
+
+      <div class="info-card">
+        <p class="info-card-title">Data Protection Contact</p>
+        <div class="info-row"><span class="info-key">Organisation</span><span class="info-val">Chalor Capital Allocation &amp; Institutional Group</span></div>
+        <div class="info-row"><span class="info-key">Email (all matters)</span><span class="info-val"><a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a></span></div>
+        <div class="info-row"><span class="info-key">Postal address</span><span class="info-val">Att: Data Protection<br>Berlin, Germany</span></div>
+        <div class="info-row"><span class="info-key">Response commitment</span><span class="info-val">Acknowledgement within 5 business days; full response within 1 calendar month</span></div>
+      </div>
+
+      <div class="notice-box">
+        This Privacy Policy is published in English as the authoritative version. In the event of any inconsistency between this version and any translation or summary, the English text shall prevail. This policy has been prepared with reference to Regulation (EU) 2016/679 (GDPR) and applicable national implementing legislation. It should be read alongside our <a href="imprint.html">Imprint</a> and <a href="cookies.html">Cookie Policy</a>.
+      </div>
+    </div>
+
   </div>
 </main>
 
@@ -1105,34 +747,15 @@ footer { background: var(--navy-deep); color: rgba(255,255,255,0.65); }
     </div>
   </div>
 </footer>
-<script src="main.js"></script>
+<script src="/main.js"></script>
 <script>
-// Header hide/show
 let lastScroll = 0;
 const header = document.getElementById('site-header');
 window.addEventListener('scroll', () => {
-  const current = window.scrollY;
-  if (current > lastScroll && current > 80) {
-    header.classList.add('hide');
-  } else {
-    header.classList.remove('hide');
-  }
-  lastScroll = current <= 0 ? 0 : current;
+  const c = window.scrollY;
+  header.classList.toggle('hide', c > lastScroll && c > 80);
+  lastScroll = c <= 0 ? 0 : c;
 }, { passive: true });
-
-// TOC active state
-const tocLinks = document.querySelectorAll('.toc-list a');
-const sections = document.querySelectorAll('.legal-section');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      tocLinks.forEach(l => l.classList.remove('active'));
-      const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
-      if (active) active.classList.add('active');
-    }
-  });
-}, { rootMargin: '-20% 0px -60% 0px' });
-sections.forEach(s => observer.observe(s));
 </script>
 </body>
 </html>

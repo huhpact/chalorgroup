@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Imprint — Chalor Capital Allocation & Institutional Group</title>
-<meta name="description" content="Legal imprint and disclosure information for Chalor Capital Allocation & Institutional Group.">
+<meta name="description" content="Legal imprint and mandatory disclosure information for Chalor Capital Allocation & Institutional Group.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
@@ -16,6 +16,7 @@
 <meta name="theme-color" content="#072958">
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G4V61PC4QD"></script>
+<link rel="stylesheet" href="main.css">
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -23,32 +24,25 @@
 
   gtag('config', 'G-G4V61PC4QD');
 </script>
-<link rel="stylesheet" href="main.css">
 <style>
 :root {
   --navy: #072958;
   --navy-deep: #051e42;
   --navy-mid: #0e3d7a;
   --slate: #a4acb8;
-  --slate-light: #c8cdd6;
   --bg-white: #ffffff;
   --bg-near: #f8f9fb;
-  --bg-light: #f0f3f8;
   --text-dark: #0d1b2a;
   --text-body: #3a4557;
   --text-muted: #6b7a92;
   --border-light: #e4e8ef;
-  --shadow-sm: 0 2px 12px rgba(7,41,88,0.08);
-  --shadow-md: 0 8px 32px rgba(7,41,88,0.12);
   --radius-sm: 8px;
   --radius-md: 16px;
-  --radius-lg: 24px;
   --transition: 0.25s ease;
   --font-display: 'Manrope', sans-serif;
   --font-body: 'DM Sans', sans-serif;
-  --max-width: 1240px;
+  --max-width: 900px;
 }
-
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -57,386 +51,182 @@ body {
   background: var(--bg-white);
   overflow-x: hidden;
   font-size: 16px;
-  line-height: 1.75;
+  line-height: 1.8;
   -webkit-font-smoothing: antialiased;
 }
-
-/* ── SCROLLBAR ── */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--bg-near); }
 ::-webkit-scrollbar-thumb { background: var(--slate); border-radius: 3px; }
 
-/* ── HEADER ── */
+/* HEADER */
 #site-header {
-  position: fixed;
-  top: 0; left: 0; right: 0;
-  z-index: 1000;
-  padding: 16px 24px;
+  position: fixed; top: 0; left: 0; right: 0;
+  z-index: 1000; padding: 16px 24px;
   pointer-events: none;
   transition: transform 0.35s ease;
 }
 #site-header.hide { transform: translateY(-120%); }
 .header-island {
-  max-width: 1100px;
-  margin: 0 auto;
-  background: rgba(255,255,255,0.92);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  max-width: 1100px; margin: 0 auto;
+  background: rgba(255,255,255,0.93);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
   border-radius: 16px;
   box-shadow: 0 4px 24px rgba(7,41,88,0.10), 0 1px 4px rgba(7,41,88,0.06);
-  padding: 0 32px;
-  height: 68px;
+  padding: 0 32px; height: 68px;
   display: flex; align-items: center; justify-content: space-between;
   pointer-events: all;
   border: 1px solid rgba(7,41,88,0.06);
 }
-.header-logo {
-  display: flex; align-items: center; gap: 12px;
-  text-decoration: none;
-  flex-shrink: 0;
-}
+.header-logo { display: flex; align-items: center; gap: 12px; text-decoration: none; flex-shrink: 0; }
 .logo-wordmark {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 16px;
-  letter-spacing: 0.18em;
-  color: var(--navy);
-  text-transform: uppercase;
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 16px; letter-spacing: 0.18em;
+  color: var(--navy); text-transform: uppercase;
 }
 .header-back {
   display: inline-flex; align-items: center; gap: 8px;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--navy);
-  text-decoration: none;
-  padding: 10px 20px;
-  border: 1.5px solid var(--border-light);
-  border-radius: 10px;
-  transition: background var(--transition), border-color var(--transition);
+  font-family: var(--font-display); font-weight: 700;
+  font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--navy); text-decoration: none;
+  padding: 10px 20px; border: 1.5px solid var(--border-light);
+  border-radius: 10px; transition: background var(--transition), border-color var(--transition);
 }
 .header-back:hover { background: var(--bg-near); border-color: var(--navy); }
 
-/* ── CONTAINER ── */
-.container {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 0 40px;
-  position: relative;
-  z-index: 1;
-}
-
-/* ── PAGE HERO ── */
+/* PAGE HERO */
 .page-hero {
-  background: var(--navy);
-  padding: 160px 0 80px;
-  position: relative;
-  overflow: hidden;
+  background: var(--navy); padding: 160px 0 80px;
+  position: relative; overflow: hidden;
 }
 .page-hero::before {
-  content: '';
-  position: absolute; inset: 0;
+  content: ''; position: absolute; inset: 0;
   background-image:
     linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-  pointer-events: none;
+  background-size: 60px 60px; pointer-events: none;
 }
+.container { max-width: 1240px; margin: 0 auto; padding: 0 40px; position: relative; z-index: 1; }
 .page-hero-label {
-  display: inline-block;
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.55);
-  padding: 6px 14px;
-  background: rgba(255,255,255,0.08);
-  border-radius: 40px;
-  margin-bottom: 24px;
+  display: inline-block; font-family: var(--font-body); font-weight: 500;
+  font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase;
+  color: rgba(255,255,255,0.55); padding: 6px 14px;
+  background: rgba(255,255,255,0.08); border-radius: 40px; margin-bottom: 24px;
 }
-.page-hero h1 {
-  font-family: var(--font-display);
-  font-weight: 800;
-  font-size: clamp(40px, 6vw, 64px);
-  line-height: 1.05;
-  letter-spacing: -0.025em;
-  color: #fff;
-  margin-bottom: 16px;
-}
-.page-hero-sub {
-  font-size: 16px;
-  color: rgba(255,255,255,0.55);
-  max-width: 560px;
-  margin-top: 12px;
-}
-
-/* ── BREADCRUMB ── */
 .breadcrumb {
   display: flex; align-items: center; gap: 8px;
-  font-size: 13px;
-  color: rgba(255,255,255,0.45);
-  margin-bottom: 32px;
+  font-size: 13px; color: rgba(255,255,255,0.45); margin-bottom: 32px;
 }
 .breadcrumb a { color: rgba(255,255,255,0.55); text-decoration: none; transition: color var(--transition); }
 .breadcrumb a:hover { color: #fff; }
 .breadcrumb span { color: rgba(255,255,255,0.25); }
+.page-hero h1 {
+  font-family: var(--font-display); font-weight: 800;
+  font-size: clamp(40px, 6vw, 64px);
+  line-height: 1.05; letter-spacing: -0.025em; color: #fff; margin-bottom: 16px;
+}
+.page-hero-sub { font-size: 16px; color: rgba(255,255,255,0.55); max-width: 620px; margin-top: 12px; }
 
-/* ── MAIN CONTENT ── */
-.legal-main {
-  padding: 80px 0 120px;
-  background: var(--bg-white);
-}
-.legal-layout {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  gap: 80px;
-  align-items: start;
-}
+/* MAIN */
+.legal-main { padding: 80px 0 140px; background: var(--bg-white); }
+.legal-wrap { max-width: var(--max-width); margin: 0 auto; padding: 0 40px; }
 
-.footer-logo-img { height: 52px; width: auto; object-fit: contain; }
-
-/* ── STICKY TOC ── */
-.toc-wrap {
-  position: sticky;
-  top: 104px;
-}
-.toc-label {
-  font-family: var(--font-body);
-  font-weight: 500;
-  font-size: 11px;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 16px;
-}
-.toc-list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-.toc-list li a {
-  display: block;
-  font-size: 13px;
-  font-family: var(--font-body);
-  color: var(--text-muted);
-  text-decoration: none;
-  padding: 7px 12px;
-  border-radius: 8px;
-  border-left: 2px solid transparent;
-  transition: color var(--transition), background var(--transition), border-color var(--transition);
-  line-height: 1.4;
-}
-.toc-list li a:hover, .toc-list li a.active {
-  color: var(--navy);
-  background: rgba(7,41,88,0.05);
-  border-left-color: var(--navy);
-}
-
-/* ── LEGAL CONTENT ── */
-.legal-content { max-width: 720px; }
-.legal-section {
-  margin-bottom: 64px;
-  padding-bottom: 64px;
-  border-bottom: 1px solid var(--border-light);
-}
-.legal-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
-
-.legal-section-num {
-  font-family: var(--font-body);
-  font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: var(--navy);
-  opacity: 0.6;
-  margin-bottom: 10px;
-}
-.legal-section h2 {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 22px;
-  letter-spacing: -0.01em;
-  color: var(--text-dark);
-  margin-bottom: 20px;
-  line-height: 1.25;
-}
-.legal-section h3 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-size: 16px;
-  color: var(--text-dark);
-  margin-top: 28px;
-  margin-bottom: 10px;
-}
-.legal-section p {
-  font-size: 15px;
-  line-height: 1.8;
-  color: var(--text-body);
-  margin-bottom: 14px;
-}
-.legal-section p:last-child { margin-bottom: 0; }
-.legal-section ul {
-  margin: 12px 0 12px 0;
-  padding-left: 0;
-  list-style: none;
-}
-.legal-section ul li {
-  font-size: 15px;
-  line-height: 1.8;
-  color: var(--text-body);
-  padding-left: 20px;
-  position: relative;
-  margin-bottom: 6px;
-}
-.legal-section ul li::before {
-  content: '—';
-  position: absolute;
-  left: 0;
-  color: var(--slate);
-}
-
-/* ── INFO CARD ── */
-.info-card {
-  background: var(--bg-near);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius-md);
-  padding: 28px 32px;
-  margin-bottom: 24px;
-}
-.info-card-title {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 14px;
-  color: var(--navy);
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  margin-bottom: 16px;
-}
-.info-row {
-  display: flex;
-  gap: 12px;
-  padding: 10px 0;
-  border-bottom: 1px solid var(--border-light);
-  font-size: 14px;
-  line-height: 1.5;
-}
-.info-row:last-child { border-bottom: none; padding-bottom: 0; }
-.info-key {
-  flex: 0 0 160px;
-  color: var(--text-muted);
-  font-weight: 500;
-}
-.info-val {
-  color: var(--text-dark);
-}
-.info-val a {
-  color: var(--navy);
-  text-decoration: none;
-  border-bottom: 1px solid rgba(7,41,88,0.2);
-  transition: border-color var(--transition);
-}
-.info-val a:hover { border-color: var(--navy); }
-
-/* ── NOTICE BOX ── */
-.notice-box {
-  background: rgba(7,41,88,0.04);
-  border-left: 3px solid var(--navy);
-  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  padding: 18px 22px;
-  margin: 20px 0;
-  font-size: 14px;
-  color: var(--text-body);
-  line-height: 1.7;
-}
-
-/* ── LAST UPDATED ── */
 .meta-bar {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 18px 24px;
-  background: var(--bg-near);
-  border-radius: var(--radius-sm);
-  margin-bottom: 48px;
-  font-size: 13px;
-  color: var(--text-muted);
-  flex-wrap: wrap;
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  padding: 16px 22px; background: var(--bg-near);
+  border-radius: var(--radius-sm); margin-bottom: 56px;
+  font-size: 13px; color: var(--text-muted);
+  border: 1px solid var(--border-light);
 }
-.meta-bar i { font-size: 15px; color: var(--slate); }
+.meta-bar i { color: var(--slate); }
 .meta-bar strong { color: var(--text-dark); }
 
-/* ── FOOTER ── */
+/* SECTIONS */
+.legal-section { margin-bottom: 72px; padding-bottom: 72px; border-bottom: 1px solid var(--border-light); }
+.legal-section:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+.section-eyebrow {
+  font-family: var(--font-body); font-size: 11px; font-weight: 500;
+  letter-spacing: 0.22em; text-transform: uppercase;
+  color: var(--navy); opacity: 0.55; margin-bottom: 10px;
+}
+.legal-section h2 {
+  font-family: var(--font-display); font-weight: 700; font-size: 24px;
+  letter-spacing: -0.01em; color: var(--text-dark);
+  margin-bottom: 24px; line-height: 1.2;
+}
+.legal-section h3 {
+  font-family: var(--font-display); font-weight: 600; font-size: 17px;
+  color: var(--text-dark); margin-top: 36px; margin-bottom: 14px; line-height: 1.35;
+}
+.legal-section p { font-size: 15px; line-height: 1.85; color: var(--text-body); margin-bottom: 16px; }
+.legal-section p:last-child { margin-bottom: 0; }
+.legal-section ul { list-style: none; margin: 14px 0 18px; padding: 0; }
+.legal-section ul li {
+  font-size: 15px; line-height: 1.8; color: var(--text-body);
+  padding-left: 22px; position: relative; margin-bottom: 9px;
+}
+.legal-section ul li::before { content: '—'; position: absolute; left: 0; color: var(--slate); }
+.legal-section a { color: var(--navy); text-decoration: none; border-bottom: 1px solid rgba(7,41,88,0.2); transition: border-color var(--transition); }
+.legal-section a:hover { border-color: var(--navy); }
+
+/* CARDS */
+.info-card {
+  background: var(--bg-near); border: 1px solid var(--border-light);
+  border-radius: var(--radius-md); padding: 28px 32px; margin: 24px 0;
+}
+.info-card-title {
+  font-family: var(--font-display); font-weight: 700; font-size: 12px;
+  color: var(--navy); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 18px;
+}
+.info-row {
+  display: flex; gap: 16px; padding: 11px 0;
+  border-bottom: 1px solid var(--border-light); font-size: 14px; line-height: 1.6;
+}
+.info-row:last-child { border-bottom: none; padding-bottom: 0; }
+.info-key { flex: 0 0 180px; color: var(--text-muted); font-weight: 500; }
+.info-val { color: var(--text-dark); }
+.info-val a { color: var(--navy); border-bottom: 1px solid rgba(7,41,88,0.2); }
+.info-val a:hover { border-color: var(--navy); }
+
+/* NOTICE */
+.notice-box {
+  background: rgba(7,41,88,0.04); border-left: 3px solid var(--navy);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  padding: 20px 24px; margin: 24px 0;
+  font-size: 14px; color: var(--text-body); line-height: 1.75;
+}
+.notice-box strong { color: var(--text-dark); }
+.notice-box a { color: var(--navy); border-bottom: 1px solid rgba(7,41,88,0.2); text-decoration: none; }
+
+/* FOOTER */
 footer { background: var(--navy-deep); color: rgba(255,255,255,0.65); }
 .footer-main { padding: 80px 0; }
-.footer-grid {
-  display: grid;
-  grid-template-columns: 1.6fr 1fr 1fr 1fr;
-  gap: 48px;
-}
-.footer-brand-tagline {
-  font-size: 14px;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.45);
-  margin-top: 16px;
-  max-width: 280px;
-}
-.footer-social {
-  display: flex; gap: 12px;
-  margin-top: 24px;
-}
+.footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1fr; gap: 48px; }
+.footer-brand-tagline { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.45); margin-top: 16px; max-width: 280px; }
+.footer-social { display: flex; gap: 12px; margin-top: 24px; }
 .footer-social a {
-  width: 38px; height: 38px;
-  border-radius: 10px;
+  width: 38px; height: 38px; border-radius: 10px;
   background: rgba(255,255,255,0.07);
   display: flex; align-items: center; justify-content: center;
-  color: rgba(255,255,255,0.55);
-  font-size: 16px;
-  text-decoration: none;
+  color: rgba(255,255,255,0.55); font-size: 16px; text-decoration: none;
   transition: background var(--transition), color var(--transition);
 }
 .footer-social a:hover { background: rgba(255,255,255,0.15); color: #fff; }
 .footer-col-title {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 12px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
-  margin-bottom: 20px;
+  font-family: var(--font-display); font-weight: 700; font-size: 12px;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: rgba(255,255,255,0.35); margin-bottom: 20px;
 }
 .footer-links { list-style: none; }
 .footer-links li { margin-bottom: 10px; }
-.footer-links a {
-  font-size: 14px;
-  color: rgba(255,255,255,0.55);
-  text-decoration: none;
-  transition: color var(--transition);
-}
+.footer-links a { font-size: 14px; color: rgba(255,255,255,0.55); text-decoration: none; transition: color var(--transition); }
 .footer-links a:hover { color: #fff; }
 .footer-sep { height: 1px; background: rgba(255,255,255,0.08); }
 .footer-bottom { padding: 24px 0; }
-.footer-bottom-inner {
-  display: flex; align-items: center; justify-content: space-between;
-  flex-wrap: wrap; gap: 12px;
-}
+.footer-bottom-inner { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
 .footer-copy { font-size: 13px; color: rgba(255,255,255,0.35); }
-.footer-reg {
-  font-size: 12px;
-  color: rgba(255,255,255,0.3);
-  display: flex; align-items: center; gap: 8px;
-  letter-spacing: 0.04em;
-}
-.footer-reg span { opacity: 0.4; }
 
-/* ── RESPONSIVE ── */
 @media (max-width: 900px) {
-  .legal-layout { grid-template-columns: 1fr; }
-  .toc-wrap { position: static; margin-bottom: 40px; }
-  .container { padding: 0 24px; }
+  .container, .legal-wrap { padding: 0 24px; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
 }
 @media (max-width: 600px) {
@@ -488,7 +278,7 @@ footer { background: var(--navy-deep); color: rgba(255,255,255,0.65); }
     <a href="/index.html#philosophy" onclick="closeSidebar()">Philosophy</a>
     <a href="/index.html#contact" onclick="closeSidebar()">Contact</a>
   </nav>
-  <a href="#contact" class="sidebar-cta" onclick="closeSidebar()">Get in Touch</a>
+  <a href="/index.html#contact" class="sidebar-cta" onclick="closeSidebar()">Get in Touch</a>
   <div class="sidebar-social">
     <a href="#" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
     <a href="#" aria-label="X / Twitter"><i class="ti ti-brand-x"></i></a>
@@ -518,148 +308,145 @@ footer { background: var(--navy-deep); color: rgba(255,255,255,0.65); }
 <section class="page-hero">
   <div class="container">
     <div class="breadcrumb">
-      <a href="index.html">Home</a>
-      <span>/</span>
+      <a href="index.html">Home</a><span>/</span>
       <span style="color:rgba(255,255,255,0.65);">Imprint</span>
     </div>
     <div class="page-hero-label">Legal Disclosure</div>
     <h1>Imprint</h1>
-    <p class="page-hero-sub">Mandatory disclosure information pursuant to applicable European and international legal requirements.</p>
+    <p class="page-hero-sub">Mandatory legal disclosure information for Chalor Capital Allocation &amp; Institutional Group, provided in accordance with applicable statutory requirements.</p>
   </div>
 </section>
 
 <main class="legal-main">
-  <div class="container">
-    <div class="legal-layout">
+  <div class="legal-wrap">
 
-      <div class="legal-content">
+    <div class="meta-bar">
+      <i class="ti ti-calendar"></i> Last updated: <strong>5 June 2026</strong>
+      &nbsp;&middot;&nbsp;
+      <i class="ti ti-world"></i> Applicable to: <strong>chalorgroup.com</strong>
+    </div>
 
-        <div class="meta-bar">
-          <i class="ti ti-calendar"></i>
-          Last updated: <strong>1 June 2026</strong>
-          <span style="margin-left:auto; display:flex; align-items:center; gap:6px;">
-            <i class="ti ti-shield-check"></i> Compliant with TMG §5, DSGVO Art. 13, and applicable EU disclosure requirements
-          </span>
-        </div>
+    <!-- SECTION 1 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">01 — Identity of the Operator</p>
+      <h2>Company Information</h2>
+      <p>This website, accessible at <strong>chalorgroup.com</strong>, is owned, operated, and published by Chalor Capital Allocation &amp; Institutional Group (hereinafter referred to as "Chalor", "we", "us", or "the Company"). The following particulars are provided in fulfilment of all applicable statutory disclosure obligations governing the operation of commercial websites and the publication of business information to the public.</p>
+      <p>Chalor Capital Allocation &amp; Institutional Group is a private advisory and capital allocation firm providing bespoke institutional-grade services to private investors and mid-market enterprises across Continental Europe and North America. The Company operates on a strictly private, non-public basis and does not offer regulated financial products or services to the general public.</p>
 
-        <div class="legal-section" id="company-info">
-          <p class="legal-section-num">Section 01</p>
-          <h2>Company Information</h2>
-          <p>This website is operated by Chalor Capital Allocation & Institutional Group. The following information is provided in accordance with § 5 of the German Telemedia Act (Telemediengesetz, TMG), Article 14 of Regulation (EU) No. 524/2013, and all other applicable national and European statutory disclosure obligations.</p>
+      <div class="info-card">
+        <p class="info-card-title">Registered Entity Details</p>
+        <div class="info-row"><span class="info-key">Legal name</span><span class="info-val">Chalor Capital Allocation &amp; Institutional Group</span></div>
+        <div class="info-row"><span class="info-key">Legal form</span><span class="info-val">Private advisory firm</span></div>
+        <div class="info-row"><span class="info-key">Registered address</span><span class="info-val">Berlin, Germany</span></div>
+        <div class="info-row"><span class="info-key">Website</span><span class="info-val"><a href="https://www.chalorgroup.com">www.chalorgroup.com</a></span></div>
+        <div class="info-row"><span class="info-key">Email</span><span class="info-val"><a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a></span></div>
+      </div>
 
-          <div class="info-card">
-            <p class="info-card-title">Entity</p>
-            <div class="info-row">
-              <span class="info-key">Legal name</span>
-              <span class="info-val">Chalor Capital Allocation &amp; Institutional Group</span>
-            </div>
-          
-          </div>
+      <p>All official communications and legal correspondence addressed to the Company should be directed in writing to the registered address above or, for non-urgent matters, to the email address provided. We undertake to acknowledge written enquiries within five (5) business days.</p>
+    </div>
 
-          <div class="info-card">
-            <p class="info-card-title">Contact Details</p>
-            <div class="info-row">
-              <span class="info-key">Email</span>
-              <span class="info-val"><a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a></span>
-            </div>
-          
-            <div class="info-row">
-              <span class="info-key">Website</span>
-              <span class="info-val"><a href="https://chalorgroup.com">chalorgroup.com</a></span>
-            </div>
-          </div>
-        </div>
+    <!-- SECTION 2 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">02 — Editorial Responsibility</p>
+      <h2>Person Responsible for Content</h2>
+      <p>In accordance with applicable statutory provisions governing editorial accountability for the content published on this website, the individual responsible for the editorial content of www.chalorgroup.com is the managing director of Chalor Capital Allocation &amp; Institutional Group. All content published on this website is reviewed and approved by senior management prior to publication.</p>
+      <p>Enquiries relating to the accuracy, completeness, or appropriateness of content published on this website may be submitted in writing to:</p>
+      <div class="info-card">
+        <p class="info-card-title">Editorial Contact</p>
+        <div class="info-row"><span class="info-key">Function</span><span class="info-val">Managing Director / Person Responsible for Content</span></div>
+        <div class="info-row"><span class="info-key">Organisation</span><span class="info-val">Chalor Capital Allocation &amp; Institutional Group</span></div>
+        <div class="info-row"><span class="info-key">Email</span><span class="info-val"><a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a></span></div>
+        <div class="info-row"><span class="info-key">Address</span><span class="info-val">Berlin, Germany</span></div>
+      </div>
+      <p>We are committed to ensuring that all content published on this website is accurate, up to date, and not misleading. If you believe any content published on this website contains an error or misrepresentation, we encourage you to contact us so that we may investigate and correct the matter promptly.</p>
+    </div>
 
-        <div class="legal-section" id="regulatory">
-          <p class="legal-section-num">Section 02</p>
-          <h2>Regulatory Status &amp; Supervisory Authorities</h2>
-          <p>Chalor Capital Allocation &amp; Institutional Group operates as a financial services provider.</p>
+    <!-- SECTION 3 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">03 — Nature of Services</p>
+      <h2>Private Advisory Services — No Public Offering</h2>
+      <p>Chalor Capital Allocation &amp; Institutional Group operates exclusively as a private advisory and capital allocation firm. All services provided by the Company are offered on a strictly private, confidential, and individually negotiated basis to pre-qualified clients who engage the Company directly. The Company does not:</p>
+      <ul>
+        <li>offer, promote, or solicit participation in any publicly listed financial instrument or collective investment scheme;</li>
+        <li>manage public funds or accept deposits from the general public;</li>
+        <li>provide regulated investment advice or portfolio management services within the meaning of any applicable financial services directive or national implementing legislation;</li>
+        <li>make any representation that its services are subject to regulatory oversight by any financial supervisory authority.</li>
+      </ul>
+      <p>The content of this website is published for informational purposes only. It does not constitute an offer to provide services, a solicitation of any kind, or investment advice within the meaning of any applicable law. Prospective clients should conduct their own independent due diligence before entering into any arrangement with the Company. Nothing contained herein should be construed as a guarantee of future results or performance.</p>
+      <div class="notice-box">
+        <strong>Important notice:</strong> Chalor Capital Allocation &amp; Institutional Group is a private advisory firm. It is not a licensed bank, investment firm, or asset manager subject to public regulatory supervision, and does not hold itself out as such. Clients engage the Company on the basis of individually negotiated private agreements. If you have any questions about the nature or scope of the services offered, please contact us directly at <a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a> prior to entering into any engagement.
+      </div>
+    </div>
 
-          
+    <!-- SECTION 4 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">04 — Intellectual Property</p>
+      <h2>Copyright &amp; Intellectual Property Rights</h2>
+      <p>All content published on this website — including but not limited to text, graphics, logos, icons, images, design elements, layout, and code — is the exclusive intellectual property of Chalor Capital Allocation &amp; Institutional Group or its licensors, and is protected under applicable copyright, trademark, and other intellectual property laws.</p>
+      <p>The name "Chalor", the Chalor wordmark, the associated logo (the triangle-and-line mark), and all associated trade dress are proprietary to Chalor Capital Allocation &amp; Institutional Group. Unauthorised use, reproduction, imitation, or appropriation of any of these marks or elements — whether in whole or in part, in any medium — is strictly prohibited and may give rise to civil and criminal liability.</p>
 
-          <div class="notice-box">
-            <strong>Important regulatory notice:</strong> The information provided on this website does not constitute investment advice, a solicitation to buy or sell financial instruments, or a public offer in any jurisdiction. All services are provided exclusively to eligible counterparties and professional clients as defined under MiFID II (Directive 2014/65/EU) and applicable national implementing legislation. Past performance is not a reliable indicator of future results.
-          </div>
+      <h3>Permitted Use</h3>
+      <p>Users of this website are permitted to view and print content solely for their own private, non-commercial reference. The following acts are expressly prohibited without the prior written authorisation of the Company:</p>
+      <ul>
+        <li>Reproduction, copying, or redistribution of any content for commercial or public purposes;</li>
+        <li>Modification, adaptation, translation, or creation of derivative works based on website content;</li>
+        <li>Framing, scraping, or systematic extraction of content from this website by automated means;</li>
+        <li>Use of the Company's name, trademarks, or branding in any external publication, advertisement, or digital medium;</li>
+        <li>Passing off any content as the Company's endorsement of a third party's products or services.</li>
+      </ul>
+      <p>Requests for press or media use of Company branding or content should be directed to <a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a>. We will consider reasonable requests on a case-by-case basis.</p>
 
-          <p>Where services are provided to clients in the United States, such services are offered in reliance on applicable exemptions under the Investment Advisers Act of 1940 and/or Regulation D of the Securities Act of 1933. Chalor Group is not registered as an investment adviser with the U.S. Securities and Exchange Commission (SEC).</p>
-        </div>
+      <h3>Third-Party Content</h3>
+      <p>Where content on this website incorporates materials from third parties — including typefaces, icon libraries, or open-source frameworks — such materials are used under the respective licences granted by their owners. References to third-party names or services are made for identification purposes only and do not imply affiliation, endorsement, or sponsorship.</p>
+    </div>
 
+    <!-- SECTION 5 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">05 — Liability</p>
+      <h2>Limitation of Liability</h2>
 
-        <div class="legal-section" id="contact">
-          <p class="legal-section-num">Section 03</p>
-          <h2>Contact</h2>
-          <p>For general enquiries, media requests, compliance matters, data protection questions, or legal correspondence, please use the following contact channels:</p>
+      <h3>Liability for Website Content</h3>
+      <p>Chalor Capital Allocation &amp; Institutional Group makes every reasonable effort to ensure that the information published on this website is accurate, complete, and current at the time of publication. However, the Company gives no warranty, express or implied, as to the accuracy, completeness, timeliness, or fitness for any particular purpose of the information contained herein. The information is provided on an "as is" basis without any representation or endorsement.</p>
+      <p>To the fullest extent permitted by applicable law, the Company excludes all liability for any direct, indirect, incidental, consequential, or punitive loss or damage arising from reliance on, or use of, any content published on this website. This includes, without limitation, any loss arising from errors, inaccuracies, omissions, interruptions, or delays in the content, or from any decision made in reliance on it.</p>
 
-          <div class="info-card">
-            <p class="info-card-title">General Contact</p>
-            <div class="info-row">
-              <span class="info-key">Email (general)</span>
-              <span class="info-val"><a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a></span>
-            </div>
-            
-            <div class="info-row">
-              <span class="info-key">Business hours</span>
-              <span class="info-val">Monday – Friday, 09:00 – 17:00 CET</span>
-            </div>
-          </div>
+      <h3>Liability for Hyperlinks</h3>
+      <p>This website may contain hyperlinks to external websites operated by third parties. Such links are provided for the user's convenience and informational purposes only. Chalor Capital Allocation &amp; Institutional Group has no control over the content, availability, or accuracy of linked third-party websites, and assumes no responsibility for them. The inclusion of a link does not constitute any endorsement, sponsorship, or recommendation of the linked site or its operator. Users who access third-party websites through links on this website do so entirely at their own risk.</p>
+      <p>We review linked pages at the time of linking; if we are made aware of unlawful content on linked pages, we will remove such links without delay.</p>
 
-          <div class="notice-box">
-            Correspondence sent to our email addresses is treated as confidential business communication and handled in accordance with our <a href="privacy.html" style="color:var(--navy);">Privacy Policy</a>. We endeavour to respond to all written enquiries within five (5) business days. For time-sensitive legal matters, please mark your correspondence accordingly.
-          </div>
-        </div>
+      <h3>Availability of the Website</h3>
+      <p>The Company does not guarantee that this website will be available at all times or that it will be free from errors, viruses, or other harmful components. We reserve the right to suspend, modify, or discontinue the website or any part of it at any time without notice. The Company accepts no liability for any loss or damage arising from the temporary or permanent unavailability of the website.</p>
 
-       
+      <h3>No Contractual Relationship</h3>
+      <p>Access to and use of this website does not create any contractual relationship between the user and Chalor Capital Allocation &amp; Institutional Group. No information provided on this website should be understood as creating any obligation on the part of the Company to enter into a service agreement with any particular party.</p>
+    </div>
 
-        <div class="legal-section" id="liability">
-          <p class="legal-section-num">Section 04</p>
-          <h2>Liability Disclaimer</h2>
+    <!-- SECTION 6 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">06 — Dispute Resolution &amp; Governing Law</p>
+      <h2>Applicable Law, Jurisdiction &amp; Dispute Resolution</h2>
 
-          <h3>Liability for Content</h3>
-          <p>As a service provider, Chalor Capital Allocation &amp; Institutional Group is responsible for its own content on these pages in accordance with general legislation pursuant to § 7 para. 1 TMG. However, pursuant to §§ 8 to 10 TMG, we are not obliged as a service provider to monitor transmitted or stored third-party information or to investigate circumstances that indicate illegal activity.</p>
-          <p>Obligations to remove or block the use of information in accordance with general legislation remain unaffected by this. However, liability in this regard is only possible from the moment of knowledge of a concrete infringement. Upon becoming aware of such infringements, we will remove the relevant content immediately.</p>
+      <h3>Governing Law</h3>
+      <p>This Imprint, together with any terms governing access to this website, is governed by and construed in accordance with the laws applicable in the jurisdiction of the Company's registered seat, without prejudice to any mandatory consumer protection provisions that may apply in the user's country of residence.</p>
 
-          <h3>Liability for Links</h3>
-          <p>Our website contains links to external third-party websites over whose content we have no influence. Therefore, we cannot assume any liability for this external content. The respective provider or operator of the linked pages is always responsible for the content of those pages. The linked pages were checked for possible legal violations at the time of linking. Illegal content was not identifiable at the time of linking.</p>
-          <p>Permanent monitoring of the content of linked pages is not reasonable without concrete evidence of a legal violation. Upon becoming aware of such infringements, we will remove the relevant links immediately.</p>
+      <h3>Jurisdiction</h3>
+      <p>To the extent permitted by law, any disputes arising out of or in connection with the use of this website or the information contained herein shall be subject to the exclusive jurisdiction of the courts of competent jurisdiction at the Company's registered seat, unless mandatory provisions of law require otherwise.</p>
 
-          <h3>Investment &amp; Financial Disclaimer</h3>
-          <p>Nothing contained on this website constitutes financial, legal, tax, or investment advice and should not be relied upon as such. All information is provided for informational purposes only and is subject to change without notice. Investment in financial instruments involves significant risk, including the risk of loss of the entire invested amount. Chalor Capital Allocation &amp; Institutional Group accepts no liability for investment decisions made on the basis of information published on this website.</p>
+      <h3>Online Dispute Resolution</h3>
+      <p>The European Commission provides an online platform for alternative dispute resolution for consumers within the European Union, accessible at <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr</a>. Please note, however, that as Chalor Capital Allocation &amp; Institutional Group provides exclusively private advisory services to professional and institutional clients — and not consumer goods or services within the meaning of applicable consumer protection legislation — the Company is neither obligated to participate in nor willing to make use of consumer dispute resolution procedures. For any dispute, the parties are encouraged to seek an amicable resolution through direct contact with the Company in the first instance.</p>
 
-          <div class="notice-box">
-            <strong>No public offer:</strong> The information on this website does not constitute a public offering or solicitation in any jurisdiction in which such an offer or solicitation would be unlawful. Access to this website from certain jurisdictions may be restricted by law. Persons in those jurisdictions who access this website do so on their own initiative and are responsible for compliance with local laws.
-          </div>
-        </div>
+      <h3>Severability</h3>
+      <p>Should any provision of this Imprint or any associated terms be found invalid, unlawful, or unenforceable, the remaining provisions shall continue in full force and effect. The invalid provision shall be replaced by a valid provision that most closely reflects the intended purpose of the original.</p>
+    </div>
 
-        <div class="legal-section" id="copyright">
-          <p class="legal-section-num">Section 05</p>
-          <h2>Copyright</h2>
-          <p>The content and works created by the site operators on these pages are subject to German copyright law. Duplication, processing, distribution and any form of commercialisation of such material beyond the scope of the copyright law shall require the prior written consent of its respective author or creator.</p>
-          <p>Downloads and copies of this website are only permitted for private, non-commercial use. Insofar as the content on this site was not created by the operator, the copyrights of third parties are respected. In particular, third-party content is marked as such. Should you nevertheless become aware of a copyright infringement, please inform us accordingly. Upon becoming aware of such infringements, we will remove the relevant content immediately.</p>
+    <!-- SECTION 7 -->
+    <div class="legal-section">
+      <p class="section-eyebrow">07 — Changes &amp; Updates</p>
+      <h2>Amendments to This Imprint</h2>
+      <p>Chalor Capital Allocation &amp; Institutional Group reserves the right to update, amend, or supplement the information contained in this Imprint at any time and without prior notice, in particular in response to changes in applicable law, the Company's legal structure, or its operational circumstances. The date of the most recent revision is indicated in the metadata bar at the top of this page.</p>
+      <p>Users are encouraged to review this page periodically to remain informed of any changes. Continued use of the website following an amendment constitutes acceptance of the updated version of this Imprint.</p>
+      <p>For any questions regarding this Imprint, please contact us at <a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a>.</p>
+    </div>
 
-          <ul>
-            <li>All text, graphics, logos, and other visual materials on this website are the intellectual property of Chalor Capital Allocation &amp; Institutional Group unless otherwise stated.</li>
-            <li>The Chalor name, wordmark, and associated logo are proprietary trademarks. Unauthorised use is strictly prohibited.</li>
-            <li>Reproduction of any part of this website for commercial purposes requires prior written approval.</li>
-            <li>Press and media enquiries regarding permitted use of branding materials should be directed to <a href="mailto:chalorgroup@outlook.fr">chalorgroup@outlook.fr</a>.</li>
-          </ul>
-        </div>
-
-        <div class="legal-section" id="dispute">
-          <p class="legal-section-num">Section 06</p>
-          <h2>Dispute Resolution</h2>
-
-          <h3>Online Dispute Resolution (ODR)</h3>
-          <p>The European Commission provides a platform for online dispute resolution (ODR), which can be accessed at <a href="https://ec.europa.eu/consumers/odr" target="_blank" rel="noopener noreferrer">https://ec.europa.eu/consumers/odr</a>. Our email address can be found in the imprint above.</p>
-
-          <h3>Consumer Dispute Resolution</h3>
-          <p>We are not obliged nor willing to participate in dispute resolution proceedings before a consumer arbitration board, as the services provided by Chalor Capital Allocation &amp; Institutional Group are directed exclusively at professional and institutional clients as defined under MiFID II and do not constitute consumer services within the meaning of applicable consumer protection legislation.</p>
-
-          <h3>Applicable Law &amp; Jurisdiction</h3>
-          <p>Unless otherwise agreed in writing, all legal relations between Chalor Capital Allocation &amp; Institutional Group and its clients or third parties are governed exclusively by the laws of the Federal Republic of Germany, excluding the United Nations Convention on Contracts for the International Sale of Goods (CISG). The exclusive place of jurisdiction for all disputes arising from or in connection with these legal relations shall be the registered seat of the company, to the extent permitted by law.</p>
-        </div>
-
-      </div><!-- /.legal-content -->
-    </div><!-- /.legal-layout -->
   </div>
 </main>
 
@@ -668,7 +455,8 @@ footer { background: var(--navy-deep); color: rgba(255,255,255,0.65); }
     <div class="container">
       <div class="footer-grid">
         <div>
-          <a href="index.html" class="header-logo" style="margin-bottom: 16px; display: inline-flex;" aria-label="Chalor Group — Home">
+          <a href="index.html" class="header-logo" style="margin-bottom: 16px; display: inline-flex;" aria-label="Chalor Capital — Home">
+      
             <img
               class="footer-logo-img"
               src="/img/logo-inverted.png"
@@ -726,34 +514,16 @@ footer { background: var(--navy-deep); color: rgba(255,255,255,0.65); }
     </div>
   </div>
 </footer>
+
 <script src="main.js"></script>
 <script>
-// Header hide/show on scroll
 let lastScroll = 0;
 const header = document.getElementById('site-header');
 window.addEventListener('scroll', () => {
-  const current = window.scrollY;
-  if (current > lastScroll && current > 80) {
-    header.classList.add('hide');
-  } else {
-    header.classList.remove('hide');
-  }
-  lastScroll = current <= 0 ? 0 : current;
+  const c = window.scrollY;
+  header.classList.toggle('hide', c > lastScroll && c > 80);
+  lastScroll = c <= 0 ? 0 : c;
 }, { passive: true });
-
-// TOC active state
-const tocLinks = document.querySelectorAll('.toc-list a');
-const sections = document.querySelectorAll('.legal-section');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      tocLinks.forEach(l => l.classList.remove('active'));
-      const active = document.querySelector(`.toc-list a[href="#${entry.target.id}"]`);
-      if (active) active.classList.add('active');
-    }
-  });
-}, { rootMargin: '-20% 0px -60% 0px' });
-sections.forEach(s => observer.observe(s));
 </script>
 </body>
 </html>
